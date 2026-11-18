@@ -3,7 +3,7 @@ date: 2026-11-18
 id: S001
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T007-scaffold.md
 target_release: none
-status: executing
+status: pr-open
 base_branch: main
 base_sha: 32fbe81f22c0d080e51574d5edd41ef9490a1e9f
 work_branch: workstream/t007-scaffold
@@ -18,7 +18,7 @@ references:
 cross_examined: meta/muse-wonder-full-1.0 (architect), 16 findings, 15 accepted
 approved_by: autonomous
 approved_at: 2026-11-18T18:12Z
-pr: none
+pr: 18
 kickbacks: 0
 merged: none
 harvested: none
