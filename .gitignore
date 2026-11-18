@@ -1,0 +1,21 @@
+# Source packets: the verbatim text a cook approved, kept for the editor check.
+# They can hold private conversation text, so they are never committed.
+.sources/
+
+# Local agent settings and overrides
+.claude/settings.local.json
+CLAUDE.local.md
+AGENTS.override.md
+
+# Secrets
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+*.swp
