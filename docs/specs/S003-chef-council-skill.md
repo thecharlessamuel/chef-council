@@ -3,7 +3,7 @@ date: 2026-11-18
 id: S003
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T009-chef-council-skill.md
 target_release: none
-status: draft
+status: ready-to-build
 base_branch: main
 base_sha: ae8f725603666ca23bb0ba7e80dca6ecfa53b86a
 work_branch: workstream/t009-chef-council-skill
@@ -20,8 +20,8 @@ references:
   - docs/learnings/L002-council-roster-and-vetting.md
   - .agents/spec-profile.md
 cross_examined: meta/muse-wonder-full-1.0 (architect), 24 findings, 24 accepted
-approved_by: pending
-approved_at: pending
+approved_by: autonomous
+approved_at: 2026-11-18T23:06Z
 pr: none
 kickbacks: 0
 merged: none
