@@ -21,6 +21,20 @@ This roster is yours to edit. To add, change, or remove a lens, follow [`council
 
 Consulted by default, each for its own job.
 
+### [Kenji-style lens](vetting/kenji-lopez-alt.md)
+
+- **Job:** Heat, ingredient function, and which variables matter
+- **Typical question:** Which variables actually change the result?
+- **Scope:** Savory cooking technique
+- **Where it can mislead:** It can turn a simple dish into a testing exercise, its explanations may not carry over to the cook's own stove and pan, and it does not by itself diagnose a dish that has already gone wrong.
+
+### [America's Test Kitchen-style lens](vetting/americas-test-kitchen.md)
+
+- **Job:** Reliability, repeatability, and failure prevention
+- **Typical question:** Where will a home cook most likely fail?
+- **Scope:** Any home recipe that has to work the first time
+- **Where it can mislead:** Because it favors the most heavily tested version, it can steer a cook toward a longer or more involved method than a casual meal needs, and its advice assumes the equipment and products the test kitchen has tried.
+
 ## On-demand specialists
 
 Consulted only when the dish is in the lens's scope.
