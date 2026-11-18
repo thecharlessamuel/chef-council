@@ -28,7 +28,7 @@ jobs:
         run: scripts/secret-scan.sh
 
   checks:
-    name: skill links and tests
+    name: tests
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
