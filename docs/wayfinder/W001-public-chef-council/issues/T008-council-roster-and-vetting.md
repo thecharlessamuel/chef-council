@@ -8,7 +8,7 @@ claimed_by: spec-pipeline
 claimed_at: 2026-11-18T19:03:32Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/9
-spec: none
+spec: docs/specs/S002-council-roster-and-vetting.md
 ---
 
 ## Question

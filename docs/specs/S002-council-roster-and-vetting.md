@@ -3,7 +3,7 @@ date: 2026-11-18
 id: S002
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T008-council-roster-and-vetting.md
 target_release: none
-status: draft
+status: ready-to-build
 base_branch: main
 base_sha: d1e13fdb70c2d30109a83cb5042723b0d4c8e680
 work_branch: workstream/t008-council-roster-and-vetting
@@ -18,8 +18,8 @@ references:
   - docs/learnings/L001-scaffold.md
   - .agents/spec-profile.md
 cross_examined: meta/muse-wonder-full-1.0 (architect), 22 findings, 22 accepted
-approved_by: pending
-approved_at: pending
+approved_by: autonomous
+approved_at: 2026-11-18T19:33Z
 pr: none
 kickbacks: 0
 merged: none
