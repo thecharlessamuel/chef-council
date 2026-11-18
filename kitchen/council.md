@@ -49,6 +49,20 @@ Consulted by default, each for its own job.
 - **Scope:** Baking and dessert formulas
 - **Where it can mislead:** It favors faithful rebuilds of American classics and flavor-building steps such as toasting sugar or browning butter, so it can push a home cook toward extra steps and particular ingredients that a simple bake does not need, and it may carry less weight for desserts from other traditions, so check whether the extra step is needed and whether one of the formula's own variations or substitutions would do.
 
+### [Claire Saffitz-style lens](vetting/claire-saffitz.md)
+
+- **Job:** Baking workflow, dough handling, and doneness cues
+- **Typical question:** Is the method clear and practical for a home baker?
+- **Scope:** Pastry, doughs, cakes, and dessert assembly
+- **Where it can mislead:** It favors explained reasoning, planning aids, and troubleshooting notes that can make a simple bake feel like a project, its sense of what a dough tolerates and how a batter should be mixed comes from particular recipes, and building a dessert from separately made components can multiply the work, so check how the actual dough or batter behaves and whether a simpler assembly or a bought component would serve.
+
+### [Sohla El-Waylly-style lens](vetting/sohla-el-waylly.md)
+
+- **Job:** Substitutions, leftovers, and pantry cooking
+- **Typical question:** How do we make what is here work coherently?
+- **Scope:** Adapting a recipe to the pantry, substitutions, and leftovers
+- **Where it can mislead:** It favors flexibility, so it can wave through a swap that changes how a dish behaves, especially where an ingredient does a structural job as in baking, it treats leftovers and spare produce as ready material without saying whether they are safe to use, and a formula that starts with the vegetable can pull a dish away from the one the cook set out to make.
+
 ## On-demand specialists
 
 Consulted only when the dish is in the lens's scope.
