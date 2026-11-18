@@ -23,6 +23,7 @@ issue: https://github.com/thecharlessamuel/chef-council/issues/1
 - [Private until review](issues/T004-private-until-review.md) — built private; the maintainer makes it public after review.
 - [Privacy rules](issues/T005-privacy-rules.md) — everything that enters the repository is public-bound; a private denylist is swept before every merge.
 - [Private repository names](issues/T006-private-repository-names.md) — public text never names the maintainer's private repositories.
+- [Scaffold](issues/T007-scaffold.md) — shipped as S001 (PR #18)
 
 ## Not yet specified
 - [deferred] How Antigravity CLI and Muse Code load instructions is unverified (design §6); `AGENTS.md` covers them by convention, and no ticket tests them.

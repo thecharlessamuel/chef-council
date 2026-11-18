@@ -3,7 +3,7 @@ date: 2026-11-18
 id: S001
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T007-scaffold.md
 target_release: none
-status: approved
+status: shipped
 base_branch: main
 base_sha: 32fbe81f22c0d080e51574d5edd41ef9490a1e9f
 work_branch: workstream/t007-scaffold
@@ -20,8 +20,8 @@ approved_by: autonomous
 approved_at: 2026-11-18T18:12Z
 pr: 18
 kickbacks: 1
-merged: none
-harvested: none
+merged: 2026-11-18
+harvested: 2026-11-18 (3 learnings)
 ---
 
 # Scaffold: agent entry files, kitchen templates, skills home, and CI

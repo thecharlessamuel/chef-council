@@ -2,13 +2,13 @@
 id: T007
 map: docs/wayfinder/W001-public-chef-council/MAP.md
 type: build
-status: claimed
+status: resolved
 blocked_by: []
 claimed_by: spec-pipeline
 claimed_at: 2026-11-18T17:30:12Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/8
-spec: docs/specs/S001-scaffold.md
+spec: docs/specs/archive/S001-scaffold.md
 ---
 
 ## Question
@@ -30,6 +30,7 @@ Done when a fresh clone shows these files, the CI run on the PR is green, and th
 - The one-line `README.md` GitHub created stays until T014 replaces it.
 
 ## Resolution
+Shipped as docs/specs/archive/S001-scaffold.md through PR #18, merged 2026-11-18; harvest: L001.
 
 ## Rationale
 
