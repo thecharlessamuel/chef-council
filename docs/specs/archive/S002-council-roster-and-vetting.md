@@ -3,7 +3,7 @@ date: 2026-11-18
 id: S002
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T008-council-roster-and-vetting.md
 target_release: none
-status: approved
+status: shipped
 base_branch: main
 base_sha: d1e13fdb70c2d30109a83cb5042723b0d4c8e680
 work_branch: workstream/t008-council-roster-and-vetting
@@ -22,8 +22,8 @@ approved_by: autonomous
 approved_at: 2026-11-18T19:33Z
 pr: 20
 kickbacks: 0
-merged: none
-harvested: none
+merged: 2026-11-18
+harvested: 2026-11-18 (3 learnings)
 ---
 
 # Council roster and vetting: the rule, the check, fourteen records, and the roster

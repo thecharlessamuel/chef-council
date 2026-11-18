@@ -2,13 +2,13 @@
 id: T008
 map: docs/wayfinder/W001-public-chef-council/MAP.md
 type: build
-status: claimed
+status: resolved
 blocked_by: [T007]
 claimed_by: spec-pipeline
 claimed_at: 2026-11-18T19:03:32Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/9
-spec: docs/specs/S002-council-roster-and-vetting.md
+spec: docs/specs/archive/S002-council-roster-and-vetting.md
 ---
 
 ## Question
@@ -29,6 +29,7 @@ Done when every name has a record whose citations were read in the session with 
 - A record describes published work, never personal life.
 
 ## Resolution
+Shipped as docs/specs/archive/S002-council-roster-and-vetting.md through PR #20, merged 2026-11-18; harvest: L002.
 
 ## Rationale
 
