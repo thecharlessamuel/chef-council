@@ -4,7 +4,7 @@ status: ready-to-build
 created: 2026-11-18
 classified: 2026-11-18
 spec: none
-issue: none
+issue: https://github.com/thecharlessamuel/chef-council/issues/1
 ---
 
 ## Destination

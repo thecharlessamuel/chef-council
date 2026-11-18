@@ -7,7 +7,7 @@ blocked_by: [T007]
 claimed_by: none
 claimed_at: none
 cross_examined: none
-issue: none
+issue: https://github.com/thecharlessamuel/chef-council/issues/9
 spec: none
 ---
 
