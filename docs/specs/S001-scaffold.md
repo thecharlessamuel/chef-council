@@ -3,7 +3,7 @@ date: 2026-11-18
 id: S001
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T007-scaffold.md
 target_release: none
-status: kicked-back
+status: executing
 base_branch: main
 base_sha: 32fbe81f22c0d080e51574d5edd41ef9490a1e9f
 work_branch: workstream/t007-scaffold
