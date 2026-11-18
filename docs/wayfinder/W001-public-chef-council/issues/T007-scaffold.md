@@ -8,7 +8,7 @@ claimed_by: spec-pipeline
 claimed_at: 2026-11-18T17:30:12Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/8
-spec: none
+spec: docs/specs/S001-scaffold.md
 ---
 
 ## Question
