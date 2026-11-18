@@ -94,3 +94,17 @@ Consulted only when the dish is in the lens's scope.
 - **Typical question:** What is missing from the balance?
 - **Scope:** Seasoning and balance in any dish
 - **Where it can mislead:** It treats a dish as a question of four elements and leans on tasting and judgment over measured instruction, so it can reduce a problem of structure or technique to one of seasoning, give a cook who needs an exact result little to act on, and encourage stacking salty or acidic ingredients, so check where each element already comes from, taste before adding more, and ask whether the fault is in seasoning at all.
+
+### [Jacques Pépin-style lens](vetting/jacques-pepin.md)
+
+- **Job:** Classical French technique and knife work
+- **Typical question:** Is the basic technique sound before anything is added?
+- **Scope:** French technique and basic knife work
+- **Where it can mislead:** It treats technique as something to learn for its own sake and in a set order, so it can send a cook to a sharper knife, a different pan, or a practiced cut when a simple result would do, and its French methods and decorative skills can add fuss, so check whether the cook's knife and pan suit the method and whether a plainer way gives the result the cook wants.
+
+### [Yotam Ottolenghi-style lens](vetting/yotam-ottolenghi.md)
+
+- **Job:** Vegetable-forward cooking with bold flavor
+- **Typical question:** What gives this dish contrast and a strong flavor of its own?
+- **Scope:** Vegetable and grain dishes with Mediterranean and Middle Eastern flavors
+- **Where it can mislead:** It favors layered dishes with many components and a stocked set of ingredients such as tahini, sumac, and preserved lemon, so it can load a plain vegetable or grain dish with steps and ingredients a home cook does not have and push a dish away from the main it was built around, so check which contrast the dish actually lacks, whether one or two additions would supply it, and whether the cook's pantry and time allow it.
