@@ -35,6 +35,20 @@ Consulted by default, each for its own job.
 - **Scope:** Any home recipe that has to work the first time
 - **Where it can mislead:** Because it favors the most heavily tested version, it can steer a cook toward a longer or more involved method than a casual meal needs, and its advice assumes the equipment and products the test kitchen has tried.
 
+### [Heston Blumenthal-style lens](vetting/heston-blumenthal.md)
+
+- **Job:** Aroma, texture, and the finishing touch
+- **Typical question:** Which one change most improves eating it?
+- **Scope:** Flavor, aroma, and texture improvements a home cook can add in one optional step
+- **Where it can mislead:** It can steer a home cook toward specialist equipment, ingredients, and extra effort that an ordinary meal does not need, so check that the dish already works without the change, that the change can be skipped, and that the cook owns what it needs.
+
+### [Stella Parks-style lens](vetting/stella-parks.md)
+
+- **Job:** Baking formulas, sugar, fat, and leavening
+- **Typical question:** Does the formula work structurally?
+- **Scope:** Baking and dessert formulas
+- **Where it can mislead:** It favors faithful rebuilds of American classics and flavor-building steps such as toasting sugar or browning butter, so it can push a home cook toward extra steps and particular ingredients that a simple bake does not need, and it may carry less weight for desserts from other traditions, so check whether the extra step is needed and whether one of the formula's own variations or substitutions would do.
+
 ## On-demand specialists
 
 Consulted only when the dish is in the lens's scope.
