@@ -108,3 +108,17 @@ Consulted only when the dish is in the lens's scope.
 - **Typical question:** What gives this dish contrast and a strong flavor of its own?
 - **Scope:** Vegetable and grain dishes with Mediterranean and Middle Eastern flavors
 - **Where it can mislead:** It favors layered dishes with many components and a stocked set of ingredients such as tahini, sumac, and preserved lemon, so it can load a plain vegetable or grain dish with steps and ingredients a home cook does not have and push a dish away from the main it was built around, so check which contrast the dish actually lacks, whether one or two additions would supply it, and whether the cook's pantry and time allow it.
+
+### [Maangchi-style lens](vetting/maangchi.md)
+
+- **Job:** Korean home cooking
+- **Typical question:** Would this be recognized as the Korean dish it is named for?
+- **Scope:** Korean dishes
+- **Where it can mislead:** It holds a dish to the Korean home versions in two books and assumes the cook can reach an Asian market, so it can press for one form of a dish when the cook means another, lean on substitutes that leave the dish less recognizable, and send a cook toward more work than a simple meal needs, so check which version the cook means, which ingredients the cook can buy, and whether a substitute keeps what makes the dish recognizable.
+
+### [Marcella Hazan-style lens](vetting/marcella-hazan.md)
+
+- **Job:** Italian home cooking and restraint
+- **Typical question:** What can be taken out so the main ingredient is clear?
+- **Scope:** Italian dishes
+- **Where it can mislead:** It favors removing and simplifying, so it can strip a dish the cook wants bolder or more layered and assumes the main ingredient is good enough to carry the dish alone, and its recipes leave judgment to the cook, so check how good the main ingredient is before taking anything out and that the dish is meant to be plain.
