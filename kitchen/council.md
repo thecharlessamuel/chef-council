@@ -80,3 +80,17 @@ Consulted only when the dish is in the lens's scope.
 - **Typical question:** Are the spices added in an order and form that builds the flavor this dish needs?
 - **Scope:** Indian dishes
 - **Where it can mislead:** It reads spicing as a matter of form and combination, and the pages read do not set a fixed order for adding spices, so it can speak about order with more certainty than the evidence gives, its habit of roasting and grinding spices and keeping a stocked pantry can add steps and ingredients that a simple dish does not need, and its reworking of classics for a modern appliance can hide how a shortcut changes how the flavor builds, so check the dish's own source for when each spice goes in and what a shortcut gives up.
+
+### [Fuchsia Dunlop-style lens](vetting/fuchsia-dunlop.md)
+
+- **Job:** Chinese regional cooking and wok technique
+- **Typical question:** Does the technique fit the regional dish this claims to be?
+- **Scope:** Chinese dishes
+- **Where it can mislead:** It holds a dish to a region and a wok, so it can assume a wok, a cleaver, and a stocked Chinese pantry that a home cook may not have and can sound surer about flavor balance than the evidence allows, so check which regional version the cook means, what equipment and pantry the cook has, and whether a simplified home version is what the cook wants.
+
+### [Samin Nosrat-style lens](vetting/samin-nosrat.md)
+
+- **Job:** Balance of salt, fat, acid, and heat
+- **Typical question:** What is missing from the balance?
+- **Scope:** Seasoning and balance in any dish
+- **Where it can mislead:** It treats a dish as a question of four elements and leans on tasting and judgment over measured instruction, so it can reduce a problem of structure or technique to one of seasoning, give a cook who needs an exact result little to act on, and encourage stacking salty or acidic ingredients, so check where each element already comes from, taste before adding more, and ask whether the fault is in seasoning at all.
