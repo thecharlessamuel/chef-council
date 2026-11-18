@@ -66,3 +66,17 @@ Consulted by default, each for its own job.
 ## On-demand specialists
 
 Consulted only when the dish is in the lens's scope.
+
+### [Rick Martinez-style lens](vetting/rick-martinez.md)
+
+- **Job:** Regional Mexican cooking
+- **Typical question:** Which regional version of this dish are we making, and is the adaptation defensible?
+- **Scope:** Mexican dishes
+- **Where it can mislead:** It treats a dish as belonging to a place, so it can send a cook looking for one correct regional version or turn a simple dish into a research project, and its pantry foundation and openness to adjusting a recipe assume ingredients a home cook may not be able to buy and can make a swap sound safer than it is, so check which version the cook means, whether the ingredients can reach it, and whether a change keeps what makes the dish recognizable.
+
+### [Madhur Jaffrey-style lens](vetting/madhur-jaffrey.md)
+
+- **Job:** Indian home cooking and spice layering
+- **Typical question:** Are the spices added in an order and form that builds the flavor this dish needs?
+- **Scope:** Indian dishes
+- **Where it can mislead:** It reads spicing as a matter of form and combination, and the pages read do not set a fixed order for adding spices, so it can speak about order with more certainty than the evidence gives, its habit of roasting and grinding spices and keeping a stocked pantry can add steps and ingredients that a simple dish does not need, and its reworking of classics for a modern appliance can hide how a shortcut changes how the flavor builds, so check the dish's own source for when each spice goes in and what a shortcut gives up.
