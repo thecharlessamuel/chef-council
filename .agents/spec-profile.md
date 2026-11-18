@@ -29,7 +29,9 @@
     command in this list.
   - The CI checks' local commands, run from the repository root:
     `python3 scripts/check-skills.py` (prints `skills checked: <N>` and exits
-    0), `python3 -m unittest discover -s tests -v` (its last line is `OK`), and
+    0), `python3 scripts/check-council.py` (prints `council checked: <S>
+    seated, <R> records` and exits 0), `python3 -m unittest discover -s tests
+    -v` (its last line is `OK`), and
     `scripts/secret-scan.sh` (gitleaks over the full local history: exit 0
     with `no leaks found`, exit 1 on a leak, and exit 2 when the scan could
     not run, which never counts as clean). The scan downloads the pinned
