@@ -38,5 +38,7 @@ jobs:
           persist-credentials: false
       - name: Check every skill has its link and its AGENTS.md line
         run: python3 scripts/check-skills.py
+      - name: Check the council roster against the vetting records
+        run: python3 scripts/check-council.py
       - name: Run the tests
         run: python3 -m unittest discover -s tests -v

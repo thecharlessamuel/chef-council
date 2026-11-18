@@ -17,6 +17,10 @@ Each file starts with a short block of fields between `---` lines. When you have
 - Keep a preference tied to the dish it came from. "No raisins in the rice pilaf" is not a general dislike of raisins.
 - Change these files whenever your kitchen changes, and update the date.
 
+## The council
+
+[`council.md`](council.md) is the roster of lenses your agent consults, and the `vetting/` folder holds the record behind each one. They work as they are. To add a lens, narrow one, or remove one, follow [`council-vetting.md`](council-vetting.md).
+
 ## Before you publish a fork
 
 If your fork is public, these files are public too, along with their history. You do not have to name anyone or give a medical detail: "two adults and a small child" and `higher_risk_diners: yes` tell an agent all it needs.
