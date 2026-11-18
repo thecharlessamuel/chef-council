@@ -27,6 +27,14 @@
     every check passed; a red check is a kickback finding and a missing run is
     a question for the human. The spec that adds a check records its local
     command in this list.
+  - The CI checks' local commands, run from the repository root:
+    `python3 scripts/check-skills.py` (prints `skills checked: <N>` and exits
+    0), `python3 -m unittest discover -s tests -v` (its last line is `OK`), and
+    `scripts/secret-scan.sh` (gitleaks over the full local history: exit 0
+    with `no leaks found`, exit 1 on a leak, and exit 2 when the scan could
+    not run, which never counts as clean). The scan downloads the pinned
+    gitleaks release on Linux x86_64 on first use; elsewhere, set
+    `GITLEAKS_BIN` to an installed gitleaks.
   - The wayfinder skill's `scripts/lint.py` over `docs/wayfinder/*/MAP.md`
     (the skill's directory is the one the harness prints when the skill
     loads). It prints one line per problem and exits 1 when it prints any.
