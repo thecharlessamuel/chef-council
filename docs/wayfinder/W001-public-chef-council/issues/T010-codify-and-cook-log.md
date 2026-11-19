@@ -8,7 +8,7 @@ claimed_by: spec-pipeline
 claimed_at: 2026-11-19T01:04:32Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/11
-spec: none
+spec: docs/specs/S004-codify-and-cook-log.md
 ---
 
 ## Question
