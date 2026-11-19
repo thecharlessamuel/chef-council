@@ -3,7 +3,7 @@ date: 2026-11-19
 id: S007
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T013-chat-path-and-adapters.md
 target_release: none
-status: ready-to-build
+status: executing
 base_branch: main
 base_sha: 8b3e43e8ea034efa3378216c70f6b55a89dd4ceb
 work_branch: workstream/t013-chat-path-and-adapters
