@@ -2,13 +2,13 @@
 id: T013
 map: docs/wayfinder/W001-public-chef-council/MAP.md
 type: build
-status: claimed
+status: resolved
 blocked_by: [T009, T011]
 claimed_by: spec-pipeline
 claimed_at: 2026-11-19T05:27:42Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/14
-spec: docs/specs/S007-chat-path-and-adapters.md
+spec: docs/specs/archive/S007-chat-path-and-adapters.md
 ---
 
 ## Question
@@ -28,6 +28,7 @@ Done when the instructions file is under the limit, the bundle regenerates byte 
 - Sources: `private-sources/cooking/context/claude-project-setup.md`, `private-sources/home-design/context/assistant-instructions.md`, and `private-sources/council-skills/recipe-publish/` (the persistence check and "an update needs the current version" only; drop IDs, raw URLs, pushing `main`, and emoji titles).
 
 ## Resolution
+Shipped as docs/specs/archive/S007-chat-path-and-adapters.md through PR #30, merged 2026-11-19; harvest: L007.
 
 ## Rationale
 

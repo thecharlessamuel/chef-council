@@ -3,7 +3,7 @@ date: 2026-11-19
 id: S007
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T013-chat-path-and-adapters.md
 target_release: none
-status: approved
+status: shipped
 base_branch: main
 base_sha: 8b3e43e8ea034efa3378216c70f6b55a89dd4ceb
 work_branch: workstream/t013-chat-path-and-adapters
@@ -31,8 +31,8 @@ approved_by: autonomous
 approved_at: 2026-11-19T06:08Z
 pr: 30
 kickbacks: 0
-merged: none
-harvested: none
+merged: 2026-11-19
+harvested: 2026-11-19 (3 learnings)
 ---
 
 # Chat path and adapters: paste-in instructions, a generated chat bundle with a CI check, setup notes, and the sync contract

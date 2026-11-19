@@ -29,6 +29,7 @@ issue: https://github.com/thecharlessamuel/chef-council/issues/1
 - [Codify and cook log](issues/T010-codify-and-cook-log.md) — shipped as S004 (PR #24)
 - [Editor gate](issues/T011-editor-gate.md) — shipped as S005 (PR #26)
 - [Example recipes](issues/T012-example-recipes.md) — shipped as S006 (PR #28)
+- [Chat path and adapters](issues/T013-chat-path-and-adapters.md) — shipped as S007 (PR #30)
 
 ## Not yet specified
 - [deferred] How Antigravity CLI and Muse Code load instructions is unverified (design §6); `AGENTS.md` covers them by convention, and no ticket tests them.
