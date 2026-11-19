@@ -8,7 +8,7 @@ claimed_by: spec-pipeline
 claimed_at: 2026-11-19T07:58:50Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/16
-spec: none
+spec: docs/specs/S009-stranger-test.md
 ---
 
 ## Question
