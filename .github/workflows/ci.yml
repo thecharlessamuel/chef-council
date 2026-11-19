@@ -40,6 +40,8 @@ jobs:
         run: python3 scripts/check-skills.py
       - name: Check the council roster against the vetting records
         run: python3 scripts/check-council.py
+      - name: Check the chat bundle is current
+        run: scripts/build-chat-bundle.sh --check
       - name: Run the tests
         run: python3 -m unittest discover -s tests -v
       - name: Lint the recipe cards and check the index

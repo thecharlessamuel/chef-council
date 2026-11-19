@@ -1,6 +1,6 @@
 # Agent entry point: Chef Council
 
-This repository is a system for cooking with AI agents: a council of cooking lenses that develops and pressure-tests recipes, plain-text recipe cards and cook logs, and an independent editor check on every recipe change. Read this file first, then the files it points to. It applies to every agent, whichever harness runs it.
+This repository is a system for cooking with AI agents: a council of cooking lenses that develops and pressure-tests recipes, plain-text recipe cards and cook logs, and an independent editor check on every recipe change.
 
 The person you are working with is called the cook here. If you cannot read or write files in this repository (a chat app, for example), say so once, and when asked to save something return the complete file and its path for the cook to save.
 
@@ -34,7 +34,7 @@ The person you are working with is called the cook here. If you cannot read or w
 7. **Codify.** Write or update the card and the cook log from what was approved and reported, with an honest status. The cook sets the scope of the save.
 8. **Editor check.** A fresh agent checks the card against the approved text. On a fail, fix the card and run a fresh check.
 9. **Pull request.** Open one; the cook merges it.
-10. **Mirror, on request only.** Copy a card to a notes app only when the cook asks or calls the recipe final, then read the copy back.
+10. **Mirror, on request only.** Copy a card to a notes app only when the cook asks or calls the recipe final, by [`adapters/README.md`](adapters/README.md).
 11. **Promote.** Only the cook calls a recipe a house recipe.
 
 What stays with the cook: choosing a direction, the scope of a save, what was cooked and how it tasted, promoting a recipe, and the merge.
@@ -59,5 +59,6 @@ Skills live in `.agents/skills/<name>/`, and Claude Code finds them through the 
   - `scripts/secret-scan.sh`: gitleaks over the full history.
   - `python3 scripts/lint-cards.py`: the cards are well formed and the index is current.
   - `scripts/check-qc.sh`: each changed card has a current passing editor report.
+  - `scripts/build-chat-bundle.sh --check`: `chat/bundle.md` is current.
 - Never commit a secret, a credential, or a token. Source packets, the exact text a cook approved, stay in the git-ignored `.sources/` folder.
 - Everything committed to a public fork is public, including `kitchen/` and the history. Keep out anything the cook would not publish.
