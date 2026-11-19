@@ -2,13 +2,13 @@
 id: T009
 map: docs/wayfinder/W001-public-chef-council/MAP.md
 type: build
-status: open
+status: claimed
 blocked_by: [T008]
-claimed_by: none
-claimed_at: none
+claimed_by: spec-pipeline
+claimed_at: 2026-11-18T22:31:38Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/10
-spec: none
+spec: docs/specs/S003-chef-council-skill.md
 ---
 
 ## Question
