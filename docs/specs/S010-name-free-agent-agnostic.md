@@ -3,7 +3,7 @@ date: 2026-11-19
 id: S010
 wayfinder: none
 target_release: none
-status: executing
+status: pr-open
 base_branch: main
 base_sha: 38dfcceca709b025624c08327f87791871a3605f
 work_branch: workstream/s010-name-free-agent-agnostic
@@ -26,7 +26,7 @@ references:
 cross_examined: cross-provider (architect), 13 findings, 11 accepted
 approved_by: autonomous
 approved_at: 2026-11-19T18:28Z
-pr: none
+pr: 36
 kickbacks: 0
 merged: none
 harvested: none
