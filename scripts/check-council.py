@@ -6,9 +6,10 @@ Usage: python3 scripts/check-council.py [repository-root]
 A record is a file kitchen/vetting/<slug>.md in the shape of
 templates/lens-vetting-record.md. The roster, kitchen/council.md, seats a lens
 with a heading that links its record. The check fails when a record is
-malformed, when the roster seats a lens with no record or a cut record, when
-a record that says seat is not on the roster, and when the roster and a
-record disagree. kitchen/council-vetting.md states the rule in words.
+malformed, when a record holds a web link or names its lens <Name>-style lens,
+when the roster seats a lens with no record or a cut record, when a record
+that says seat is not on the roster, and when the roster and a record
+disagree. kitchen/council-vetting.md states the rule in words.
 
 Prints one line per problem and exits 1, or prints
 "council checked: <S> seated, <R> records" and exits 0.
@@ -19,25 +20,17 @@ import os
 import re
 import sys
 
-KEYS = ["lens", "name", "seat", "job", "question", "verdict", "scope", "checked"]
-SECTIONS = [
-    "Official site",
-    "Published work",
-    "Independent sources",
-    "What the published work shows",
-    "Where this lens can mislead",
-    "Verdict",
-    "Access notes",
-]
-CITED = SECTIONS[:3]
+KEYS = ["lens", "seat", "job", "question", "verdict", "scope", "checked"]
+HOLDS = "What this lens holds"
+SECTIONS = [HOLDS, "Where this lens can mislead", "Verdict"]
 ITEMS = ["Job", "Typical question", "Scope", "Where it can mislead"]
 GROUPS = {"Core lenses": "core", "On-demand specialists": "specialist"}
 YAML_WORDS = {"yes", "no", "true", "false", "on", "off", "null", "y", "n"}
 ROSTER = "kitchen/council.md"
-CHECKED = re.compile(r"\(checked (\d{4}-\d{2}-\d{2})\)")
-ENTRY = re.compile(r"^### \[(.+-style lens)\]\(vetting/([a-z0-9]+(?:-[a-z0-9]+)*)\.md\)$")
+ENTRY = re.compile(r"^### \[(.+ lens)\]\(vetting/([a-z0-9]+(?:-[a-z0-9]+)*)\.md\)$")
 ITEM = re.compile(r"^- \*\*(.+?):\*\* (.*\S)\s*$")
-LINK = re.compile(r"https://\S+")
+LINK = re.compile(r"https?://", re.IGNORECASE)
+LENS_FORM = "lens must be <Descriptor> lens, and never <Name>-style lens"
 
 
 def is_date(text):
@@ -48,8 +41,8 @@ def is_date(text):
     return re.fullmatch(r"\d{4}-\d{2}-\d{2}", text) is not None
 
 
-def has_checked(text):
-    return any(is_date(found) for found in CHECKED.findall(text))
+def lens_ok(text):
+    return text.endswith(" lens") and not text.endswith("-style lens")
 
 
 def quote_problems(lines):
@@ -63,22 +56,19 @@ def quote_problems(lines):
     return problems
 
 
-def top_items(lines):
-    """Join each top-level list item with its indented continuation lines."""
-    items = []
-    for line in lines:
-        if line.startswith("- "):
-            items.append(line[2:])
-        elif items and line.startswith("  "):
-            items[-1] += " " + line.strip()
-    return items
+def link_problems(lines):
+    return [
+        "line %d: a record holds no web link" % number
+        for number, line in enumerate(lines, 1)
+        if LINK.search(line)
+    ]
 
 
 def check_record(lines):
     """Return (fields or None, problems) for one record's lines."""
     problems = []
     if not lines or lines[0] != "---" or "---" not in lines[1:]:
-        return None, ["front matter is missing"]
+        return None, ["front matter is missing"] + link_problems(lines)
     end = lines.index("---", 1)
     fields = {}
     order = []
@@ -90,9 +80,11 @@ def check_record(lines):
         order.append(match.group(1))
         fields[match.group(1)] = match.group(2)
     if problems:
-        return None, problems
+        return None, problems + link_problems(lines)
     if order != KEYS:
-        return None, ["front matter keys must be exactly: %s" % ", ".join(KEYS)]
+        return None, [
+            "front matter keys must be exactly: %s" % ", ".join(KEYS)
+        ] + link_problems(lines)
 
     for key in KEYS:
         value = fields[key]
@@ -103,8 +95,8 @@ def check_record(lines):
             )
         if value.lower() in YAML_WORDS:
             problems.append("%s must not be a YAML boolean or null word" % key)
-    if not fields["lens"].endswith("-style lens"):
-        problems.append("lens must end with -style lens")
+    if not lens_ok(fields["lens"]):
+        problems.append(LENS_FORM)
     if fields["seat"] not in ("core", "specialist"):
         problems.append("seat must be core or specialist")
     if not fields["question"].endswith("?"):
@@ -134,7 +126,7 @@ def check_record(lines):
     names = [line[3:] for line in body if line.startswith("## ")]
     if names != SECTIONS:
         problems.append("sections must be exactly, in order: %s" % ", ".join(SECTIONS))
-        return fields, problems + quote_problems(lines)
+        return fields, problems + quote_problems(lines) + link_problems(lines)
     sections = {}
     current = None
     for line in body:
@@ -143,78 +135,24 @@ def check_record(lines):
         elif current is not None:
             current.append(line)
 
-    seated = verdict in ("seat", "seat narrower")
-    counts = {}
-    links = set()
     for name in SECTIONS:
-        content = [line for line in sections[name] if line.strip()]
-        if not content:
+        if not any(line.strip() for line in sections[name]):
             problems.append("section %s is empty" % name)
-            continue
-        if name not in CITED:
-            continue
-        if not content[0].startswith("- ") or any(
-            not line.startswith(("- ", "  ")) for line in content
-        ):
-            problems.append(
-                "%s: every line must be a list item or its indented continuation"
-                % name
-            )
-        items = top_items(content)
-        counts[name] = len(items)
-        for number, item in enumerate(items, 1):
-            if name == "Official site" and item.startswith("No official site"):
-                plain = True
-                counts["no site"] = 1
-            else:
-                plain = not seated and item.startswith("None found")
-            if plain:
-                if not has_checked(item):
-                    problems.append("%s: item %d needs (checked YYYY-MM-DD)" % (name, number))
-            elif "https://" not in item or not has_checked(item):
-                problems.append(
-                    "%s: item %d needs an https:// link and (checked YYYY-MM-DD)"
-                    % (name, number)
-                )
-            else:
-                link = LINK.search(item).group(0)
-                if link in links:
-                    problems.append(
-                        "%s: item %d repeats a link already cited in this record"
-                        % (name, number)
-                    )
-                links.add(link)
-    if counts.get("Official site", 1) != 1:
-        problems.append(
-            "Official site: expected one list item, found %d" % counts["Official site"]
-        )
-    if seated:
-        if counts.get("Published work", 2) < 2:
-            problems.append(
-                "Published work: a seated lens needs at least 2 items, found %d"
-                % counts["Published work"]
-            )
-        need = 2 if counts.get("no site") else 1
-        if counts.get("Independent sources", need) < need:
-            problems.append(
-                "Independent sources: a seated lens needs at least %d items, found %d"
-                % (need, counts["Independent sources"])
-            )
-        shown = sections["What the published work shows"]
+    if verdict in ("seat", "seat narrower"):
+        shown = sections[HOLDS]
         tendencies = sum(1 for line in shown if re.match(r"\d+\. \S", line))
         if any(line.strip() for line in shown) and not 3 <= tendencies <= 5:
             problems.append(
-                "What the published work shows: a seated lens needs 3 to 5 "
-                "numbered items, found %d" % tendencies
+                "%s: a seated lens needs 3 to 5 numbered items, found %d"
+                % (HOLDS, tendencies)
             )
         if any(
             line.strip() and not re.match(r"\d+\. \S|  ", line) for line in shown
         ):
             problems.append(
-                "What the published work shows: a seated lens lists numbered "
-                "items and nothing else"
+                "%s: a seated lens lists numbered items and nothing else" % HOLDS
             )
-    return fields, problems + quote_problems(lines)
+    return fields, problems + quote_problems(lines) + link_problems(lines)
 
 
 def check_roster(lines):
@@ -241,14 +179,15 @@ def check_roster(lines):
             )
         elif line.startswith("### "):
             match = ENTRY.match(line)
-            if match:
+            if match and lens_ok(match.group(1)):
                 current = []
                 entries.append((match.group(2), group, match.group(1), current))
             else:
                 current = None
                 problems.append(
                     "line %d: lens heading must be "
-                    "### [<Name>-style lens](vetting/<slug>.md)" % number
+                    "### [<Descriptor> lens](vetting/<slug>.md), and never "
+                    "<Name>-style lens" % number
                 )
         elif current is not None and line.startswith("- "):
             current.append(line)

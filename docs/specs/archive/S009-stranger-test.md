@@ -26,7 +26,7 @@ references:
   - docs/learnings/L007-chat-path-and-adapters.md
   - docs/learnings/L008-docs-and-behavior-checks.md
   - .agents/spec-profile.md
-cross_examined: meta/muse-wonder-full-1.0 (architect), 16 findings, 14 accepted
+cross_examined: cross-provider (architect), 16 findings, 14 accepted
 approved_by: autonomous
 approved_at: 2026-11-19T08:36Z
 pr: 34
@@ -36,6 +36,8 @@ harvested: 2026-11-19 (4 learnings)
 ---
 
 # Stranger test: two fresh runs of the README's five-minute path, and the fixes for what the first one tripped on
+
+> **Names removed on 2026-11-19.** This record was edited after it was written. Real names, titles, and links now read `[name removed]`, `[title removed]`, or `[link removed]`, a lens's former name reads as its present name in square brackets, a vetting record's former file name reads as its present one, and the model that reviewed a spec is described without its name. Until that day the lenses carried real names. That decision was superseded, and spec S010 made this edit.
 
 ## Goal and definition of done
 
@@ -832,10 +834,8 @@ repository; the stranger's card lives only in its own clone.
 ## Cross-examination
 
 One round, on the first complete draft, run by leg 1 on 2026-11-19 through
-the route the profile's `## Independent review` section selects for an
-Anthropic session at the architect tier: provider `meta`, model
-`muse-wonder-full-1.0`, reasoning effort high, Muse Code 1.4.15
-(1.4.15-R8339.1), read-only and sandboxed, with no shell, write, or web
+the route the profile's `## Independent review` section selects for this session's
+provider at the architect tier: a different provider's architect-tier model, reasoning effort high, its command-line tool, read-only and sandboxed, with no shell, write, or web
 tool. The dossier held the draft spec, `AGENTS.md`, the profile, ticket
 T015 and the map, the six files of the touch set as they stand at
 `base_sha`, the `cook-log` and `recipe-editor` skills, the cook-log and

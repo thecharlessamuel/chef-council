@@ -1,6 +1,6 @@
 # Skills
 
-Each skill is one folder here, `.agents/skills/<name>/`, holding a `SKILL.md` in the Agent Skills format. Codex, Cursor, Gemini CLI, and Pi find skills in this folder on their own. Claude Code looks in `.claude/skills/`, so every skill also has a symbolic link there.
+Each skill is one folder here, `.agents/skills/<name>/`, holding a `SKILL.md` in the Agent Skills format. An agent that follows the Agent Skills format finds skills in this folder on its own. Claude Code looks in `.claude/skills/`, so every skill also has a symbolic link there.
 
 ## Adding a skill
 

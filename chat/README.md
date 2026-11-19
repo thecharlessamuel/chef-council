@@ -1,6 +1,6 @@
 # Chef Council in a chat app
 
-Use this folder when your assistant is a chat app that cannot read this repository: a project in Claude or ChatGPT, a Gem in Gemini, or a chat in Muse. You get the same council, the same rules, and the same editor check. What changes is that you carry the files in and out by hand, because the chat cannot save anything.
+Use this folder when your assistant is a chat app that cannot read this repository. You get the same council, the same rules, and the same editor check. What changes is that you carry the files in and out by hand, because the chat cannot save anything.
 
 ## What is here
 
@@ -26,7 +26,6 @@ These steps are the same in every app. The table below says what each app calls 
 | Claude Projects | "Set project instructions" on the project's page | The project knowledge base, with its "+" button | Read on 2026-11-19: [How can I create and manage projects?](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects) |
 | ChatGPT Projects | The project's instructions | The project's files | Not checked. The help page could not be read on 2026-11-19, so these names may be wrong. |
 | Gemini Gems | The instructions box of a new Gem | "Knowledge", then "Add files" | Read on 2026-11-19: [Tips for creating custom Gems](https://support.google.com/gemini/answer/15235603) |
-| Muse | Not known | Not known | Not checked. No official page describing instructions or knowledge files for a Muse chat was found on 2026-11-19. Use the fallback below. |
 
 Apps rename their screens. When a name above is not there, look for the place the app keeps instructions that apply to every chat, and the place it keeps files that every chat can read.
 
@@ -62,5 +61,5 @@ One of the things you paste is the card's hash line, which comes from a command.
 
 - Run a script. It gives you the command and says it did not run it. The index, the card linter, and the editor gate run in your terminal or in CI.
 - See a file you changed after you built the bundle, until you upload a new one or paste the file.
-- Open a web page, unless your app gives it a browsing tool. Without one it cannot research a source or vet a new name for the council, and it is told to say so.
+- Open a web page, unless your app gives it a browsing tool. Without one it cannot research a source, and it is told to say so.
 - Copy a card to a notes app. That is a job for an agent that works in the repository, under [`adapters/README.md`](../adapters/README.md).

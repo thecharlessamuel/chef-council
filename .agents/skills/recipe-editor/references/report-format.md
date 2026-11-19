@@ -64,7 +64,7 @@ The hash ties the report to the card as you read it. If the card changes afterwa
 
 - **Title.** The card's title and version.
 - **Card, Date, Kind of save, Source, Packet.** The card's path, the day of the check, and three lines from the top of the packet: the kind of save, where the approved text came from, and the packet's own path. For Source, say where the text came from, never what it said. When there is no packet, or the packet does not say, write `not stated` for Kind of save and for Source, and for Packet write the path you were given, or `none`.
-- **Editor.** What ran the check, such as a fresh agent session and the model's name if you know it. It is never a person's name and never a lens.
+- **Editor.** What ran the check, such as a fresh agent session. It is never a person's name and never a lens.
 - **Discrepancies.** One row for each. Where: the section and the item. Then what the approved text says and what the card says, in as few words as show the difference, and the severity, `blocking` or `minor`. Write `None.` in place of the table when there is none. For a missing or summarized packet, the one row reads `no verbatim source` under Where.
 - **Additions.** Each thing on the card that the approved text does not hold, and whether it sits outside the Equipment, Ingredients, and Method. Write `None.` when there is none.
 - **Checks run.** One line for each check in the skill's `## Compare the card with the packet` section, in that order, saying `checked`, `not applicable` with the reason, or `not checked` with the reason. With no verbatim source, every check that needs the approved text reads `not checked, because there is no verbatim source`.

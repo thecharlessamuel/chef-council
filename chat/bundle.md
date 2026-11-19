@@ -12,20 +12,20 @@ It holds the kitchen files, the skills, the method pages, and the templates of o
 - kitchen/equipment.md
 - kitchen/pantry.md
 - kitchen/profile.md
-- kitchen/vetting/americas-test-kitchen.md
-- kitchen/vetting/claire-saffitz.md
-- kitchen/vetting/fuchsia-dunlop.md
-- kitchen/vetting/heston-blumenthal.md
-- kitchen/vetting/jacques-pepin.md
-- kitchen/vetting/kenji-lopez-alt.md
-- kitchen/vetting/maangchi.md
-- kitchen/vetting/madhur-jaffrey.md
-- kitchen/vetting/marcella-hazan.md
-- kitchen/vetting/rick-martinez.md
-- kitchen/vetting/samin-nosrat.md
-- kitchen/vetting/sohla-el-waylly.md
-- kitchen/vetting/stella-parks.md
-- kitchen/vetting/yotam-ottolenghi.md
+- kitchen/vetting/baking-formula.md
+- kitchen/vetting/baking-workflow.md
+- kitchen/vetting/bold-vegetable.md
+- kitchen/vetting/classical-french-technique.md
+- kitchen/vetting/indian-spice-layering.md
+- kitchen/vetting/italian-restraint.md
+- kitchen/vetting/korean-home-cooking.md
+- kitchen/vetting/pantry-adaptation.md
+- kitchen/vetting/regional-chinese.md
+- kitchen/vetting/regional-mexican.md
+- kitchen/vetting/repeatable-results.md
+- kitchen/vetting/savory-science.md
+- kitchen/vetting/seasoning-balance.md
+- kitchen/vetting/sensory-finish.md
 - .agents/skills/chef-council/SKILL.md
 - .agents/skills/chef-council/references/food-safety.md
 - .agents/skills/chef-council/references/troubleshooting.md
@@ -72,36 +72,37 @@ If your fork is public, these files are public too, along with their history. Yo
 ===== FILE: kitchen/council-vetting.md =====
 # The vetting rule
 
-A lens that carries a real person's or publisher's name is seated on the council only when the `kitchen/vetting/` folder holds a record for it whose verdict is `seat` or `seat narrower`. The record is what the lens is allowed to know. A lens argues only from the tendencies its record lists and only inside its recorded scope. It is a way of reading published work. It is not the person, and it does not speak for them.
+A lens is seated on the council only when the `kitchen/vetting/` folder holds a record for it whose verdict is `seat` or `seat narrower`. The record is what the lens is allowed to know. A lens argues only from the tendencies its record lists and only inside its recorded scope. A lens is a described cooking approach. It is not a person, it is not named for one, and it does not speak for anyone.
 
 ## What a record holds
 
-One file per name, `kitchen/vetting/<slug>.md`, copied from [`templates/lens-vetting-record.md`](../templates/lens-vetting-record.md):
+One file per lens, `kitchen/vetting/<slug>.md`, copied from [`templates/lens-vetting-record.md`](../templates/lens-vetting-record.md):
 
-- **The official site**, with the date it was checked. When there is none, or none could be opened, the record says `No official site`, the access notes say which, and the record needs a second independent source.
-- **Two or more named published works** that are relevant to the seat: books, a column, a series, or a recipe archive, each with a link and the date checked.
-- **At least one independent source**: something written by someone other than the person and the publisher of the work, such as a review, a profile of the work, an award listing, or a book by someone else, that confirms what the seat assumes. A publisher's description reprinted on another site is not independent.
-- **Three to five tendencies the published work shows**, written in this repository's own words. These are all the lens may reason from.
+- **The lens's name**: two or three words that describe its approach, then the word `lens`, such as `Weeknight speed lens`. It is never a person's name, a brand, or the form `<Name>-style lens`.
+- **Its seat, its job, and its scope**: `core` or `specialist`, the job the lens does on the council, and what it may argue about.
+- **Three to five tendencies**: what the lens holds about cooking, each one a way of working that a cook could follow or decline, written in this repository's own words. These are all the lens may reason from.
 - **The one question the lens always asks.**
-- **Where the lens can mislead**: where advice argued from those tendencies goes wrong for a home cook. This is about the lens. Nothing here judges the person.
+- **Where the lens can mislead**: where advice argued from those tendencies goes wrong for a home cook, and what to check when it does.
 - **A verdict**: `seat`, `seat narrower` (with the scope the lens is held to), or `cut`, and the reason.
-- **Access notes**: what was not read, what was behind a paywall, and what is known only from a search result.
+- **The date the record was last checked.**
 
 ## Rules for writing a record
 
-1. Cite only pages that were opened and read in the session that wrote the record, each with the date. A search result is not a page that was read.
-2. Describe published work, never personal life.
-3. Write no quotations. Tendencies are paraphrase, in your own words, and titles are set in italics. A record never says that anyone approved, endorsed, or took part in this repository, because no one did.
-4. Copy no recipe text from any publisher: no ingredient lists, methods, or headnotes.
-5. Cut a name whose relevant published work cannot be verified. A famous name with no evidence in the seat's specialty is a cut, with the reason in the record. A cut record stays in `kitchen/vetting/` so the name is not proposed again without new evidence.
-6. Numbers do not come from a lens. A safe temperature, a ratio, a pressure-cooker minimum, or a nutrition figure comes from a cited standard, a tested source, or the equipment manual. Food safety is a constraint on every lens, not a seat.
+1. Name no one. A record names no person, publication, outlet, show, book, product, or brand, and it holds no web link. Describe the approach, not where it came from.
+2. Write no quotations. A record never says that anyone approved, endorsed, or took part in this repository, because no one did.
+3. Copy no recipe text from any publisher: no ingredient lists, methods, or headnotes.
+4. Cut a lens that has no job of its own: one whose job a seated lens already does, or one whose tendencies cannot be written without naming someone. A cut record stays in `kitchen/vetting/` so the lens is not proposed again without a new reason.
+5. Numbers do not come from a lens. A safe temperature, a ratio, a pressure-cooker minimum, or a nutrition figure comes from a cited standard, a tested source, or the equipment manual. Food safety is a constraint on every lens, not a seat.
+
+## When someone asks for a person or a brand
+
+Asked to add a named cook, author, publisher, show, or brand to the council, seat no name. Say that the council's lenses are named for approaches and not for people, and ask what about that cooking the cook wants the council to weigh. Then offer a lens for that approach, with a descriptor for its name, and write its record by the rules above, or decline and give the reason. Write nothing about the person, quote nothing, and never say that a lens is that person or speaks for them.
 
 ## Seating, changing, and removing a lens
 
-- **To add a lens:** copy the template, read the sources, fill the record in, and reach a verdict. When the verdict seats the lens, add its entry to [`council.md`](council.md) under the heading that matches the record's `seat`, repeating the record's `lens`, `job`, `question`, and `scope` word for word.
-- **To change a lens:** change its record first, then its roster entry. Open the record's links again and give every citation and the `checked` field the new date.
+- **To add a lens:** copy the template, fill the record in, and reach a verdict. When the verdict seats the lens, add its entry to [`council.md`](council.md) under the heading that matches the record's `seat`, repeating the record's `lens`, `job`, `question`, and `scope` word for word.
+- **To change a lens:** change its record first, then its roster entry, and give the `checked` field the new date.
 - **To remove a lens:** delete its roster entry, and either delete the record or set its `verdict` to `cut` and its `scope` to `none`.
-- **A lens with no real name** (for example a budget lens or a weeknight lens) follows the same steps. Its record cites the published work it leans on.
 
 Then run the check, which CI also runs:
 
@@ -109,19 +110,15 @@ Then run the check, which CI also runs:
 python3 scripts/check-council.py
 ```
 
-It fails when a record is missing a part, when the roster seats a lens without a seated record, when a seated record is missing from the roster, and when the two disagree.
-
-## When a record goes stale
-
-Links move and published work changes. A record is evidence as of its `checked` date. Before leaning on a record that is more than a year old, open its links again and update the dates, the tendencies, and the access notes.
+It fails when a record is missing a part, when a record holds a web link or a lens is written `<Name>-style lens`, when the roster seats a lens without a seated record, when a seated record is missing from the roster, and when the two disagree.
 ===== END FILE: kitchen/council-vetting.md =====
 
 ===== FILE: kitchen/council.md =====
 # The council
 
-The council is a set of lenses: ways of looking at a recipe, each built from one cook's or one publisher's published work. Each lens is named `<Name>-style lens`. Every lens here has a vetting record in the `kitchen/vetting/` folder, and the lens argues only from the tendencies that record lists and only inside its scope. [`council-vetting.md`](council-vetting.md) is the rule for seating one.
+The council is a set of lenses: ways of looking at a recipe, each one a described cooking approach. Each lens is named for its approach, `<Descriptor> lens`, and never for a person or a brand. Every lens here has a record in the `kitchen/vetting/` folder, and the lens argues only from the tendencies that record lists and only inside its scope. [`council-vetting.md`](council-vetting.md) is the rule for seating one.
 
-No one named here is affiliated with this repository, and no one named here has reviewed, approved, endorsed, or contributed to anything in it. A lens is a reading of published work. It is not the person and does not speak for them.
+No lens is a real person, and none stands for one. Nothing a lens argues is a quotation of anyone, and no cook, author, or publisher has reviewed, approved, endorsed, or contributed to anything in this repository.
 
 ## How the council argues
 
@@ -140,42 +137,42 @@ This roster is yours to edit. To add, change, or remove a lens, follow [`council
 
 Consulted by default, each for its own job.
 
-### [Kenji-style lens](vetting/kenji-lopez-alt.md)
+### [Savory science lens](vetting/savory-science.md)
 
 - **Job:** Heat, ingredient function, and which variables matter
 - **Typical question:** Which variables actually change the result?
 - **Scope:** Savory cooking technique
 - **Where it can mislead:** It can turn a simple dish into a testing exercise, its explanations may not carry over to the cook's own stove and pan, and it does not by itself diagnose a dish that has already gone wrong.
 
-### [America's Test Kitchen-style lens](vetting/americas-test-kitchen.md)
+### [Repeatable results lens](vetting/repeatable-results.md)
 
 - **Job:** Reliability, repeatability, and failure prevention
 - **Typical question:** Where will a home cook most likely fail?
 - **Scope:** Any home recipe that has to work the first time
-- **Where it can mislead:** Because it favors the most heavily tested version, it can steer a cook toward a longer or more involved method than a casual meal needs, and its advice assumes the equipment and products the test kitchen has tried.
+- **Where it can mislead:** Because it favors the most heavily tested version, it can steer a cook toward a longer or more involved method than a casual meal needs, and its advice assumes equipment and products that may differ from what the cook owns.
 
-### [Heston Blumenthal-style lens](vetting/heston-blumenthal.md)
+### [Sensory finish lens](vetting/sensory-finish.md)
 
 - **Job:** Aroma, texture, and the finishing touch
 - **Typical question:** Which one change most improves eating it?
 - **Scope:** Flavor, aroma, and texture improvements a home cook can add in one optional step
 - **Where it can mislead:** It can steer a home cook toward specialist equipment, ingredients, and extra effort that an ordinary meal does not need, so check that the dish already works without the change, that the change can be skipped, and that the cook owns what it needs.
 
-### [Stella Parks-style lens](vetting/stella-parks.md)
+### [Baking formula lens](vetting/baking-formula.md)
 
 - **Job:** Baking formulas, sugar, fat, and leavening
 - **Typical question:** Does the formula work structurally?
 - **Scope:** Baking and dessert formulas
 - **Where it can mislead:** It favors faithful rebuilds of American classics and flavor-building steps such as toasting sugar or browning butter, so it can push a home cook toward extra steps and particular ingredients that a simple bake does not need, and it may carry less weight for desserts from other traditions, so check whether the extra step is needed and whether one of the formula's own variations or substitutions would do.
 
-### [Claire Saffitz-style lens](vetting/claire-saffitz.md)
+### [Baking workflow lens](vetting/baking-workflow.md)
 
 - **Job:** Baking workflow, dough handling, and doneness cues
 - **Typical question:** Is the method clear and practical for a home baker?
 - **Scope:** Pastry, doughs, cakes, and dessert assembly
 - **Where it can mislead:** It favors explained reasoning, planning aids, and troubleshooting notes that can make a simple bake feel like a project, its sense of what a dough tolerates and how a batter should be mixed comes from particular recipes, and building a dessert from separately made components can multiply the work, so check how the actual dough or batter behaves and whether a simpler assembly or a bought component would serve.
 
-### [Sohla El-Waylly-style lens](vetting/sohla-el-waylly.md)
+### [Pantry adaptation lens](vetting/pantry-adaptation.md)
 
 - **Job:** Substitutions, leftovers, and pantry cooking
 - **Typical question:** How do we make what is here work coherently?
@@ -186,61 +183,61 @@ Consulted by default, each for its own job.
 
 Consulted only when the dish is in the lens's scope.
 
-### [Rick Martinez-style lens](vetting/rick-martinez.md)
+### [Regional Mexican lens](vetting/regional-mexican.md)
 
 - **Job:** Regional Mexican cooking
 - **Typical question:** Which regional version of this dish are we making, and is the adaptation defensible?
 - **Scope:** Mexican dishes
 - **Where it can mislead:** It treats a dish as belonging to a place, so it can send a cook looking for one correct regional version or turn a simple dish into a research project, and its pantry foundation and openness to adjusting a recipe assume ingredients a home cook may not be able to buy and can make a swap sound safer than it is, so check which version the cook means, whether the ingredients can reach it, and whether a change keeps what makes the dish recognizable.
 
-### [Madhur Jaffrey-style lens](vetting/madhur-jaffrey.md)
+### [Indian spice layering lens](vetting/indian-spice-layering.md)
 
 - **Job:** Indian home cooking and spice layering
 - **Typical question:** Are the spices added in an order and form that builds the flavor this dish needs?
 - **Scope:** Indian dishes
-- **Where it can mislead:** It reads spicing as a matter of form and combination, and the pages read do not set a fixed order for adding spices, so it can speak about order with more certainty than the evidence gives, its habit of roasting and grinding spices and keeping a stocked pantry can add steps and ingredients that a simple dish does not need, and its reworking of classics for a modern appliance can hide how a shortcut changes how the flavor builds, so check the dish's own source for when each spice goes in and what a shortcut gives up.
+- **Where it can mislead:** It reads spicing as a matter of form and combination, and its record sets no fixed order for adding spices, so it can speak about order with more certainty than it has, its habit of roasting and grinding spices and keeping a stocked pantry can add steps and ingredients that a simple dish does not need, and its reworking of classics for a modern appliance can hide how a shortcut changes how the flavor builds, so check the dish's own source for when each spice goes in and what a shortcut gives up.
 
-### [Fuchsia Dunlop-style lens](vetting/fuchsia-dunlop.md)
+### [Regional Chinese lens](vetting/regional-chinese.md)
 
 - **Job:** Chinese regional cooking and wok technique
 - **Typical question:** Does the technique fit the regional dish this claims to be?
 - **Scope:** Chinese dishes
-- **Where it can mislead:** It holds a dish to a region and a wok, so it can assume a wok, a cleaver, and a stocked Chinese pantry that a home cook may not have and can sound surer about flavor balance than the evidence allows, so check which regional version the cook means, what equipment and pantry the cook has, and whether a simplified home version is what the cook wants.
+- **Where it can mislead:** It holds a dish to a region and a wok, so it can assume a wok, a cleaver, and a stocked Chinese pantry that a home cook may not have and can sound surer about flavor balance than its record supports, so check which regional version the cook means, what equipment and pantry the cook has, and whether a simplified home version is what the cook wants.
 
-### [Samin Nosrat-style lens](vetting/samin-nosrat.md)
+### [Seasoning balance lens](vetting/seasoning-balance.md)
 
 - **Job:** Balance of salt, fat, acid, and heat
 - **Typical question:** What is missing from the balance?
 - **Scope:** Seasoning and balance in any dish
 - **Where it can mislead:** It treats a dish as a question of four elements and leans on tasting and judgment over measured instruction, so it can reduce a problem of structure or technique to one of seasoning, give a cook who needs an exact result little to act on, and encourage stacking salty or acidic ingredients, so check where each element already comes from, taste before adding more, and ask whether the fault is in seasoning at all.
 
-### [Jacques Pépin-style lens](vetting/jacques-pepin.md)
+### [Classical French technique lens](vetting/classical-french-technique.md)
 
 - **Job:** Classical French technique and knife work
 - **Typical question:** Is the basic technique sound before anything is added?
 - **Scope:** French technique and basic knife work
 - **Where it can mislead:** It treats technique as something to learn for its own sake and in a set order, so it can send a cook to a sharper knife, a different pan, or a practiced cut when a simple result would do, and its French methods and decorative skills can add fuss, so check whether the cook's knife and pan suit the method and whether a plainer way gives the result the cook wants.
 
-### [Yotam Ottolenghi-style lens](vetting/yotam-ottolenghi.md)
+### [Bold vegetable lens](vetting/bold-vegetable.md)
 
 - **Job:** Vegetable-forward cooking with bold flavor
 - **Typical question:** What gives this dish contrast and a strong flavor of its own?
 - **Scope:** Vegetable and grain dishes with Mediterranean and Middle Eastern flavors
 - **Where it can mislead:** It favors layered dishes with many components and a stocked set of ingredients such as tahini, sumac, and preserved lemon, so it can load a plain vegetable or grain dish with steps and ingredients a home cook does not have and push a dish away from the main it was built around, so check which contrast the dish actually lacks, whether one or two additions would supply it, and whether the cook's pantry and time allow it.
 
-### [Maangchi-style lens](vetting/maangchi.md)
+### [Korean home cooking lens](vetting/korean-home-cooking.md)
 
 - **Job:** Korean home cooking
 - **Typical question:** Would this be recognized as the Korean dish it is named for?
 - **Scope:** Korean dishes
-- **Where it can mislead:** It holds a dish to the Korean home versions in two books and assumes the cook can reach an Asian market, so it can press for one form of a dish when the cook means another, lean on substitutes that leave the dish less recognizable, and send a cook toward more work than a simple meal needs, so check which version the cook means, which ingredients the cook can buy, and whether a substitute keeps what makes the dish recognizable.
+- **Where it can mislead:** It holds a dish to established Korean home versions and assumes the cook can reach an Asian market, so it can press for one form of a dish when the cook means another, lean on substitutes that leave the dish less recognizable, and send a cook toward more work than a simple meal needs, so check which version the cook means, which ingredients the cook can buy, and whether a substitute keeps what makes the dish recognizable.
 
-### [Marcella Hazan-style lens](vetting/marcella-hazan.md)
+### [Italian restraint lens](vetting/italian-restraint.md)
 
 - **Job:** Italian home cooking and restraint
 - **Typical question:** What can be taken out so the main ingredient is clear?
 - **Scope:** Italian dishes
-- **Where it can mislead:** It favors removing and simplifying, so it can strip a dish the cook wants bolder or more layered and assumes the main ingredient is good enough to carry the dish alone, and its recipes leave judgment to the cook, so check how good the main ingredient is before taking anything out and that the dish is meant to be plain.
+- **Where it can mislead:** It favors removing and simplifying, so it can strip a dish the cook wants bolder or more layered and assumes the main ingredient is good enough to carry the dish alone, and it leaves judgment to the cook, so check how good the main ingredient is before taking anything out and that the dish is meant to be plain.
 ===== END FILE: kitchen/council.md =====
 
 ===== FILE: kitchen/equipment.md =====
@@ -337,108 +334,57 @@ Rules you have already settled, which win over any saved recipe card. One per li
 - _Example: the weeknight chili has no beans; do not add them._
 ===== END FILE: kitchen/profile.md =====
 
-===== FILE: kitchen/vetting/americas-test-kitchen.md =====
+===== FILE: kitchen/vetting/baking-formula.md =====
 ---
-lens: America's Test Kitchen-style lens
-name: America's Test Kitchen / Dan Souza
+lens: Baking formula lens
 seat: core
-job: Reliability, repeatability, and failure prevention
-question: Where will a home cook most likely fail?
+job: Baking formulas, sugar, fat, and leavening
+question: Does the formula work structurally?
 verdict: seat
-scope: Any home recipe that has to work the first time
-checked: 2026-11-18
+scope: Baking and dessert formulas
+checked: 2026-11-19
 ---
 
-# America's Test Kitchen-style lens
+# Baking formula lens
 
-## Official site
+## What this lens holds
 
-- *America's Test Kitchen* (the publisher's recipe site): https://www.americastestkitchen.com/ (checked 2026-11-18). The front page lists recipes, equipment reviews, ingredient taste tests, the magazines, television episodes, and classes, and it was read for what the publisher puts out.
-
-## Published work
-
-- *Cook's Illustrated* (America's Test Kitchen, magazine): https://www.americastestkitchen.com/cooksillustrated (checked 2026-11-18). The page describes the magazine as built around the science of cooking and says its recipes are developed by reviewing existing versions and then testing each variable until the result is reliable in any kitchen.
-- *How we make our recipes failproof every time* (America's Test Kitchen, recipe site): https://www.americastestkitchen.com/articles/7088-how-we-make-our-recipes-failproof-every-time (checked 2026-11-18). The page lays out the publisher's stages for a recipe, from research and comparing versions to development, home testing, and refinement before publication.
-- *Media contact* (America's Test Kitchen, television and video): https://www.americastestkitchen.com/about-us/media-contact (checked 2026-11-18). The page lists the television series, the video podcasts, the magazine, and the cookbooks, and names Dan Souza as the host of the video podcast *I Changed My Mind with Dan Souza*.
-- *The Complete America's Test Kitchen TV Show Cookbook 2001–2026* (America's Test Kitchen, 2025): https://penguinrandomhouse.com/books/790387/the-complete-americas-test-kitchen-tv-show-cookbook-20012026-by-americas-test-kitchen (checked 2026-11-18). The publisher's page describes a collection of recipes from the television show with product recommendations and a shopping guide, aimed at beginners and experienced cooks alike.
-
-## Independent sources
-
-- *The America's Test Kitchen Family Cookbook* review (Publishers Weekly, 2005): https://publishersweekly.com/9780936184876 (checked 2026-11-18). The reviewer says the repeated testing behind the recipes supports the claim that they work in a home kitchen, and that the book could serve as a dependable everyday reference.
-- *America's Test Kitchen Twentieth Anniversary TV Show Cookbook* review (Publishers Weekly, 2019): https://publishersweekly.com/9781945256882 (checked 2026-11-18). The reviewer says each recipe opens with an explanation of what makes it work and that the book's precision and testing give reliable results.
-- *Tried and true tricks from America's Test Kitchen* (WAMC, 2011): https://www.wamc.org/2011-12-07/tried-and-true-tricks-from-americas-test-kitchen (checked 2026-11-18). A public radio segment from the NPR program *Fresh Air* in which the test kitchen's approach to making recipes that home cooks can reproduce is discussed.
-
-## What the published work shows
-
-1. A recipe starts from a comparison of several existing versions of the dish, and the version that is published is refined by changing one variable at a time over many rounds of testing, with the tastings done blind to limit bias.
-2. Recipes are tried at home by cooks of different skill levels before they are published, and a recipe that too many of those cooks would not make again goes back to the test kitchen, so the aim is a result a cook gets on the first attempt.
-3. Recipe writing allows for what home cooks really do, such as swapping ingredients and not reading ahead, so the instructions and tips are written to hold up under that use.
-4. Recipes come with an explanation of what makes the preparation work, drawn from food science, so a cook can see why each step is there.
-5. Recipes are published beside equipment reviews and ingredient taste tests, so the cook is told which tools and products have been tried.
+1. Rebuild classic American desserts and store-bought treats at home with professional technique, and treat the history of a dessert as part of why it is worth making.
+2. Test a formula heavily and give it variations and, where possible, substitutions such as gluten-free alternatives, so it can be adapted without losing its result.
+3. Work on sugar and other browning ingredients for flavor, such as toasting sugar before it goes into a dough, adding milk solids to deepen browning, or browning butter where a recipe gains from it.
+4. Reach for a particular ingredient to get a texture or a structure, such as a fizzy soda for a light crumb, and care about how tall and stable a meringue stands or how an all-butter crust behaves.
 
 ## Where this lens can mislead
 
-Because this lens favors the version that has been tested the most, it can steer a cook toward a longer or more involved method when a simpler one would serve a casual meal. Its habit of changing one variable at a time can add steps, tools, or ingredients whose gain a home cook would not notice at the table. Its advice also assumes the equipment and products the test kitchen has tried, which may differ from what the cook owns. When it pushes an extra step, check whether that step changes the dish being made, and check the advice against the cook's own equipment and pantry.
+Advice argued from these tendencies favors faithful rebuilds of American classics and flavor-building steps such as toasting sugar or browning butter, so it can push a home cook toward extra steps and particular ingredients that a simple bake does not need. Its fixed point is American desserts, so it may carry less weight for desserts from other traditions, and its habit of tuning a formula for one result may not carry over when the cook changes the pan, the oven, or the pantry. Check whether the extra step is needed for the dessert at hand, and whether one of the formula's own variations or substitutions would do.
 
 ## Verdict
 
-Seat, with the full default scope. Four published works and three independent sources were opened and read, five tendencies are supported by what those pages say, and the first three are about reliability, repeatability, and failure prevention, which is the job. The one part of the scope, recipes that work the first time, is covered. The lens describes the publisher's published work as a whole, including its magazine, television programs, cookbooks, and recipe site. Dan Souza is named in the name line, and the only thing a cited page says about him is that he hosts a video podcast.
+Seat, with the full default scope. Four tendencies are recorded, and the third and fourth are about the job of baking formulas, sugar, and structure. The scope is a single part, baking and dessert formulas, and each tendency is about it.
 
-Parts covered: recipes that work the first time (tendencies 1 and 2).
+Parts covered: baking and dessert formulas (tendencies 1, 2, 3, and 4).
+===== END FILE: kitchen/vetting/baking-formula.md =====
 
-## Access notes
-
-Searched: America's Test Kitchen official site about
-Searched: Cook's Illustrated magazine recipe testing approach
-Searched: America's Test Kitchen cookbook The New Best Recipe
-Searched: America's Test Kitchen television series PBS episodes
-Searched: America's Test Kitchen review cookbook reliable recipes home cooks review
-Searched: America's Test Kitchen profile test kitchen method independent coverage newspaper
-Searched: Dan Souza America's Test Kitchen chief creative officer OR host What's Eating Dan
-
-The page at the site's about address returned a not-found error, so the official site is cited through its front page and its media page. The front page names Dan Souza only in a photo caption and gives no role; no cited page states a role for him beyond hosting the video podcast, so his role at the publisher was not confirmed here. A page listing his articles and videos on the recipe site was opened but is not cited. The Cook's Illustrated address redirects to the page cited above.
-
-Not cited: a lifestyle site's interview with a recipe-testing executive and a Library Journal review of a cookbook both refused to load. A bookseller-style page for one cookbook reads as the publisher's description and is not independent, so it is not cited. A publisher page at a second book site loaded with no content. Two further reviews were opened but are not cited, one in Publishers Weekly of a television companion cookbook and one in the Christian Science Monitor of a Cook's Country dessert book. Search results alone gave a Daily Meal piece on behind-the-scenes facts, a student newspaper item, a Wikipedia article, a PBS show page, and several television listing sites; none was opened, and nothing here relies on them. Figures about test counts or costs that appeared in search results are not used.
-===== END FILE: kitchen/vetting/americas-test-kitchen.md =====
-
-===== FILE: kitchen/vetting/claire-saffitz.md =====
+===== FILE: kitchen/vetting/baking-workflow.md =====
 ---
-lens: Claire Saffitz-style lens
-name: Claire Saffitz
+lens: Baking workflow lens
 seat: core
 job: Baking workflow, dough handling, and doneness cues
 question: Is the method clear and practical for a home baker?
 verdict: seat
 scope: Pastry, doughs, cakes, and dessert assembly
-checked: 2026-11-18
+checked: 2026-11-19
 ---
 
-# Claire Saffitz-style lens
+# Baking workflow lens
 
-## Official site
+## What this lens holds
 
-- *Dessert Person site* (Claire Saffitz): https://dessertperson.com/contact-1 (checked 2026-11-18). The page on her site that describes her work as a recipe developer and video host and presents her first book as a way to give hesitant home bakers confidence.
-
-## Published work
-
-- *Dessert Person* (her own page for the book): https://dessertperson.com/dessert-person-cookbook (checked 2026-11-18). Says the recipes explain how and why each one works so reluctant home bakers can try new ingredients and techniques with more confidence.
-- *Dessert Person* (Penguin Random House): https://www.penguinrandomhouse.com/books/609892/dessert-person-by-claire-saffitz/ (checked 2026-11-18). The publisher's page for the same book, which says each recipe gives a skill level, prep and bake times, troubleshooting, and practical do's and don'ts, supported by step-by-step photos.
-- *What's for Dessert* (Penguin Random House): https://www.penguinrandomhouse.com/books/609933/whats-for-dessert-by-claire-saffitz/ (checked 2026-11-18). The publisher's page for her second book, which describes streamlined recipes that need no stand mixer, with plenty of troubleshooting advice.
-- *Recipe Development* (her own site): https://dessertperson.com/recipe-development (checked 2026-11-18). Her page about her published recipe columns, which describes thorough, approachable instructions and, for a sourdough guide and a biscuit cobbler, what a beginner can expect and what the dough tolerates.
-
-## Independent sources
-
-- *Publishers Weekly* review of *Dessert Person* (Publishers Weekly): https://www.publishersweekly.com/9781984826961 (checked 2026-11-18). An unsigned trade review that says the recipes are ordered by difficulty, that loaf and single-layer cakes have their own chapter, and that footnotes help novices with specific pitfalls.
-- *Niles West News* review of *Dessert Person* (Niles West News, 2022): https://nileswestnews.org/86962/arts-entertainment/reviews/claire-saffitz-dessert-person (checked 2026-11-18). A signed review that praises the book's organization by difficulty, its chart of time against difficulty, and its step-by-step guidance even for basic tasks, and that describes recipes sending the baker to other pages for a separately made brioche dough, pastry cream, and syrup.
-- *The Daily Meal* article on her cake batter tips (The Daily Meal, 2022): https://www.thedailymeal.com/1153128/claire-saffitzs-tips-for-mixing-the-perfect-cake-batter (checked 2026-11-18). An article by Clement Obropta, mostly the writer's own description of her cake videos, that sets out how she mixes cake batter and why, by creaming with frequent scraping or by reverse creaming.
-
-## What the published work shows
-
-1. The recipes carry the reasoning behind the steps, and troubleshooting sits inside the method, so a hesitant home baker can follow a method with understanding: footnotes warn when an ingredient will change how long a step takes, and notes say how to fix a common problem.
-2. The books help a baker plan the work before starting: each recipe states its skill level and timing, recipes are ordered by difficulty, a chart sets recipes against time and difficulty, and the later book streamlines the work with recipes that need no stand mixer.
-3. Doughs are described by what they tolerate and what a beginner can expect: a biscuit dough is called forgiving of some extra handling, and a sourdough guide tells first-timers to expect imperfect early loaves and lays out the equipment and the schedule.
-4. Cakes are explained by how the batter is mixed and why: creaming with frequent scraping of the bowl gives an even batter that rises evenly, while mixing softened butter into the dry ingredients first gives a tender cake with flat layers, and the choice depends on the recipe and the result wanted.
-5. A finished dessert is built from parts made in turn, so a recipe can send the baker to the page of another recipe for a component such as a dough, a pastry cream, or a syrup, and the later book includes chilled desserts such as icebox cakes.
+1. Carry the reasoning behind the steps, and put troubleshooting inside the method, so a hesitant home baker can follow with understanding: warn when an ingredient will change how long a step takes, and say how to fix a common problem.
+2. Help the baker plan before starting: state the skill level and the timing, order the work by difficulty, and streamline where a recipe can do without special equipment such as a stand mixer.
+3. Describe a dough by what it tolerates and what a beginner can expect: a biscuit dough forgives some extra handling, and a first sourdough loaf will be imperfect and needs its equipment and schedule laid out.
+4. Explain a cake by how its batter is mixed and why: creaming with frequent scraping of the bowl gives an even batter that rises evenly, while mixing softened butter into the dry ingredients first gives a tender cake with flat layers, and the choice depends on the result wanted.
+5. Build a finished dessert from parts made in turn, such as a dough, a pastry cream, or a syrup, and count chilled desserts such as icebox cakes among them.
 
 ## Where this lens can mislead
 
@@ -446,647 +392,190 @@ Because it favors explained reasoning, planning aids, and troubleshooting notes,
 
 ## Verdict
 
-Seat. The published work is real, was read on its publisher's and her own pages, and is backed by independent sources, and the tendencies are about the fixed job of baking workflow and dough handling. Each part of the default scope has a supported tendency: tendency 3 is about pastry and doughs, tendency 4 about cakes, and tendency 5 about dessert assembly. The cakes part rests on one article that is mostly the writer's description of her cake videos, and the dessert assembly part rests on one review that describes recipes built from separately made components, so the lens should argue those two parts with that thin support in mind.
+Seat, with the full default scope. Five tendencies are recorded, and they are about the job of baking workflow and dough handling. Each part of the scope has a tendency. The cakes part and the dessert assembly part each rest on one tendency, so the lens argues those two parts with that thin support in mind.
 
 Parts covered: pastry and doughs (tendency 3); cakes (tendency 4); dessert assembly (tendency 5).
+===== END FILE: kitchen/vetting/baking-workflow.md =====
 
-## Access notes
-
-- The Library Journal review of *What's for Dessert* and a student-newspaper review of the same book at The Harvard Crimson both returned an access error when opened, so neither is cited; they are known only from search results.
-- A signed profile of the second book on the food site *Taste* and the trade review of that book in *Publishers Weekly* were opened and read, but neither is cited because the record holds the most independent sources it may. A radio-program page about the second book returned an access error, so it is not cited.
-- A magazine interview in *Newsweek* was opened and read but is mostly her own words, so it is not cited as an independent source.
-- Her second book is not described on any page of her own site that was read, so *What's for Dessert* rests on its publisher's page and on the trade review; the publisher's page is a marketing summary that does not detail methods.
-- Searched: Claire Saffitz official site
-- Searched: Claire Saffitz What's for Dessert cookbook Clarkson Potter
-- Searched: Dessert Person Claire Saffitz review Publishers Weekly starred
-- Searched: What's for Dessert Claire Saffitz book review simple recipes
-- Searched: Claire Saffitz layer cake assembly frosting components Dessert Person review
-- Searched: Claire Saffitz assembling dessert components make ahead icebox cake tarte tropezienne technique
-===== END FILE: kitchen/vetting/claire-saffitz.md =====
-
-===== FILE: kitchen/vetting/fuchsia-dunlop.md =====
+===== FILE: kitchen/vetting/bold-vegetable.md =====
 ---
-lens: Fuchsia Dunlop-style lens
-name: Fuchsia Dunlop
+lens: Bold vegetable lens
 seat: specialist
-job: Chinese regional cooking and wok technique
-question: Does the technique fit the regional dish this claims to be?
+job: Vegetable-forward cooking with bold flavor
+question: What gives this dish contrast and a strong flavor of its own?
 verdict: seat
-scope: Chinese dishes
-checked: 2026-11-18
+scope: Vegetable and grain dishes with Mediterranean and Middle Eastern flavors
+checked: 2026-11-19
 ---
 
-# Fuchsia Dunlop-style lens
+# Bold vegetable lens
 
-## Official site
+## What this lens holds
 
-- Fuchsia Dunlop: https://fuchsiadunlop.com/ (checked 2026-11-18). The author's own site, with pages for her books, news, and events; the home page and the books page were read, and they lead to the book pages cited below.
-
-## Published work
-
-- *The Food of Sichuan* (author's site): https://fuchsiadunlop.com/books/the-food-of-sichuan (checked 2026-11-18). The author's page for her Sichuan cookbook, which says the instructions are meant to be easy to follow at home with a small set of Sichuanese pantry staples, that readers can build wok and cleaver skills, and that the book conveys the layered tastes, textures, and sensations of Sichuan food; it is the main work on regional Chinese cooking and wok technique.
-- *Every Grain of Rice* (author's site): https://fuchsiadunlop.com/books/every-grain-of-rice (checked 2026-11-18). The author's page for her book of simple Chinese home cooking from southern China, which says the cooking is built around vegetables with meat and fish in smaller amounts, that many dishes need few ingredients, and that the book opens with the core seasonings and techniques of Chinese cooking.
-- *Five Tastes* (author's site): https://fuchsiadunlop.com/books/five-tastes (checked 2026-11-18). The author's page for her book on Chinese flavor, which says a small set of core seasonings, flavor pairings, and techniques can turn whatever ingredients a cook has into a satisfying meal, drawing on the idea of five tastes blended harmoniously.
-- *Invitation to a Banquet* (author's site): https://fuchsiadunlop.com/books/invitation-to-a-banquet (checked 2026-11-18). The author's page for her book on Chinese cuisine, which says each chapter takes one classic dish as a way into a wider theme and that the book looks at regional cooking across the country.
-
-## Independent sources
-
-- *One great cookbook: Every Grain of Rice by Fuchsia Dunlop* (The Week US, 2024): https://theweek.com/culture-life/food-drink/one-great-cookbook-every-grain-of-rice-fuchsia-dunlop (checked 2026-11-18). A signed review by Scott Hocker that sets the book apart from the author's other books, which rebuild complex regional restaurant-style dishes, calls its recipes how some people cook at home, describes the stir-fries as variations on one wok-centered sequence, and praises its glossary of pantry ingredients.
-- *Every Grain of Rice* (Asia by the Book, 2022): https://asiabythebook.com/blog/2022/6/29/every-grain-of-rice (checked 2026-11-18). A signed review by Janet Brown that describes the book as vegetable-forward cooking that uses meat sparingly as a flavoring, built on fresh ingredients and a stocked Chinese pantry, with step-by-step photographs of basic methods and a reach beyond the author's earlier Sichuan and Hunan books to other regions.
-- *Book Review The Food of Sichuan by Fuchsia Dunlop* (Outlook Traveller): https://www.outlooktraveller.com/travelnews/glamping/book-review-the-food-of-sichuan-by-fuchsia-dunlop (checked 2026-11-18). A signed review by Amit Dixit that says the fire of Sichuan food is only part of the story, names the numbing sensation of Sichuan pepper as its signature, and calls the cuisine layered and sophisticated.
-
-## What the published work shows
-
-1. It treats Chinese food as a set of distinct regional cuisines, with Sichuan a main subject, and presents Sichuan food by its layered tastes, textures, and sensations rather than by heat alone.
-2. It treats wok and cleaver skills as something a home cook can learn, and it builds its stir-fry dishes as variations on one wok-centered sequence.
-3. It is written for the home cook: instructions meant to be easy to follow, a small stock of core seasonings and pantry staples, and many dishes that need few ingredients.
-4. It builds flavor by balancing the tastes (sour, bitter, sweet, pungent, and salty) with a small set of seasonings and pairings that can be applied to whatever ingredients are on hand.
-5. Its everyday cooking is vegetable-forward, with meat and fish in smaller amounts and drawn from several regions of China, and it keeps that separate from restaurant-style regional dishes.
+1. Vegetables are the subject of the dish, not a side or a meat substitute, and a vegetable dish can be a main course.
+2. Grains and pulses get the same standing as vegetables, with rice, cereals, couscous, and pasta given their own place and with yogurt and herbs in profusion beside them.
+3. Flavor comes from a Mediterranean and Middle Eastern palette of herbs, spices, citrus, tahini, yogurt, sumac, and preserved lemon, sometimes stretched further east.
+4. A dish is built on contrast and richness together: smoky against dense and crunchy, sweet against savory, with dairy adding richness.
+5. The full form of this cooking is layered, with many steps and ingredients; a simpler form keeps the flavor combinations while favoring dishes that are quick, short on ingredients, made ahead, or pantry based.
 
 ## Where this lens can mislead
 
-This lens reads a dish as belonging to a region and to a wok, so it can hold a home version to one regional standard, or assume a wok, a cleaver, and a stocked Chinese pantry that a home cook may not have. The pages read describe its flavor balancing in general terms and give no fixed rule, so it can sound surer about how to balance a dish than the evidence allows. When it does, check which regional version the cook means, what equipment and pantry the cook has, and whether a simplified home version is what the cook wants.
+Because this lens favors layered dishes with many components and a stocked set of ingredients such as tahini, sumac, preserved lemon, and fresh herbs, advice argued from it can load a plain vegetable or grain dish with extra steps and ingredients a home cook does not have. Its vegetable-first view can also push a dish away from the meat or other main it was built around. When this happens, check which contrast the dish actually lacks, whether one or two additions would supply it, and whether the cook's pantry and time allow it, and look to the simpler form's short-ingredient approach before adding a component.
 
 ## Verdict
 
-Seat. Four published works and three independent sources were opened and read, five tendencies are supported by cited pages, and tendencies 1 and 2 are about the fixed job. The default scope is one part, Chinese dishes, and tendencies 1 and 2 are about it, so the scope is the default scope.
+Seat, with the full default scope. Five tendencies are recorded, including tendencies about the job, and every part of the scope has at least one.
 
-Parts covered: Chinese dishes (tendencies 1 and 2).
+Parts covered: vegetable dishes (tendency 1); grain dishes (tendency 2); Mediterranean and Middle Eastern flavors (tendency 3).
+===== END FILE: kitchen/vetting/bold-vegetable.md =====
 
-## Access notes
-
-- The official site opened on the first attempt. The Food of Sichuan page on it did not name a publisher or year, so none is given above.
-- Search results listed pages from booksellers, publishers, and agencies for the books; none of those were opened, and none are cited.
-- One other review of a Dunlop book was opened and read but is not cited, because three independent sources is the limit. The James Beard Foundation page listing the 2020 nominees was also opened and read but is not cited.
-- An interview article that presents her wok advice in her own words was opened and read; it is not cited because it is mostly her own words.
-- A review page at an alt-weekly returned a too-many-requests error, a reference page at a cookbook subscription site returned a forbidden error, and a page at a China-affairs site failed on a certificate error; none of these were read and none are cited.
-- Searched: Fuchsia Dunlop official website
-- Searched: Fuchsia Dunlop The Food of Sichuan book
-- Searched: The Food of Sichuan Fuchsia Dunlop review
-- Searched: Fuchsia Dunlop Every Grain of Rice review
-- Searched: Fuchsia Dunlop James Beard Foundation Book Award Food of Sichuan
-- Searched: James Beard Foundation 2020 Book Awards International cookbook finalists The Food of Sichuan
-- Searched: Fuchsia Dunlop wok technique stir-fry Sichuan regional dishes
-- Searched: Fuchsia Dunlop Sichuan cooking method stir-frying heat wok oil Bloomsbury Food of Sichuan excerpt techniques
-- Searched: Guardian OR Observer OR New York Times Fuchsia Dunlop Food of Sichuan cookbook review wok
-===== END FILE: kitchen/vetting/fuchsia-dunlop.md =====
-
-===== FILE: kitchen/vetting/heston-blumenthal.md =====
+===== FILE: kitchen/vetting/classical-french-technique.md =====
 ---
-lens: Heston Blumenthal-style lens
-name: Heston Blumenthal
-seat: core
-job: Aroma, texture, and the finishing touch
-question: Which one change most improves eating it?
-verdict: seat
-scope: Flavor, aroma, and texture improvements a home cook can add in one optional step
-checked: 2026-11-18
----
-
-# Heston Blumenthal-style lens
-
-## Official site
-
-- *Heston Blumenthal* (personal site): https://www.hestonblumenthal.com/ (checked 2026-11-18). A coming-soon page for a new project that describes a curious, creative, and playful look at the kitchen and says the approach is to question everything; it lists his restaurants and names no books.
-
-## Published work
-
-- *The Fat Duck Cookbook* (Bloomsbury, 2009): https://www.betterreading.com.au/book/the-fat-duck-cookbook/ (checked 2026-11-18). A bookseller listing that describes the restaurant's story followed by signature recipes and specialist writing on subjects such as synaesthesia, creaminess, and flavour expectation, and that mentions an interest in how smell affects taste.
-- *Heston Blumenthal at Home* (Bloomsbury, 2011): https://www.betterreading.com.au/book/heston-blumenthal-at-home/ (checked 2026-11-18). A bookseller listing that describes a technique section, with topics such as taste and flavour and seasoning with the five tastes, followed by recipes, and presents the book as showing effective techniques and why they work.
-- *In Search of Perfection* (Bloomsbury, 2006): https://www.betterread.com.au/book/in-search-of-perfection.do (checked 2026-11-18). A bookseller listing that describes a search for the best version of eight classic dishes, drawing on interviews with experts and on his own culinary and scientific research, with tips such as how to cut potatoes for frying.
-
-## Independent sources
-
-- *Heston Blumenthal at Home Review* (The Cooking World, 2021): https://www.thecookingworld.com/reviews/heston-blumenthal-at-home-review (checked 2026-11-18). A review by Diogo Lopes that calls the book designed for cooks who want to know how food works, singles out the flavour of its recipes, and warns that some recipes are laborious and hard for less experienced cooks to repeat.
-- *The Fat Duck Cookbook Review* (The Cooking World, 2018): https://www.thecookingworld.com/reviews/the-fat-duck-cookbook-review (checked 2026-11-18). A review by Diogo Lopes that says the book has a science section explaining the science behind each recipe and that restaurant books like it aim mainly to share knowledge, so cooking from them at home comes second.
-- *Nature's Bounty: A Heady Feast* (Psychology Today, 2010): https://www.psychologytoday.com/articles/201003/natures-bounty-heady-feast (checked 2026-11-18). An article by Katie Robbins that says the cookbook pairs famous recipes with the psychology and neuroscience behind them, links the cooking to memory, emotion, and expectation, and says liquid nitrogen and maltodextrin are used to create textures, aromas, and visual effects.
-
-## What the published work shows
-
-1. The published work explains the science behind a technique, giving the reason it works along with the steps, and treats cooking as something to understand and test.
-2. Flavor is treated as more than the basic tastes: seasoning and taste get their own technique topics, and expectation, memory, and context are said to shape how a dish is perceived.
-3. Aroma is treated as a lever on flavor: smell is studied for how it affects taste, and specialist ingredients are used to create aromas.
-4. Texture is designed on purpose, using specialist tools and ingredients such as liquid nitrogen and maltodextrin, and creaminess is a topic in its own right.
-5. Familiar dishes are rebuilt by researching the best version with experts and science, and the result can take a great deal of effort and be hard for a less experienced cook to repeat.
-
-## Where this lens can mislead
-
-Advice argued from these tendencies can steer a home cook toward specialist equipment, ingredients, and extra effort that an ordinary meal does not need, and the reviews describe parts of the work as laborious and not accessible to everyone. A change meant to improve aroma or texture can also crowd out the plain dish if it is not truly optional. Before adding anything, check that the dish already works without it, that the change can be skipped without harm, and that the cook owns the tool or ingredient it needs.
-
-## Verdict
-
-Seat. Three published works and three independent sources were opened and read, and the tendencies are supported by those pages, with a supported tendency about each part of the default scope and several about the fixed job. The scope is the default scope, so the lens may argue flavor, aroma, and texture improvements a home cook can add in one optional step.
-
-Parts covered: flavor (tendency 2); aroma (tendency 3); texture (tendency 4).
-
-## Access notes
-
-- Searched: Heston Blumenthal official website
-- Searched: The Fat Duck Cookbook Heston Blumenthal Bloomsbury
-- Searched: Heston Blumenthal In Search of Perfection book review
-- Searched: Heston Blumenthal at Home cookbook review
-- Searched: Bloomsbury Heston Blumenthal at Home book page
-- Searched: Heston Blumenthal In Search of Perfection Bloomsbury publisher page
-- Searched: Heston Blumenthal Fat Duck Cookbook review aroma texture multisensory
-- Searched: Heston Blumenthal In Search of Perfection Guardian review
-- Searched: Heston Blumenthal Fat Duck Cookbook James Beard Foundation award
-- The publisher's own site for the books could not be fetched with the page-fetch tool, so the book pages cited are bookseller listings that reprint publisher text; they are used as pages about the works and are not counted as independent.
-- The Fat Duck restaurant's own site was opened. It describes his approach briefly and mentions no books; it is the restaurant's site, so it is not cited.
-- A trade-press news item about the 2011 book deal was opened but its body was behind a paywall, so nothing was read from it.
-- A cookbook-library page and a book-catalogue page for the books returned an access error or a rate limit and were not read.
-- A Guardian review of the television series and several reader blogs and reader-review pages were seen only in search results and were not opened.
-- Awards for other Blumenthal books turned up in search results only and were not opened, so no award is claimed.
-===== END FILE: kitchen/vetting/heston-blumenthal.md =====
-
-===== FILE: kitchen/vetting/jacques-pepin.md =====
----
-lens: Jacques Pépin-style lens
-name: Jacques Pépin
+lens: Classical French technique lens
 seat: specialist
 job: Classical French technique and knife work
 question: Is the basic technique sound before anything is added?
 verdict: seat
 scope: French technique and basic knife work
-checked: 2026-11-18
+checked: 2026-11-19
 ---
 
-# Jacques Pépin-style lens
+# Classical French technique lens
 
-## Official site
+## What this lens holds
 
-- Jacques Pépin (jacquespepin.com): https://jacquespepin.com/ (checked 2026-11-18). A site carrying his name and a copyright notice in it, which lists his books and television series and presents *Complete Techniques* as a long-standing reference for home and professional cooks; the address jacquespepin.net redirects to it.
-
-## Published work
-
-- *The Complete Pépin*, episode Basic Knife Skills (PBS, 2007): https://www.pbs.org/video/basic-knife-skills-bcvhlv (checked 2026-11-18). The broadcaster's page for the episode, which says it covers selecting and sharpening knives, holding and positioning a knife, and chopping herbs and onions, and that the series is about technique rather than recipes.
-- *Jacques Pépin New Complete Techniques* (Hachette UK, 2012): https://hachette.co.uk/titles/jacques-p%c3%a9pin/jacques-p%c3%a9pin-new-complete-techniques/9781579129118 (checked 2026-11-18). The publisher's page for the revised technique reference, which says it gives step-by-step instructions with photographs of Pépin demonstrating and names techniques from sharpening a knife and peeling an onion to boning a chicken and carving garnishes from fruit and vegetables.
-- *Essential Pépin* video series (Jacques Pépin Foundation, 2011): https://jp.foundation/video-series/essential-pepin (checked 2026-11-18). The foundation's page for the technique videos that accompany the book, which says they cover knife skills, fruits and vegetables, fish and shellfish, and desserts.
-
-## Independent sources
-
-- *Bay Area Bites* review of *Jacques Pépin New Complete Techniques* (KQED, 2012): https://www.kqed.org/bayareabites/52238/cooking-up-refinement-with-jacques-pepins-new-complete-techniques (checked 2026-11-18). A signed review by a writer who cooked from the book, nearly all in her own words, which describes a French method for scrambled eggs and a consommé entry as the parts she tried and notes a presentation section with garnishes.
-- *Cookbook review: Jacques Pepin New Complete Techniques* (Mountain Librarian, 2012): https://mountainlibrarianreviews.blogspot.com/2012/11/cookbook-review-jacques-pepin-new.html (checked 2026-11-18). A reviewer's blog post, in the reviewer's own words, which says each entry has step-by-step instructions and photos and that the photos help most in the bread chapter.
-
-## What the published work shows
-
-1. The published work teaches technique as the thing being learned: the television episode is introduced as a show about technique and not recipes, and the book is a reference of techniques with recipes beside them.
-2. Each technique is shown as a sequence of steps with photographs of the cook demonstrating it.
+1. Technique is the thing being learned, and recipes sit beside it as practice.
+2. A technique is a sequence of steps that can be shown one at a time.
 3. Knife work starts from the tool and the hand before any cutting: choosing and sharpening the knife, then how to hold and position it, then the common cuts on herbs and vegetables such as onions.
-4. Classic French methods are applied to everyday dishes such as scrambled eggs and consommé, where the choice of pan and handling is what differs from the reviewer's usual way.
-5. Decorative skills, such as carving garnishes from fruit and vegetables and fluting mushrooms, sit in the same reference as the basics.
+4. The classic methods of French cooking apply to everyday dishes such as scrambled eggs and consommé, where the choice of pan and the handling are what differ from a cook's usual way.
+5. Decorative skills, such as carving garnishes from fruit and vegetables and fluting mushrooms, belong beside the basics.
 
 ## Where this lens can mislead
 
-This lens treats technique as something to be learned for its own sake and in a set order, so it can send a cook to a sharper knife, a different pan, or a practiced cut when the dish only needed a simple result, and it can make an easy dish sound more demanding than a home cook needs. Its French methods may differ from the cook's habit without changing the dish much, and its place for decorative skills can add fuss. The pages read describe books and a television episode, so what the lens says about hand position and motion is only as good as the cook's own tools and skill. When it raises a technique, check whether the cook's knife and pan suit the method and whether a plainer way gives the result the cook wants.
+This lens treats technique as something to be learned for its own sake and in a set order, so it can send a cook to a sharper knife, a different pan, or a practiced cut when the dish only needed a simple result, and it can make an easy dish sound more demanding than a home cook needs. The French methods it favors may differ from the cook's habit without changing the dish much, and its place for decorative skills can add fuss. What the lens says about hand position and motion is only as good as the cook's own tools and skill. When it raises a technique, check whether the cook's knife and pan suit the method and whether a plainer way gives the result the cook wants.
 
 ## Verdict
 
-Seat, as a specialist. The official site and three published works were opened and read, two independent reviews were opened and read, and five tendencies are supported by the pages cited. Each part of the default scope has a supported tendency: the review of the book describes a French method applied to eggs and consommé, and the episode and book pages describe knife work from selecting and sharpening the knife through holding it and cutting common vegetables. The scope is the default scope.
+Seat, as a specialist, with the full default scope. Five tendencies are recorded, and each part of the scope has one: a French method applied to eggs and consommé, and knife work from selecting and sharpening the knife through holding it and cutting common vegetables.
 
 Parts covered: French technique (tendency 4); basic knife work (tendency 3).
+===== END FILE: kitchen/vetting/classical-french-technique.md =====
 
-## Access notes
-
-- Searched: Jacques Pépin official site
-- Searched: Jacques Pépin New Complete Techniques book
-- Searched: Jacques Pépin knife skills basic cuts video technique
-- Searched: Jacques Pépin Essential Pépin book techniques recipes
-- Searched: Jacques Pépin New Complete Techniques review
-- Searched: Jacques Pépin classic French technique chef reviewed profile La Technique influence cooks
-- Searched: James Beard Foundation Cookbook Hall of Fame La Technique Jacques Pépin
-- Searched: Jacques Pépin Complete Techniques knife skills French cooking fundamentals review newspaper
-- Searched: jamesbeard.org Cookbook Hall of Fame Jacques Pépin La Technique La Méthode
-- Searched: Jacques Pépin knife skills how he cuts onion technique analysis writer watched learned
-- Searched: Jacques Pépin Complete Techniques 50th anniversary edition review
-- Searched: New York Times Style Magazine 25 most influential cookbooks last 100 years La Technique Pépin
-- Searched: Pépin Complete Techniques knife cuts chapter review cookbook blog julienne dice photographs
-- The official site was first tried at the jacquespepin.net address, which redirected to jacquespepin.com; the page does not use the word official, but it carries his name and a copyright notice in it and links to the foundation.
-- A magazine article on the book's influence and a public-television station article on the book could not be opened (access denied), and a James Beard Foundation profile page returned not found, so nothing from them is cited.
-- Opened and read but not cited: an America's Test Kitchen conversation page, a university alumni magazine profile, a tips list from a food site, an onion-cutting tips article, a school blog post, and a documentary clip page. Most of each was either other people's interview answers, a list of tips presented as his, or career history, so none is used as an independent source.
-- The book's 50th anniversary edition page from its publisher was opened and read but not cited. Reader ratings, praise printed by the publisher, and the results of searches for a Hall of Fame listing were seen only in search results and are not cited.
-- The publisher page for the revised book does not name the imprint, and the episode page lists the series as public television, so the publisher column gives the site that hosts the page.
-===== END FILE: kitchen/vetting/jacques-pepin.md =====
-
-===== FILE: kitchen/vetting/kenji-lopez-alt.md =====
+===== FILE: kitchen/vetting/indian-spice-layering.md =====
 ---
-lens: Kenji-style lens
-name: J. Kenji López-Alt
-seat: core
-job: Heat, ingredient function, and which variables matter
-question: Which variables actually change the result?
-verdict: seat narrower
-scope: Savory cooking technique
-checked: 2026-11-18
----
-
-# Kenji-style lens
-
-## Official site
-
-- *J. Kenji López-Alt, About* (official site): https://www.kenjilopezalt.com/about (checked 2026-11-18). His own site; it presents his books, columns, and videos as built on asking why techniques work, with food science and practical tips for home cooks.
-
-## Published work
-
-- *The Food Lab: Better Home Cooking Through Science* (W. W. Norton, 2015): https://wwnorton.co.uk/books/9780393081084-the-food-lab (checked 2026-11-18). The publisher's page for the book that organizes the science of cooking around familiar dishes and techniques such as searing, roasting, and blanching.
-- *The Wok: Recipes and Techniques* (W. W. Norton, 2022): https://wwnorton.co.uk/books/9780393541212-the-wok (checked 2026-11-18). The publisher's page for the book that explains how wok cooking works, including the mechanics of stir-frying and the char that wok heat gives, along with knife skills and stocking a pantry.
-
-## Independent sources
-
-- *The Food Lab: Better Home Cooking Through Science, review* (Publishers Weekly, 2015): https://www.publishersweekly.com/9780393081084 (checked 2026-11-18). A trade review describing the book as research-driven, drawn from his long-running column and earlier testing work, and readable without obscure ingredients or complicated directions.
-- *The Wok: Recipes and Techniques, review* (Publishers Weekly, 2022): https://publishersweekly.com/9780393541212 (checked 2026-11-18). A trade review describing a guide that covers equipment, method, and the science of how steam and heat affect food, with question-and-answer sidebars and step photos for harder techniques.
-- *A kitchen science savant shares his secrets in The Food Lab* (WGBH, 2015): https://www.wgbh.org/news/2015-12-01/a-kitchen-science-savant-shares-his-secrets-in-the-food-lab (checked 2026-11-18). A radio profile of the book and the column behind it, describing side-by-side tests of methods and explanations of why results differ.
-
-## What the published work shows
-
-1. Cooking questions are treated as things to test: methods are compared side by side and the results reported, then turned into dishes a home cook can make.
-2. A result is explained by its mechanism, such as how heat, moisture, or the chemistry of an ingredient changes browning or juiciness, so the cook learns why a step matters.
-3. One variable is changed at a time and its effect is traced, as when an alkaline ingredient is linked to faster browning.
-4. Equipment and heat source are treated as part of the method, so a technique is explained for the kind of stove and pan a home kitchen has, and the books stay readable without obscure ingredients.
-
-## Where this lens can mislead
-
-Advice argued from these tendencies can turn a simple dish into a testing exercise, so a cook may chase an explanation when a plain change of taste or timing is what the dish needs. Explanations built on one kind of stove, pan, or ingredient may not carry over to the cook's own kitchen, so check what equipment and heat the cook actually has before applying a conclusion. The lens explains why a result happens; it does not by itself diagnose a dish that has already gone wrong, so check the cook's report of what happened before arguing a cause.
-
-## Verdict
-
-Seat narrower. Two published works and three independent sources were opened and read, and four tendencies are supported, including ones about heat and ingredient function. No opened page supports the troubleshooting part of the default scope, so the lens is held to savory cooking technique. It may not argue troubleshooting, meaning diagnosing a dish that has already failed, baking or dessert formulas, or the regional authenticity of any cuisine.
-
-Parts covered: savory cooking technique (tendencies 1 and 2).
-
-## Access notes
-
-Searched: J. Kenji López-Alt official website
-Searched: The Food Lab Better Home Cooking Through Science W. W. Norton
-Searched: The Wok Recipes and Techniques J. Kenji López-Alt W. W. Norton
-Searched: The Food Lab review Kenji López-Alt book review science cooking
-Searched: James Beard Foundation Book Awards The Food Lab López-Alt winner
-Searched: Serious Eats The Food Lab column J. Kenji López-Alt
-
-The official site's home page was also opened; it points to recipes on a separate membership site, which was not read. His Serious Eats column could not be opened (the page-fetch tool refused that site), so the column is known only from search results and the profile above and is not cited as a read page. A Chemistry World review of The Food Lab loaded without its body text, and Library Journal, New York Journal of Books, and an NPR page on The Wok returned errors or timed out, so none of them is cited. An American Scientist review returned a server error on three tries. An award announcement page confirming the 2016 James Beard book award for The Food Lab was opened but is not cited.
-===== END FILE: kitchen/vetting/kenji-lopez-alt.md =====
-
-===== FILE: kitchen/vetting/maangchi.md =====
----
-lens: Maangchi-style lens
-name: Maangchi
-seat: specialist
-job: Korean home cooking
-question: Would this be recognized as the Korean dish it is named for?
-verdict: seat
-scope: Korean dishes
-checked: 2026-11-18
----
-
-# Maangchi-style lens
-
-## Official site
-
-- No official site could be read (checked 2026-11-18).
-
-## Published work
-
-- *Maangchi's Real Korean Cooking* (Open Road Media, ebook edition): https://openroadmedia.com/ebook/maangchis-real-korean-cooking/9780544465756 (checked 2026-11-18). An ebook publisher's page that describes the book as a wide survey of Korean home cooking, from simple dishes to restaurant favorites, with a chapter on quick kimchi and pickles, an ingredient glossary, substitution suggestions, and step-by-step photos.
-- *Maangchi's Big Book of Korean Cooking* (Barnes & Noble listing): https://www.barnesandnoble.com/w/maangchis-big-book-of-korean-cooking-maangchi/1130010809 (checked 2026-11-18). A bookseller's listing that presents the book as a comprehensive guide to authentic Korean home cooking, from everyday meals to celebration dishes.
-
-## Independent sources
-
-- *Maangchi's Big Book of Korean Cooking: From Everyday Meals to Celebration Cuisine* (Publishers Weekly, 2019): https://www.publishersweekly.com/9781328988126 (checked 2026-11-18). A review that says the recipes are explained clearly enough that difficult ones seem manageable, that classics are expanded into several versions of dishes such as bibimbap and kimchi, and that the book covers street food, soups and stews, and vegan temple cooking, with a photo guide to equipment and ingredients.
-- *Maangchi's Real Korean Cooking: Authentic Dishes for the Home Cook* (Publishers Weekly, 2015): https://www.publishersweekly.com/9780544129894 (checked 2026-11-18). A review that describes everyday meals built around rice and kimchi, ingredient and equipment lists for beginners, and chapters from rice dishes and noodles to soups, side dishes, pancakes, celebration food, and desserts, and recommends the book to anyone who wants to learn authentic Korean cooking.
-- *dropping the hammer* (Cannonball Read, 2018): https://cannonballread.com/2018/09/dropping-the-hammer/ (checked 2026-11-18). A reader's review of *Maangchi's Real Korean Cooking* that describes its opening pantry and tools chapter with Korean and English names, where to buy items, and substitutes, and its range from everyday dishes to party food, kimchi, desserts, and drinks.
-
-## What the published work shows
-
-1. The work surveys Korean food widely, from simple dishes with few ingredients through restaurant favorites to celebration food, and it shows one dish in several versions, as with bibimbap and kimchi.
-2. The work aims at authentic versions of the Korean dishes it names, written for a home cook, and arranges them by kind of dish: rice dishes, soups and stews, kimchi and pickles, and side dishes that can make up a full meal.
-3. The work starts the cook with ingredient and tool groundwork: an ingredient glossary and photo guide, Korean and English names, where to buy items, and substitutes for cooks without an Asian market nearby.
-4. The work explains recipes plainly and with step-by-step photos, so that difficult dishes seem manageable to a home cook.
-5. The work includes both quick preparations, such as fast kimchi and pickles, and long projects, such as a soybean paste that takes a long time to make.
-
-## Where this lens can mislead
-
-This lens measures a dish against the Korean home versions found in two books, and the pages read show one dish in several versions, so it can press for one form when the cook means another. Its ingredient groundwork assumes the cook can reach an Asian market, and its listed substitutes may leave a dish less recognizable than the lens suggests. Its range from quick pickles to long projects can also send a cook toward more work than a simple meal needs. Check which version of the dish the cook means, which ingredients the cook can actually buy, and whether a substitute keeps what makes the dish recognizable.
-
-## Verdict
-
-Seat. At least two published works relevant to the job were opened and read, three independent sources were opened and read, five tendencies are supported by cited pages, and tendencies 1 and 2 are about the fixed job. The one part of the default scope is covered, so the scope is the default scope.
-
-Parts covered: Korean dishes (tendencies 1 and 2).
-
-## Access notes
-
-- Official site not read: maangchi.com
-- The official site and its pages for both books returned an access error on every attempt, so no page of the official site was read; the book pages above are the publisher-side and bookseller pages that could be opened.
-- The Open Road Media page lists a larger publisher as the publisher of the book; no page from that publisher could be opened in this session.
-- No publisher page for the second book could be opened; the bookseller listing is cited for it, and its description is unsigned and cut off, so little more than the scope was taken from it.
-- The two Publishers Weekly pages carry an unsigned review paragraph beside catalog and navigation text; only the review paragraph was used.
-- A video channel page for Maangchi returned only site navigation text, so nothing was taken from it.
-- Several library catalog records, a Korean newspaper review of a different cookbook, and other listings were seen only in search results or did not describe the work, and nothing was taken from them.
-- Searched: Maangchi official site Korean recipes
-- Searched: Maangchi's Big Book of Korean Cooking Penguin Random House
-- Searched: Maangchi's Real Korean Cooking Houghton Mifflin Harcourt book
-- Searched: Maangchi's Real Korean Cooking Authentic Dishes for the Home Cook HarperCollins Mariner Books
-- Searched: Maangchi Korean cookbook review kimchi gochujang pantry
-- Searched: Maangchi's Big Book of Korean Cooking ebook everyday meals celebration cuisine description netgalley OR openroadmedia OR hmhbooks
-- Searched: Maangchi's Big Book of Korean Cooking review newspaper cookbook
-- Searched: Maangchi's Big Book of Korean Cooking publisher description 140 detailed recipes ingredients photo guide
-===== END FILE: kitchen/vetting/maangchi.md =====
-
-===== FILE: kitchen/vetting/madhur-jaffrey.md =====
----
-lens: Madhur Jaffrey-style lens
-name: Madhur Jaffrey
+lens: Indian spice layering lens
 seat: specialist
 job: Indian home cooking and spice layering
 question: Are the spices added in an order and form that builds the flavor this dish needs?
 verdict: seat
 scope: Indian dishes
-checked: 2026-11-18
+checked: 2026-11-19
 ---
 
-# Madhur Jaffrey-style lens
+# Indian spice layering lens
 
-## Official site
-
-- No official site could be read (checked 2026-11-18).
-
-## Published work
-
-- *An Invitation to Indian Cooking* (Penguin Random House, 50th anniversary edition 2023): https://penguinrandomhouse.com/books/211913/an-invitation-to-indian-cooking (checked 2026-11-18). The publisher page presents the book as a broad survey of Indian home cooking across appetizers, soups, vegetables, meats, fish, chutneys, breads, and desserts, and says it teaches home cooks to make Indian dishes.
-- *An Invitation to Indian Cooking* (Penguin UK, paperback 2003): https://www.penguin.co.uk/books/1036106/an-invitation-to-indian-cooking (checked 2026-11-18). The publisher page describes an introduction to the range and regional differences of Indian cooking, a list of the herbs and spices used in India, a glossary of cooking terms, and suggested menus.
-- *Vegetarian India* (Penguin Random House, 2015): https://penguinrandomhouse.com/books/isbn/9781101874868 (checked 2026-11-18). The publisher page presents vegetable and grain dishes gathered from home cooks across the subcontinent, with the stories behind the dishes, for home cooks including those new to Indian cooking.
-- *Madhur Jaffrey's Instantly Indian Cookbook* (Penguin Random House, 2019): https://penguinrandomhouse.com/books/600525/madhur-jaffreys-instantly-indian-cookbook-by-madhur-jaffrey (checked 2026-11-18). The publisher page describes reworked classics and new dishes for the Instant Pot that aim to keep depth of flavor, a pantry guide to spices and special ingredients, and her own garam masala blend.
-
-## Independent sources
-
-- *Madhur Jaffrey: Bringing seasoning instincts to US* (Associated Press, republished by Deseret News, 2010): https://www.deseret.com/2010/12/14/20160539/madhur-jaffrey-bringing-seasoning-instincts-to-us/ (checked 2026-11-18). A news feature by a wire reporter on her approach to seasoning, covering spices as a palette, roasting or quickly frying spices in hot oil to draw out different flavors, and how the seasoning of a fish curry differs by region.
-- *One great cookbook: Madhur Jaffrey's Vegetarian India* (Scott Hocker, The Week, 2024): https://theweek.com/culture-life/food-drink/vegetarian-india-madhur-jaffrey (checked 2026-11-18). A signed review of *Vegetarian India* that describes its organization by dish type and by ingredient, its clear recipes that assume little of the cook, its coverage of regions across the subcontinent, and unexpected seasonings for familiar vegetables.
-- *Madhur Jaffrey: Kitchen Confidante* (Nandini Nair, Open magazine, 2023): https://openthemagazine.com/lounge/books/madhur-jaffrey-kitchen-confidante (checked 2026-11-18). A signed review of a new edition of *Indian Cookery* that describes detailed step-by-step instructions for beginners, techniques such as grinding and roasting spices, and recipes learned by watching home cooks.
-
-## What the published work shows
+## What this lens holds
 
 1. The same spices give many different flavors when the cook changes how they are combined and prepared, much as paints mix into different shades, and roasting or quickly frying spices in hot oil draws out different flavors.
-2. Grinding and roasting spices are taught as basic techniques, set out in step-by-step detail for a cook with no prior knowledge, along with small handling tips and cues such as flame strength, stirring, and pot size.
-3. Seasoning follows place: the same kind of dish, such as a fish curry, is flavored differently from one region to the next, and the books present Indian cooking as regional and varied.
-4. The recipes come from watching home cooks and are written for home cooks, clear and reliable, and a book may be organized by dish type or by the ingredient a cook already has on hand instead of by region.
-5. The books give the home cook a foundation to work from, such as a list of the herbs and spices in use, a glossary of cooking terms, a pantry guide, and the author's own garam masala, and one book reworks classics for a modern appliance while aiming to keep their depth of flavor.
+2. Grinding and roasting spices are basic techniques, set out step by step for a cook with no prior knowledge, along with small handling tips and cues such as flame strength, stirring, and pot size.
+3. Seasoning follows place: the same kind of dish, such as a fish curry, is flavored differently from one region to the next, and Indian cooking is regional and varied.
+4. The cooking is home cooking, learned from watching home cooks and written to be clear and reliable, and it can be organized by dish type or by the ingredient a cook already has on hand instead of by region.
+5. Give the home cook a foundation to work from, such as a list of the herbs and spices in use, a glossary of cooking terms, a pantry guide, and a house garam masala, and rework a classic for a modern appliance only while aiming to keep its depth of flavor.
 
 ## Where this lens can mislead
 
-It reads spicing as a matter of form and combination, and the pages read do not set a fixed order for adding spices, so it can speak about order with more certainty than the evidence gives; check the dish's own source for when each spice goes in. Its habit of roasting and grinding spices and keeping a stocked pantry can add steps and ingredients that a simple dish does not need, and its regional framing can push a cook to look for one correct version of a dish. Its reworking of classics for a modern appliance can hide that a shortcut changes how the flavor builds, so check what the shortcut gives up.
+It reads spicing as a matter of form and combination, and this record sets no fixed order for adding spices, so it can speak about order with more certainty than it has; check the dish's own source for when each spice goes in. Its habit of roasting and grinding spices and keeping a stocked pantry can add steps and ingredients that a simple dish does not need, and its regional framing can push a cook to look for one correct version of a dish. Its reworking of classics for a modern appliance can hide that a shortcut changes how the flavor builds, so check what the shortcut gives up.
 
 ## Verdict
 
-Seat. At least two published works have pages that were opened and read, three independent sources were opened and read, and five tendencies are supported by those pages, with the fixed job covered by tendencies 1 and 2. The whole default scope is one part, Indian dishes, and every tendency is about it, so the lens keeps the default scope.
+Seat, with the full default scope. Five tendencies are recorded, with the job covered by tendencies 1 and 2. The scope is one part, Indian dishes, and every tendency is about it.
 
 Parts covered: Indian dishes (tendencies 1, 2, 3, 4 and 5).
+===== END FILE: kitchen/vetting/indian-spice-layering.md =====
 
-## Access notes
-
-- Official site not read: www.madhur-jaffrey.com
-- Two attempts with the page-fetch tool at that address, with and without the leading www, failed to return a page, and a third attempt at the form without a hyphen failed to resolve; a reference encyclopedia page read in this session gives the hyphenated address as her website, which is how the address is known. That encyclopedia page is not cited.
-- A publisher page for *Indian Cookery* and one for *At Home with Madhur Jaffrey* loaded with only a title and no description, so neither is cited.
-- No page that confirmed *Madhur Jaffrey's Indian Cooking* was opened, so that lead is not cited.
-- A Saveur reading list, a Saveur review of another of her books, and a MasterClass lesson page returned a refusal, and an NPR transcript timed out, so none of them was read.
-- A Bon Appétit review with a question-and-answer section, read on a Yahoo lifestyle page, and a Splendid Table interview transcript were opened and read, but her own answers are most of the text on each, so they are neither independent nor cited. A James Beard Foundation blog page on *Vegetarian India* is also mostly her own words and is not cited.
-- The James Beard Foundation Cookbook Hall of Fame page at its usual address returned not found. A search result states that *An Invitation to Indian Cooking* was inducted into that hall of fame, but no page opened here confirms it, so it is not used.
-- A James Beard Foundation feature, a Southern Foodways Alliance piece, and a second Splendid Table article were opened and read but have little on spices, so they are not cited. A Food52 page returned a too-many-requests error.
-- The order in which spices are added is not stated as a rule by any page read; tendencies 1 and 2 claim only forms and combinations.
-- Searched: Madhur Jaffrey official website
-- Searched: madhur-jaffrey.com Madhur Jaffrey books recipes site
-- Searched: Madhur Jaffrey's Indian Cooking Barron's publisher book page
-- Searched: Madhur Jaffrey Indian Cooking cookbook review spices cooking oil whole spices ground spices
-- Searched: Madhur Jaffrey whole spices hot oil first, ground spices, layering flavor technique profile
-- Searched: Madhur Jaffrey Invitation to Indian Cooking James Beard Cookbook Hall of Fame
-- Searched: Madhur Jaffrey Vegetarian India cookbook review James Beard Award
-- Searched: Madhur Jaffrey Instantly Indian cookbook review Instant Pot spices tempering
-- Searched: Madhur Jaffrey cookbook review Guardian OR New York Times OR Eater OR Bon Appétit Indian spices tempering
-- Searched: Madhur Jaffrey Instantly Indian review Priya Krishna Bon Appetit
-- Searched: Madhur Jaffrey Invitation to Indian Cooking James Beard Foundation Cookbook Hall of Fame
-- Searched: Madhur Jaffrey Instantly Indian Cookbook review Instant Pot
-- Searched: Madhur Jaffrey Vegetarian India review IACP cookbook award
-- Searched: Madhur Jaffrey cookbook spices tempering review newspaper profile of her cooking
-===== END FILE: kitchen/vetting/madhur-jaffrey.md =====
-
-===== FILE: kitchen/vetting/marcella-hazan.md =====
+===== FILE: kitchen/vetting/italian-restraint.md =====
 ---
-lens: Marcella Hazan-style lens
-name: Marcella Hazan
+lens: Italian restraint lens
 seat: specialist
 job: Italian home cooking and restraint
 question: What can be taken out so the main ingredient is clear?
 verdict: seat
 scope: Italian dishes
-checked: 2026-11-18
+checked: 2026-11-19
 ---
 
-# Marcella Hazan-style lens
+# Italian restraint lens
 
-## Official site
+## What this lens holds
 
-- No official site (checked 2026-11-18).
-
-## Published work
-
-- *The Essentials of Classic Italian Cooking* (Pan Macmillan, UK edition): https://www.panmacmillan.com/authors/marcella-hazan/the-essentials-of-classic-italian-cooking/9780752228044 (checked 2026-11-18). The publisher's page presents a large, text-led guide to Italian cooking for beginners and experienced cooks, covering soups, pastas, risottos, and meat and vegetable dishes and teaching basic skills through detailed instructions.
-- *Essentials of Classic Italian Cooking* (Penguin Random House, US edition): https://penguinrandomhouse.com/books/77517/essentials-of-classic-italian-cooking-by-marcella-hazan (checked 2026-11-18). The publisher's page presents a manual for cooks of every level, with line drawings, that combines two earlier books, and it relays reviewers' praise for its clear descriptions of technique.
-- *Ingredienti: Marcella's Guide to the Market* (Simon & Schuster, 2016): https://www.simonandschuster.net/books/Ingredienti/Marcella-Hazan/9781451627374 (checked 2026-11-18). The publisher's page presents a short guide to choosing produce, pantry staples, and cured meats, with no recipes, built on the idea that shopping comes before cooking.
-
-## Independent sources
-
-- *Publishers Weekly* review of *Essentials of Classic Italian Cooking* (Publishers Weekly, 1992): https://www.publishersweekly.com/9780394584041 (checked 2026-11-18). An unsigned trade review that describes the book as a handbook of ingredients, techniques, and classic dishes, chosen for taste over novelty and written without complicated methods or jargon.
-- *Cooking, Finally, From The Greatest Italian Cookbook Ever Written* (The Takeout, 2020): https://thetakeout.com/marcella-hazans-classic-italian-cookbooks-are-the-bes-1842821549 (checked 2026-11-18). A signed article by Kevin Pang, mostly in his own words, that presents *Essentials of Classic Italian Cooking* as a book of restraint whose recipes use pantry staples and ask the cook for more intuition.
-- *Essentials of Classic Italian Cooking* review (Head Butler, 2022): https://headbutler.com/reviews/essentials-classic-italian-cooking/ (checked 2026-11-18). A signed review by Jesse Kornbluth that describes a book of simple recipes with few ingredients, where the cook judges doneness by observation and flavor is built on a base.
-
-## What the published work shows
-
-1. The recipes are kept simple: they lean on pantry staples and a short list of ingredients rather than specialty products, and they avoid complicated methods and jargon.
-2. The recipes show restraint: a dish is built from few components and little beyond its main ingredient, so that the main ingredient stays clear.
-3. Good cooking starts with choosing the ingredient well, and that advice is meant to work with what ordinary shops sell, including the plain view that the organic or the fresh-made form is not always the better one.
-4. Technique is explained in plain, detailed language so that cooks of every level can follow it, with the book carrying its teaching in text and line drawings.
-5. The recipes leave some judgment to the cook, who is expected to watch the food for doneness and to use intuition, rather than follow every step by rote.
+1. Keep a recipe simple: lean on pantry staples and a short list of ingredients rather than specialty products, and avoid complicated methods and jargon.
+2. Show restraint: build a dish from few components and little beyond its main ingredient, so that the main ingredient stays clear.
+3. Good cooking starts with choosing the ingredient well, from what ordinary shops sell, and the organic or the fresh-made form is not always the better one.
+4. Explain technique in plain, detailed language so that cooks of every level can follow it.
+5. Leave some judgment to the cook, who is expected to watch the food for doneness and to use intuition, rather than follow every step by rote.
 
 ## Where this lens can mislead
 
-This lens favors removing and simplifying, so it can strip a dish that a cook wants bolder or more layered, and it assumes the main ingredient is good enough to carry the dish alone, which a weaker ingredient will not. Its recipes lean on the cook's own judgment about doneness, so a cook who needs exact cues may find little to act on. Check how good the main ingredient actually is before taking anything out, and check that the dish being cooked is one that is meant to be plain.
+This lens favors removing and simplifying, so it can strip a dish that a cook wants bolder or more layered, and it assumes the main ingredient is good enough to carry the dish alone, which a weaker ingredient will not. It leans on the cook's own judgment about doneness, so a cook who needs exact cues may find little to act on. Check how good the main ingredient actually is before taking anything out, and check that the dish being cooked is one that is meant to be plain.
 
 ## Verdict
 
-Seat. Two of her published works have publisher pages that were opened and read, two independent sources were opened and read, five tendencies are supported by the pages cited, and tendencies 1 and 2 are about the fixed job. The lens keeps the whole default scope as one part.
+Seat, with the full default scope. Five tendencies are recorded, and tendencies 1 and 2 are about the job. The lens keeps the whole scope as one part.
 
 Parts covered: Italian dishes (tendencies 1 and 2).
+===== END FILE: kitchen/vetting/italian-restraint.md =====
 
-## Access notes
-
-No official site was found. Searches returned only publisher author pages, bookseller pages, and reference pages.
-
-Several other pages were not read: the BookPage review, a South China Morning Post review, a cookbook-library page for *The Classic Italian Cook Book*, and a Random House page that loaded with no content about the book, so none of them is cited. A 1997 *Publishers Weekly* article and a 2016 *Publishers Weekly* review of *Ingredienti* were opened but are not cited. *The Classic Italian Cook Book* was not read on a page of its own; the publisher pages above describe it as one of the two books combined in *Essentials of Classic Italian Cooking*.
-
-Searched: Marcella Hazan official website
-Searched: Essentials of Classic Italian Cooking Marcella Hazan Knopf
-Searched: Marcella Hazan Classic Italian Cook Book review
-Searched: Ingredienti Marcella's Guide to the Market Simon & Schuster
-Searched: Marcella Hazan The Classic Italian Cook Book 1973 Harper's Magazine Press OR Knopf book page
-Searched: Guardian review Essentials of Classic Italian Cooking Marcella Hazan
-===== END FILE: kitchen/vetting/marcella-hazan.md =====
-
-===== FILE: kitchen/vetting/rick-martinez.md =====
+===== FILE: kitchen/vetting/korean-home-cooking.md =====
 ---
-lens: Rick Martinez-style lens
-name: Rick Martinez
+lens: Korean home cooking lens
 seat: specialist
-job: Regional Mexican cooking
-question: Which regional version of this dish are we making, and is the adaptation defensible?
+job: Korean home cooking
+question: Would this be recognized as the Korean dish it is named for?
 verdict: seat
-scope: Mexican dishes
-checked: 2026-11-18
+scope: Korean dishes
+checked: 2026-11-19
 ---
 
-# Rick Martinez-style lens
+# Korean home cooking lens
 
-## Official site
+## What this lens holds
 
-- Official site (chefrickmartinez.com): https://chefrickmartinez.com/ (checked 2026-11-18). The author's own site, which presents his books *Mi Cocina* and *Salsa Daddy*, his recipe publication Sazón, and his cooking classes, and describes his aim as challenging old ideas about Mexican food and helping readers cook with confidence as dishes are cooked in Mexico.
-
-## Published work
-
-- *Mi Cocina: Recipes and Rapture from My Kitchen in Mexico* (Clarkson Potter): https://www.penguinrandomhouse.com/books/634420/mi-cocina-by-rick-martinez/ (checked 2026-11-18). The publisher's page for the cookbook, which presents it as recipes re-created from dishes tasted while traveling the country, with essays and a section for each region.
-- *Salsa Daddy* (Clarkson Potter): https://www.penguinrandomhouse.com/books/762096/salsa-daddy-a-cookbook-by-rick-martinez/ (checked 2026-11-18). The publisher's page for the salsa cookbook, which groups salsas by how they are prepared, sets traditional and modern versions side by side, and frames the book around customizing.
-- *Sazón* (Substack newsletter and recipe archive): https://chefrickmartinez.substack.com/p/inside-sazon-recipes-cooking-classes (checked 2026-11-18). The author's own page describing the publication, its recipe categories, its labels for recipes, and how each recipe covers the dish as cooked in Mexico and as made at home.
-
-## Independent sources
-
-- *Mi cocina: recipes and rapture from my kitchen in México* (review by a librarian, Los Angeles Public Library, 2022): https://www.lapl.org/books-emedia/lapl-reads/review/mi-cocina-recipes-and-rapture-my-kitchen-me%CC%81xico (checked 2026-11-18). A library staff review that describes the cookbook as organized by region, with chapter openings on food context and history, a pantry chapter, and a short story with each recipe.
-- *The 2023 James Beard Media Award Winners* (James Beard Foundation, 2023): https://www.jamesbeard.org/blog/the-2023-james-beard-media-award-winners (checked 2026-11-18). The award body's own listing, which names *Mi Cocina* among the 2023 book award winners in the International category.
-
-## What the published work shows
-
-1. Cooking is organized by Mexican region, and each regional chapter opens with the food context and a short history of the region's place in Mexican cooking.
-2. Dishes are tied to the places and meals the author met while traveling the country, so a recipe comes with where it is from and the history and places behind it.
-3. The cooking starts from a pantry foundation covering chiles, corn and wheat, salsas, condiments, and seasonings, before the regional chapters begin.
-4. A recipe shows how the dish is cooked in Mexico and how the author makes it at home, and it says what can be substituted and which parts of the recipe can change without ruining it.
-5. Recipes are marked as classic dishes rooted in Mexican cooking where they are, and the salsa book sets traditional and modern versions side by side, with each recipe offered as a starting point for the cook to adjust.
+1. Korean food is wide, from simple dishes with few ingredients through restaurant favorites to celebration food, and one dish exists in several versions, as with bibimbap and kimchi.
+2. Aim at the authentic version of the Korean dish that is named, made for a home cook, and think by kind of dish: rice dishes, soups and stews, kimchi and pickles, and side dishes that can make up a full meal.
+3. Start with ingredient and tool groundwork: what an ingredient is, its Korean and English names, where to buy it, and what to substitute when no Asian market is nearby.
+4. Explain a recipe plainly and step by step, so that a difficult dish seems manageable to a home cook.
+5. The cooking holds both quick preparations, such as fast kimchi and pickles, and long projects, such as a soybean paste that takes a long time to make.
 
 ## Where this lens can mislead
 
-It treats a dish as belonging to a place, so it can send a cook looking for one correct regional version when the cook only wants a good weeknight meal, and it can turn a simple dish into a research project. Its pantry foundation and its home versions assume ingredients such as particular chiles and corn products that a home cook may not be able to buy, and its openness to adjusting a recipe can make a swap sound safer than it is. Check which regional version the cook actually means, whether the cook's ingredients can reach it, and whether a change keeps what makes the dish recognizable.
+This lens measures a dish against established Korean home versions, and one dish exists in several versions, so it can press for one form when the cook means another. Its ingredient groundwork assumes the cook can reach an Asian market, and its substitutes may leave a dish less recognizable than the lens suggests. Its range from quick pickles to long projects can also send a cook toward more work than a simple meal needs. Check which version of the dish the cook means, which ingredients the cook can actually buy, and whether a substitute keeps what makes the dish recognizable.
 
 ## Verdict
 
-Seat. Three published works were opened and read, the official site and two independent sources were opened and read, and five tendencies are supported by the pages cited, and they are about regional Mexican cooking, the fixed job. The default scope is one part and it has supported tendencies, so the lens keeps the whole default scope.
+Seat, with the full default scope. Five tendencies are recorded, and tendencies 1 and 2 are about the job. The one part of the scope is covered.
 
-Parts covered: Mexican dishes (tendencies 1, 2, 3, 4 and 5).
+Parts covered: Korean dishes (tendencies 1 and 2).
+===== END FILE: kitchen/vetting/korean-home-cooking.md =====
 
-## Access notes
-
-- Official site: the page cited above was read. The author's older domain redirected to it, and no separate page for a book was found on it, so the publisher's pages were used for the two books and the author's own Sazón page was used for the recipe publication.
-- A guessed web address for the author's site did not resolve, a guessed page for the books on the official site was not found, and a guessed publisher page for the cookbook returned an unrelated book, so none of them is cited.
-- A VICE review of *Mi Cocina* and several reader and bookseller pages appeared in search results only, or did not load, and are not cited.
-- Searched: Rick Martinez official site Mi Cocina cookbook
-- Searched: Mi Cocina Rick Martinez cookbook review regional Mexican
-- Searched: Rick Martinez chef author website mrickmartinez
-- Searched: Rick Martínez Sazón Substack regional Mexican recipes history techniques
-- Searched: Penguin Random House Mi Cocina Recipes and Rapture from My Kitchen in Mexico Rick Martinez Clarkson Potter
-- Searched: James Beard Foundation Awards 2023 International cookbook Mi Cocina Rick Martinez
-- Searched: Mi Cocina Rick Martínez review cookbook regions critic newspaper
-===== END FILE: kitchen/vetting/rick-martinez.md =====
-
-===== FILE: kitchen/vetting/samin-nosrat.md =====
+===== FILE: kitchen/vetting/pantry-adaptation.md =====
 ---
-lens: Samin Nosrat-style lens
-name: Samin Nosrat
-seat: specialist
-job: Balance of salt, fat, acid, and heat
-question: What is missing from the balance?
-verdict: seat
-scope: Seasoning and balance in any dish
-checked: 2026-11-18
----
-
-# Samin Nosrat-style lens
-
-## Official site
-
-- *ciaosamin.com* (Samin Nosrat): https://ciaosamin.com/ (checked 2026-11-18). The home page of the official site; it presents the cookbook *Good Things* and links to the site for *Salt, Fat, Acid, Heat* and to the *Home Cooking* podcast.
-
-## Published work
-
-- *Salt, Fat, Acid, Heat* (book and Netflix series, site for both): https://www.saltfatacidheat.com (checked 2026-11-18). The site for the book and the series; it is organized with a section for each of salt, fat, acid, and heat, and its tagline says that mastering the four elements means mastering the kitchen.
-- *Salt, Fat, Acid, Heat* (Canongate): https://canongate.co.uk/books/2153-salt-fat-acid-heat-mastering-the-elements-of-good-cooking/ (checked 2026-11-18). The UK publisher's page for the book, which presents it as a way to cook by instinct from four elements and names balancing a vinaigrette, caramelising roasted vegetables, and braising stews among its subjects.
-- *Good Things* (Random House, 2025): https://www.penguinrandomhouse.com/books/622646/good-things-by-samin-nosrat/ (checked 2026-11-18). The publisher's page for the second cookbook, which describes tested, flavor-forward recipes alongside tips and techniques such as how to buy olive oil.
-
-## Independent sources
-
-- *The Ringer* (review of the series by Danny Chau, 2018): https://www.theringer.com/2018/10/17/17988926/salt-fat-acid-heat-netflix-review-samin-nosrat (checked 2026-11-18). A review that describes the series as a cooking show with no recipes, aimed at basic flavor knowledge and at convincing viewers they can cook well.
-- *The Takeout* (review of the series by Gwen Ihnat, 2018): https://thetakeout.com/salt-fat-acid-heat-netflix-tv-review-1829667876 (checked 2026-11-18). A review that says the series starts from the idea that cooking has become too complicated and reduces it to a few elements, with examples of ingredients that supply salt or acid and fat.
-- *New Statesman* (review of the series by Anna Leszkiewicz, 2018): https://www.newstatesman.com/culture/food-drink/2018/10/salt-fat-acid-heat-samin-nosrat-review (checked 2026-11-18). A review of the first episode, on fat, which notes that fat is treated as flavor and texture and that food cultures are tied to their fats.
-
-## What the published work shows
-
-1. The work organizes cooking around four elements, salt, fat, acid, and heat, and holds that learning those few fundamentals lets a cook work well with any ingredients.
-2. The series teaches principles and basic flavor knowledge rather than the copying of dishes, aiming at the cook's own judgment instead of success at a single meal.
-3. Ingredients are read for the elements they supply: one ingredient can bring more than one, as sour cream adds acid and fat, and salt comes from foods such as olives, cheese, pickles, and capers.
-4. Fat is presented as a source of flavor and texture rather than something to avoid, and food cultures are linked to their characteristic fats.
-5. Heat is treated as a lever on flavor, with browning named as one way flavor intensifies, and the examples include caramelised roasted vegetables and braised stews.
-
-## Where this lens can mislead
-
-This lens treats a dish as a question of four elements, so it can reduce a problem of structure or technique, as in baking, to a question of seasoning and miss the real cause. It leans on tasting and judgment over measured instruction, so a cook who needs an exact, repeatable result gets little to act on, and any number has to come from the recipe or a cited standard. Because an ingredient is read for every element it supplies, it can encourage stacking salty or acidic ingredients, and its examples can assume ingredients or access that a home cook lacks. Check where each element in the dish already comes from, taste before adding more, and ask whether the fault is in seasoning at all.
-
-## Verdict
-
-Seat. The record has three or more supported tendencies, one of them about the fixed job, and more than two published works with pages read, and independent sources were read. The one part of the default scope, seasoning and balance in any dish, has supported tendencies, so the scope is the default scope.
-
-Parts covered: Seasoning and balance in any dish (tendencies 1 and 3).
-
-## Access notes
-
-Searched: Samin Nosrat official site
-Searched: Salt, Fat, Acid, Heat book Samin Nosrat
-Searched: Salt Fat Acid Heat review Nosrat cookbook teaches four elements
-Searched: Salt Fat Acid Heat Netflix series review
-Searched: James Beard Foundation 2018 book awards General Cookbook Salt, Fat, Acid, Heat
-Searched: Kirkus OR Publishers Weekly review Salt, Fat, Acid, Heat Nosrat
-Searched: Samin Nosrat Good Things cookbook review
-
-The about page of the official site, the book page and the *Good Things* page in its shop, and an awards body's winners listing for the book were also opened and read but are not cited. Two pages from the American publisher of the book returned a forbidden error and a *Saveur* review also did not load, so none was read. A regional magazine's review redirected to another address and was not opened. A Netflix address tried for the series showed an unrelated title and was not used. Only the first part of the long UK publisher page was read. Anything else seen in search results, such as other reviews and bookseller listings, was not opened and is not cited.
-===== END FILE: kitchen/vetting/samin-nosrat.md =====
-
-===== FILE: kitchen/vetting/sohla-el-waylly.md =====
----
-lens: Sohla El-Waylly-style lens
-name: Sohla El-Waylly
+lens: Pantry adaptation lens
 seat: core
 job: Substitutions, leftovers, and pantry cooking
 question: How do we make what is here work coherently?
 verdict: seat
 scope: Adapting a recipe to the pantry, substitutions, and leftovers
-checked: 2026-11-18
+checked: 2026-11-19
 ---
 
-# Sohla El-Waylly-style lens
+# Pantry adaptation lens
 
-## Official site
-
-- *Sohla El-Waylly* (personal site): https://sohla.squarespace.com/ (checked 2026-11-18). The home page of her personal site, where she describes herself as a chef, video host, and culinary producer, with sections for recipes, videos, and contact.
-
-## Published work
-
-- *Start Here: Instructions for Becoming a Better Cook* (Penguin Random House, 2023): https://www.penguinrandomhouse.com/books/677636/start-here-by-sohla-el-waylly/ (checked 2026-11-18). The publisher's page for her cookbook, which presents it as a technique-driven guide with practical advice, scientific background, and an almost endless assortment of recipe variations.
-- *Hot Dish with Sohla*, the post on making dinner with whatever is on hand (her Substack newsletter): https://sohla.substack.com/p/my-formula-to-make-dinner-with-whatever (checked 2026-11-18). A post that sets out a loose formula for dinner from the fridge, with vegetables chosen first, and says which ingredients can stand in for each other.
-- *Thanksgiving Leftovers Sandwich* (her personal site, 2020): https://sohla.squarespace.com/recipe-search/thanksgiving-leftovers-sandwich (checked 2026-11-18). A recipe page that turns holiday leftovers into a new dish, treating the light and dark turkey differently and using leftover stuffing in place of one of the bread layers.
-- *Hot Dish with Sohla*, the post archive (her Substack newsletter): https://sohla.substack.com/archive (checked 2026-11-18). A list of her newsletter posts, whose titles include one about meal prep for people who dislike leftovers and one about making dinner with whatever.
-
-## Independent sources
-
-- *Start Here Review Part 3: The Challenge* (Alexandra Leigh, *Alex at the Table*, 2025): https://alexatthetable.substack.com/p/start-here-review-part-3-the-challenge (checked 2026-11-18). A reader's review of the cookbook that says its recipes are built to be varied, with a chicken recipe laid out as a framework of protein, aromatics, cooking liquid, and a hearty vegetable that can be adapted from what is in the refrigerator and pantry.
-- *Start Here Review Part 4: Favorite Recipes* (Alexandra Leigh, *Alex at the Table*, 2025): https://alexatthetable.substack.com/p/start-here-review-part-4-favorite (checked 2026-11-18). A second post in the same review, which notes ingredient swaps in several of the book's recipes and a recipe that uses up a garden surplus.
-
-## What the published work shows
+## What this lens holds
 
 1. Dinner from whatever is on hand starts from a loose formula of a protein, vegetables, a starch, and a wild card such as a quick sauce, pickle, or dip, and the vegetable is decided first because it largely sets how the rest of the meal is cooked.
-2. Recipes are written as frameworks with named parts that can be swapped, such as protein, aromatics, cooking liquid, and a hearty vegetable, and they carry variations, so a cook can improvise from the refrigerator and pantry or replace an ingredient that is missing.
+2. A recipe is a framework with named parts that can be swapped, such as protein, aromatics, cooking liquid, and a hearty vegetable, so a cook can improvise from the refrigerator and pantry or replace an ingredient that is missing.
 3. Within a kind of ingredient, one can stand in for another: any pasta shape in a noodle soup, one cruciferous vegetable for another, and a sour condiment or a sauce made from wilting herbs to add punch.
-4. Leftovers and tired produce are treated as ingredients for a new dish, with each leftover component handled according to what it needs, such as light and dark turkey reheated differently, leftover stuffing used as bread, and leftover chicken added to a soup for protein.
+4. Leftovers and tired produce are ingredients for a new dish, with each leftover component handled according to what it needs, such as light and dark poultry reheated differently, leftover stuffing used as bread, and leftover chicken added to a soup for protein.
 
 ## Where this lens can mislead
 
@@ -1094,163 +583,201 @@ Advice argued from these tendencies favors flexibility, so it can wave through a
 
 ## Verdict
 
-Seat. Her official site, four published works, and two independent sources were opened and read, and four supported tendencies could be written, including at least one about every part of the default scope. The lens argues only from these tendencies and only about adapting a recipe to the pantry, substitutions, and leftovers.
+Seat, with the full default scope. Four tendencies are recorded, including at least one about every part of the scope. The lens argues only from these tendencies and only about adapting a recipe to the pantry, substitutions, and leftovers.
 
 Parts covered: adapting to the pantry (tendencies 1 and 2); substitutions (tendencies 2 and 3); leftovers (tendency 4).
+===== END FILE: kitchen/vetting/pantry-adaptation.md =====
 
-## Access notes
-
-- Searched: Sohla El-Waylly official website
-- Searched: Sohla El-Waylly Start Here cookbook instructions for becoming a better cook
-- Searched: sohlaelwaylly.com
-- Searched: Sohla El-Waylly personal site Start Here book page author bio
-- Searched: Sohla El-Waylly substitutions what to use instead pantry cooking video
-- Searched: Sohla El-Waylly leftovers recipe column
-- Searched: Hot Dish with Sohla My Formula To Make Dinner With Whatever
-- Searched: Start Here Sohla El-Waylly review substitutions variations swap leftovers
-- Searched: Off-Script with Sohla Food52 column
-- Her personal site is hosted on a Squarespace address. Two guessed addresses for an official site were tried: one did not resolve, and the other belongs to an unrelated organization.
-- The personal site's home page says a cookbook was coming, with no title, and names no columns or video series. For the cookbook, the publisher's page was used because her own site has no page for it.
-- Her Substack post on pantry staples for dinner when there is little to cook with is behind a paywall: only its title and one-line subtitle could be read, so nothing from it is cited. The post whose title mentions meal prep for people who dislike leftovers was not opened; its address returned an error, and it is known only from the archive listing.
-- Her video series Off-Script with Sohla and a video on turning any green, bean, and pasta into dinner could not be read through the page-fetch tool, which returned only site navigation text, and are known only from search results.
-- A radio segment transcript of a conversation with her was opened, and a Q and A in a magazine was opened; both are largely her own words, so neither is cited as an independent source. A news magazine's piece on the cookbook was also opened and not cited, because it says little about the job. A transcript from a public radio program timed out and was not read.
-- A food writer's newsletter post presenting a list of go-to ingredients attributed to her was opened and read but is not cited, because its content is mostly hers and so is not independent.
-- A third-party chapter summary of the cookbook, shown in search results, was not opened and is not relied on.
-===== END FILE: kitchen/vetting/sohla-el-waylly.md =====
-
-===== FILE: kitchen/vetting/stella-parks.md =====
+===== FILE: kitchen/vetting/regional-chinese.md =====
 ---
-lens: Stella Parks-style lens
-name: Stella Parks
-seat: core
-job: Baking formulas, sugar, fat, and leavening
-question: Does the formula work structurally?
-verdict: seat
-scope: Baking and dessert formulas
-checked: 2026-11-18
----
-
-# Stella Parks-style lens
-
-## Official site
-
-- *BraveTart* (Stella Parks): https://www.bravetart.com/ (checked 2026-11-18). A personal site presenting Stella Parks as the baker and writer behind BraveTart that promotes the book *BraveTart: Iconic American Desserts* as an award-winning bestseller and links to her Serious Eats author page; it says little about recipes or method.
-
-## Published work
-
-- *BraveTart: Iconic American Desserts* (W. W. Norton, 2017): https://wwnorton.co.uk/books/9780393239867-bravetart (checked 2026-11-18). The publisher's page calls the recipes meticulously tested, says the book traces how classic American desserts developed, and lists home versions of cakes, muffins, brownies, and store-bought treats.
-- *Stella Parks's blog on Goodreads* (Goodreads, 2019 to 2021): https://www.goodreads.com/author/show/15862252.Stella_Parks/blog (checked 2026-11-18). A page of her baking posts, each linking on to a Serious Eats article, covering chocolate for baking, stand mixers, frosting types, and several cakes and rolled desserts.
-
-## Independent sources
-
-- *BraveTart* review (Publishers Weekly, 2017): https://www.publishersweekly.com/9780393239867 (checked 2026-11-18). A trade review that says some recipes are more involved than usual because of techniques such as roasting sugar or browning butter, that each recipe suggests variations, and that gluten-free substitutions are offered where possible.
-- *American Beauty* (Tasting Table, 2017): https://www.tastingtable.com/cook/national/classic-american-dessert-recipes-bravetart (checked 2026-11-18). A profile of the book by a staff writer that describes how she rebuilds store-bought American treats at home with professional technique, some unexpected ingredient swaps, and the historical research behind each dessert.
-- *4 scientific tips to make your holiday cookies burst with flavor* (PBS NewsHour): https://www.pbs.org/newshour/science/4-scientific-tips-to-make-your-holiday-cookies-burst-with-flavor (checked 2026-11-18). A news piece that describes her method of toasting sugar and her use of malted milk powder to deepen browning in cookie dough.
-
-## What the published work shows
-
-1. Rebuilds classic American desserts and store-bought treats at home with professional technique, and treats the history of each dessert as part of why it is worth making.
-2. Tests formulas heavily and gives each one variations and, where possible, substitutions such as gluten-free alternatives, so a formula is meant to be adapted without losing its result.
-3. Works on sugar and other browning ingredients for flavor, such as toasting sugar before it goes into a dough and adding milk solids to deepen browning, and uses techniques such as roasting sugar or browning butter where a recipe gains from them.
-4. Reaches for a particular ingredient to get a texture or a structure, such as a fizzy soda for a light crumb, and cares about how tall and stable a meringue stands or how an all-butter crust behaves.
-
-## Where this lens can mislead
-
-Advice argued from these tendencies favors faithful rebuilds of American classics and flavor-building steps such as toasting sugar, roasting sugar, or browning butter, so it can push a home cook toward extra steps and particular ingredients that a simple bake does not need. Its fixed point is American desserts, so it may carry less weight for desserts from other traditions, and its habit of tuning a formula for one result may not carry over when the cook changes the pan, the oven, or the pantry. Check whether the extra step is needed for the dessert at hand, and whether one of the formula's own variations or substitutions would do.
-
-## Verdict
-
-Seat. Four tendencies are supported by pages that were opened and read, and the third and fourth are about the fixed job of baking formulas, sugar, and structure. The default scope is a single part, baking and dessert formulas, and each tendency is about it, so the lens keeps the whole default scope.
-
-Parts covered: baking and dessert formulas (tendencies 1, 2, 3, and 4).
-
-## Access notes
-
-Official site: the page presents itself as her personal site. It has no dedicated page for the book or the column, so the publisher's page is used for the book and a Goodreads page of her posts is used for the column. That Goodreads page links each post to a Serious Eats article but does not itself say the posts first ran there.
-
-Interview page: a food magazine's radio interview page with her about flour, butter, temperature, and reading a recipe as a whole was opened and read, but it is mostly her own words, so it is neither independent nor one of her published works and is not cited.
-
-Not opened: the W. W. Norton United States page for the book opened but gave only a title, authors, and publisher, with no description, so it is not cited. Serious Eats, where the column first ran, could not be opened with the page-fetch tool in two attempts, nor could its archived copy. Saveur, Bake Magazine, Food52 (two pages), and an AOL copy of a Serious Eats article either refused the request, limited it, or returned no page. A site at stella-parks.com did not exist.
-
-Opened but not cited: Wikipedia, a Cooking World review, and the James Beard Foundation winners page, which agree with the cited pages and add nothing the record relies on.
-
-Known only from search results and therefore not cited: a Fable author listing, Blinkist and library summaries, and the Shelf Awareness list of 2018 book award winners.
-
-Searched: Stella Parks official site BraveTart
-Searched: Stella Parks BraveTart Serious Eats pastry author website
-Searched: BraveTart Iconic American Desserts Norton book page
-Searched: Stella Parks BraveTart review flour sugar butter science of baking
-Searched: James Beard Foundation 2018 book awards Baking and Desserts BraveTart
-Searched: Stella Parks Serious Eats BraveTart column pastry articles cake flour sugar science
-Searched: Stella Parks BraveTart profile flour protein butter structure baking interview
-Searched: BraveTart Iconic American Desserts review Stella Parks tested recipes formula
-===== END FILE: kitchen/vetting/stella-parks.md =====
-
-===== FILE: kitchen/vetting/yotam-ottolenghi.md =====
----
-lens: Yotam Ottolenghi-style lens
-name: Yotam Ottolenghi
+lens: Regional Chinese lens
 seat: specialist
-job: Vegetable-forward cooking with bold flavor
-question: What gives this dish contrast and a strong flavor of its own?
+job: Chinese regional cooking and wok technique
+question: Does the technique fit the regional dish this claims to be?
 verdict: seat
-scope: Vegetable and grain dishes with Mediterranean and Middle Eastern flavors
-checked: 2026-11-18
+scope: Chinese dishes
+checked: 2026-11-19
 ---
 
-# Yotam Ottolenghi-style lens
+# Regional Chinese lens
 
-## Official site
+## What this lens holds
 
-- *About Yotam Ottolenghi* (Ottolenghi site): https://ottolenghi.co.uk/about-yotam-ottolenghi (checked 2026-11-18). The page about his work describes his books and his regular newspaper columns, and says a test kitchen team works on writing, creating, and testing recipes for his books and columns.
-
-## Published work
-
-- *Plenty* (Ebury Press, 2010): https://www.penguin.co.uk/books/1085299/plenty/ (checked 2026-11-18). The publisher's page presents a book of vegetable dishes built on strong flavors and fresh combinations, with chapters for greens, brassicas, rice and cereals, pasta and couscous, pulses, roots, and other vegetable groups.
-- *Plenty More* (Ebury Press): https://www.penguin.co.uk/books/1096761/plenty-more/ (checked 2026-11-18). The publisher's page presents a follow-up of vegetable-based dishes organized by cooking method, treating vegetables as a main course and celebrating grains, with bold flavor and original spicing.
-- *Ottolenghi Simple* (Ebury Press, 2018): https://www.penguin.co.uk/books/110543/ottolenghi-simple-by-ottolenghi-yotam/9781785031168 (checked 2026-11-18). The publisher's page presents a book of simplified recipes that keep inventive flavor combinations, each tagged for short time, few ingredients, make-ahead, pantry cooking, laziness, or being easier than it looks.
-- *Jerusalem: A Cookbook* (Penguin Random House): https://www.penguinrandomhouse.com/books/225366/jerusalem-by-yotam-ottolenghi-and-sami-tamimi/9781607743941/ (checked 2026-11-18). The publisher's page presents a collection of dishes from the cooking of the city's Muslim, Jewish, and Christian communities, described in a review it carries as spice-heavy and vegetable-forward.
-
-## Independent sources
-
-- *Review: Plenty is one of the greatest vegetarian cookbooks of all time* (The Globe and Mail, 2011): https://www.theglobeandmail.com/life/food-and-wine/food-trends/review-plenty-is-one-of-the-greatest-vegetarian-cookbooks-of-all-time/article576975/ (checked 2026-11-18). A signed review by a writer for the paper that praises how the book treats vegetables, pulses, and grains on their own terms and draws on Mediterranean, Levantine, and eastern flavors, with contrasts such as smoky charred eggplant against dense lentils and crunchy roasted vegetables.
-- *Dancing on the Plate: Yotam Ottolenghi's Plenty More* (PopMatters, 2015): https://www.popmatters.com/187950-dancing-on-the-plate-yotam-ottolenghis-plenty-more-2495593238.html (checked 2026-11-18). A signed review that describes layered, complex dishes on a Middle Eastern and Mediterranean palette stretched further east, with yogurt, grains, and herbs in profusion, bold ingredients, and sweet paired with savory.
-- *Book review: Ottolenghi Simple* (The Caterer, 2018): https://thecaterer.com/indepth/book-review-ottolenghi-simple (checked 2026-11-18). A signed review that describes vegetables at the center of the plate and a flavor palette of preserved lemon, sumac, herbs, yogurt, and tahini, in a book built around easier recipes.
-
-## What the published work shows
-
-1. Vegetables are the subject of the dish, not a side or a meat substitute: the books organize their dishes around vegetable groups or cooking methods, and the publisher's description treats vegetables as a main course.
-2. Grains and pulses get the same standing as vegetables, with rice, cereals, couscous, and pasta given their own place in the books and with yogurt and herbs appearing in profusion beside them.
-3. Flavor comes from a Mediterranean and Middle Eastern palette of herbs, spices, citrus, tahini, yogurt, sumac, and preserved lemon, sometimes stretched further east.
-4. A dish is built on contrast and richness together: smoky against dense and crunchy, sweet against savory, with dairy adding richness.
-5. *Plenty More* leans toward layered, multistep dishes with many ingredients, and the later *Ottolenghi Simple* keeps the flavor combinations while tagging recipes that are quick, short on ingredients, made ahead, or pantry based.
+1. Chinese food is a set of distinct regional cuisines, and a regional cuisine is known by its layered tastes, textures, and sensations rather than by heat alone.
+2. Wok and cleaver skills are something a home cook can learn, and stir-fry dishes are variations on one wok-centered sequence.
+3. Cook for the home: instructions that are easy to follow, a small stock of core seasonings and pantry staples, and many dishes that need few ingredients.
+4. Build flavor by balancing the tastes (sour, bitter, sweet, pungent, and salty) with a small set of seasonings and pairings that can be applied to whatever ingredients are on hand.
+5. Everyday cooking is vegetable-forward, with meat and fish in smaller amounts, and it is kept separate from restaurant-style regional dishes.
 
 ## Where this lens can mislead
 
-Because the published work favors layered dishes with many components and a stocked set of ingredients such as tahini, sumac, preserved lemon, and fresh herbs, advice argued from it can load a plain vegetable or grain dish with extra steps and ingredients a home cook does not have. Its vegetable-first view can also push a dish away from the meat or other main it was built around. When this happens, check which contrast the dish actually lacks, whether one or two additions would supply it, and whether the cook's pantry and time allow it, and look to the simplified recipes' short-ingredient approach before adding a component.
+This lens reads a dish as belonging to a region and to a wok, so it can hold a home version to one regional standard, or assume a wok, a cleaver, and a stocked Chinese pantry that a home cook may not have. Its record describes flavor balancing in general terms and gives no fixed rule, so it can sound surer about how to balance a dish than its record supports. When it does, check which regional version the cook means, what equipment and pantry the cook has, and whether a simplified home version is what the cook wants.
 
 ## Verdict
 
-Seat. The record is not a cut: four published works have an opened page, three independent signed reviews were opened and read, and five tendencies are supported by those pages, including tendencies about the job. Every part of the default scope has at least one supported tendency, so the lens is seated with the full default scope.
+Seat, with the full default scope. Five tendencies are recorded, and tendencies 1 and 2 are about the job. The scope is one part, Chinese dishes, and tendencies 1 and 2 are about it.
 
-Parts covered: vegetable dishes (tendency 1); grain dishes (tendency 2); Mediterranean and Middle Eastern flavors (tendency 3).
+Parts covered: Chinese dishes (tendencies 1 and 2).
+===== END FILE: kitchen/vetting/regional-chinese.md =====
 
-## Access notes
+===== FILE: kitchen/vetting/regional-mexican.md =====
+---
+lens: Regional Mexican lens
+seat: specialist
+job: Regional Mexican cooking
+question: Which regional version of this dish are we making, and is the adaptation defensible?
+verdict: seat
+scope: Mexican dishes
+checked: 2026-11-19
+---
 
-- Two pages on the official site, the one for *Ottolenghi Simple* and the one for *Plenty More*, answered with a too-many-requests error on each of several attempts, so the publisher's pages were used for those two books and the official site is cited only for its page about him.
-- Pages that were opened and read but are not cited: a signed review of *Jerusalem* on a trade site for caterers, a newspaper interview piece about *Ottolenghi Simple*, a farm magazine's review of *Ottolenghi Simple*, and a weekly newspaper's review of *Jerusalem*.
-- Pages that did not load: a trade site's reviews of *Plenty* and of *Plenty More* (not found), a newspaper's review of *Plenty More* (access refused), and a food site's review of *Plenty More* (access refused).
-- Everything else, including reader sites, bookseller listings, and blog posts, was seen only in search results and is not cited.
-- Searched: Yotam Ottolenghi official site
-- Searched: Ottolenghi Plenty vegetable cookbook review
-- Searched: ottolenghi.co.uk Plenty book vegetables
-- Searched: Ottolenghi Simple cookbook short ingredient lists make ahead
-- Searched: Jerusalem cookbook Ottolenghi Tamimi review
-- Searched: Ottolenghi grains rice bulgur freekeh couscous review cookbook grain salads chapter
-- Searched: Plenty More Ottolenghi review grains legumes vegetables cooking method newspaper
-- Searched: Plenty More Ottolenghi Kirkus OR Guardian OR Publishers Weekly review grains pulses
-- Searched: Jerusalem A Cookbook Ottolenghi Tamimi Penguin Random House book page
-===== END FILE: kitchen/vetting/yotam-ottolenghi.md =====
+# Regional Mexican lens
+
+## What this lens holds
+
+1. Mexican cooking is organized by region, and a region's food comes with its context and its place in the country's cooking.
+2. A dish is tied to the place and the meal it comes from, so a recipe says where it is from and what lies behind it.
+3. The cooking starts from a pantry foundation of chiles, corn and wheat, salsas, condiments, and seasonings, before any regional dish.
+4. A recipe can show both how the dish is cooked in Mexico and how it is made in a home kitchen elsewhere, and it says what can be substituted and which parts can change without ruining it.
+5. Say when a dish is a classic rooted in Mexican cooking, set traditional and modern versions side by side, and offer a recipe as a starting point for the cook to adjust.
+
+## Where this lens can mislead
+
+It treats a dish as belonging to a place, so it can send a cook looking for one correct regional version when the cook only wants a good weeknight meal, and it can turn a simple dish into a research project. Its pantry foundation and its home versions assume ingredients such as particular chiles and corn products that a home cook may not be able to buy, and its openness to adjusting a recipe can make a swap sound safer than it is. Check which regional version the cook actually means, whether the cook's ingredients can reach it, and whether a change keeps what makes the dish recognizable.
+
+## Verdict
+
+Seat, with the full default scope. Five tendencies are recorded, and they are about regional Mexican cooking, which is the job. The scope is one part, and every tendency is about it.
+
+Parts covered: Mexican dishes (tendencies 1, 2, 3, 4 and 5).
+===== END FILE: kitchen/vetting/regional-mexican.md =====
+
+===== FILE: kitchen/vetting/repeatable-results.md =====
+---
+lens: Repeatable results lens
+seat: core
+job: Reliability, repeatability, and failure prevention
+question: Where will a home cook most likely fail?
+verdict: seat
+scope: Any home recipe that has to work the first time
+checked: 2026-11-19
+---
+
+# Repeatable results lens
+
+## What this lens holds
+
+1. Start from a comparison of several existing versions of the dish, then refine one version by changing one variable at a time over many rounds, tasting blind where that limits bias.
+2. A recipe is ready when cooks of different skill levels get the result on the first attempt at home; one that too many of them would not make again goes back for more work.
+3. Write for what home cooks really do, such as swapping ingredients and not reading ahead, so the instructions and tips hold up under that use.
+4. Give the reason each step is there, drawn from food science, so a cook can see what makes the preparation work.
+5. Say which tools and products the recipe was tried with, because equipment and ingredients change the result.
+
+## Where this lens can mislead
+
+Because this lens favors the version that has been tested the most, it can steer a cook toward a longer or more involved method when a simpler one would serve a casual meal. Its habit of changing one variable at a time can add steps, tools, or ingredients whose gain a home cook would not notice at the table. Its advice also assumes the equipment and products a recipe was tried with, which may differ from what the cook owns. When it pushes an extra step, check whether that step changes the dish being made, and check the advice against the cook's own equipment and pantry.
+
+## Verdict
+
+Seat, with the full default scope. Five tendencies are recorded, and the first three are about reliability, repeatability, and failure prevention, which is the job. The one part of the scope, recipes that work the first time, is covered.
+
+Parts covered: recipes that work the first time (tendencies 1 and 2).
+===== END FILE: kitchen/vetting/repeatable-results.md =====
+
+===== FILE: kitchen/vetting/savory-science.md =====
+---
+lens: Savory science lens
+seat: core
+job: Heat, ingredient function, and which variables matter
+question: Which variables actually change the result?
+verdict: seat narrower
+scope: Savory cooking technique
+checked: 2026-11-19
+---
+
+# Savory science lens
+
+## What this lens holds
+
+1. A cooking question is something to test: compare the methods side by side, report what happened, and turn the result into a dish a home cook can make.
+2. Explain a result by its mechanism, such as how heat, moisture, or the chemistry of an ingredient changes browning or juiciness, so the cook learns why a step matters.
+3. Change one variable at a time and trace its effect, as when an alkaline ingredient is linked to faster browning.
+4. Treat equipment and heat source as part of the method: explain a technique for the kind of stove and pan a home kitchen has, and do without obscure ingredients.
+
+## Where this lens can mislead
+
+Advice argued from these tendencies can turn a simple dish into a testing exercise, so a cook may chase an explanation when a plain change of taste or timing is what the dish needs. Explanations built on one kind of stove, pan, or ingredient may not carry over to the cook's own kitchen, so check what equipment and heat the cook actually has before applying a conclusion. The lens explains why a result happens; it does not by itself diagnose a dish that has already gone wrong, so check the cook's report of what happened before arguing a cause.
+
+## Verdict
+
+Seat narrower. Four tendencies are recorded, and tendencies 1 and 2 are about heat and ingredient function, which is the job. No tendency supports troubleshooting, so the lens is held to savory cooking technique. It may not argue troubleshooting, meaning diagnosing a dish that has already failed, baking or dessert formulas, or the regional authenticity of any cuisine.
+
+Parts covered: savory cooking technique (tendencies 1 and 2).
+===== END FILE: kitchen/vetting/savory-science.md =====
+
+===== FILE: kitchen/vetting/seasoning-balance.md =====
+---
+lens: Seasoning balance lens
+seat: specialist
+job: Balance of salt, fat, acid, and heat
+question: What is missing from the balance?
+verdict: seat
+scope: Seasoning and balance in any dish
+checked: 2026-11-19
+---
+
+# Seasoning balance lens
+
+## What this lens holds
+
+1. Cooking is organized around four elements, salt, fat, acid, and heat, and learning those few fundamentals lets a cook work well with any ingredients.
+2. Teach principles and basic flavor knowledge rather than the copying of dishes, aiming at the cook's own judgment instead of success at a single meal.
+3. Read an ingredient for the elements it supplies: one ingredient can bring more than one, as sour cream adds acid and fat, and salt comes from foods such as olives, cheese, pickles, and capers.
+4. Fat is a source of flavor and texture rather than something to avoid, and a food culture has its characteristic fats.
+5. Heat is a lever on flavor, with browning one way that flavor intensifies, as in caramelized roasted vegetables and braised stews.
+
+## Where this lens can mislead
+
+This lens treats a dish as a question of four elements, so it can reduce a problem of structure or technique, as in baking, to a question of seasoning and miss the real cause. It leans on tasting and judgment over measured instruction, so a cook who needs an exact, repeatable result gets little to act on, and any number has to come from the recipe or a cited standard. Because an ingredient is read for every element it supplies, it can encourage stacking salty or acidic ingredients, and its examples can assume ingredients or access that a home cook lacks. Check where each element in the dish already comes from, taste before adding more, and ask whether the fault is in seasoning at all.
+
+## Verdict
+
+Seat, with the full default scope. Five tendencies are recorded, and tendencies 1 and 3 are about the job. The one part of the scope, seasoning and balance in any dish, is covered.
+
+Parts covered: seasoning and balance in any dish (tendencies 1 and 3).
+===== END FILE: kitchen/vetting/seasoning-balance.md =====
+
+===== FILE: kitchen/vetting/sensory-finish.md =====
+---
+lens: Sensory finish lens
+seat: core
+job: Aroma, texture, and the finishing touch
+question: Which one change most improves eating it?
+verdict: seat
+scope: Flavor, aroma, and texture improvements a home cook can add in one optional step
+checked: 2026-11-19
+---
+
+# Sensory finish lens
+
+## What this lens holds
+
+1. Explain the science behind a technique, giving the reason it works along with the steps, and treat cooking as something to understand and test.
+2. Flavor is more than the basic tastes: seasoning and taste are techniques of their own, and expectation, memory, and context shape how a dish is perceived.
+3. Aroma is a lever on flavor: what a dish smells like changes how it tastes, and an ingredient can be added for its aroma alone.
+4. Texture is designed on purpose, sometimes with specialist tools and ingredients, and creaminess is a goal in its own right.
+5. A familiar dish can be rebuilt by researching its best version, and the result can take a great deal of effort and be hard for a less experienced cook to repeat.
+
+## Where this lens can mislead
+
+Advice argued from these tendencies can steer a home cook toward specialist equipment, ingredients, and extra effort that an ordinary meal does not need, and parts of this approach are laborious and not accessible to everyone. A change meant to improve aroma or texture can also crowd out the plain dish if it is not truly optional. Before adding anything, check that the dish already works without it, that the change can be skipped without harm, and that the cook owns the tool or ingredient it needs.
+
+## Verdict
+
+Seat, with the full default scope. Five tendencies are recorded, with one about each part of the scope and several about the job. The lens may argue flavor, aroma, and texture improvements a home cook can add in one optional step.
+
+Parts covered: flavor (tendency 2); aroma (tendency 3); texture (tendency 4).
+===== END FILE: kitchen/vetting/sensory-finish.md =====
 
 ===== FILE: .agents/skills/chef-council/SKILL.md =====
 ---
@@ -1260,7 +787,7 @@ description: Develops, adapts, pressure-tests, and troubleshoots home recipes by
 
 # Chef Council
 
-The council is a set of lenses, each a way of reading a recipe that is built from one cook's or one publisher's published work. This skill picks the lenses that fit the question, lets them disagree, and gives the cook one recommendation. The cook decides; the council advises.
+The council is a set of lenses, each a described cooking approach and a way of reading a recipe. This skill picks the lenses that fit the question, lets them disagree, and gives the cook one recommendation. The cook decides; the council advises.
 
 Paths in this file are relative to the repository root, except the two files under `references/`, which sit beside this file.
 
@@ -1307,12 +834,12 @@ The roster is `kitchen/council.md`. It can change, so read it every time and use
 - **Check where each lens can mislead.** Each roster entry says where its lens goes wrong for a home cook. Apply that check to the lens's advice before passing it on.
 - **When no seated lens covers the question, say so,** and answer from the cook's own recipe, a cited source, or this skill's checklists, labeled as such. Do not stretch a lens to fit.
 
-Asked to add a name to the council, do not seat it from memory. Follow `kitchen/council-vetting.md`: vet first, then seat or decline with the reason.
+Asked to add a person or a brand to the council, seat no name. Follow `kitchen/council-vetting.md`, which says what to offer instead.
 
 ## How the council answers
 
-- **Say where each piece of advice comes from.** Attribute it to a lens by its roster name, written `<Name>-style lens`; to a cited standard or source; to the cook's own card, cook log, or equipment manual; or to this skill's method (the pressure-test checks or the troubleshooting reference). Never attribute advice to a person.
-- **A lens is not a person.** Never write that a person says, thinks, would do, approved, reviewed, or endorsed anything, and never invent a quotation. If asked whether a named cook approved a recipe, the answer is no: a lens is a reading of published work.
+- **Say where each piece of advice comes from.** Attribute it to a lens by its roster name; to a cited standard or source; to the cook's own card, cook log, or equipment manual; or to this skill's method (the pressure-test checks or the troubleshooting reference). Never attribute advice to a person.
+- **A lens is not a person.** Never write that a person says, thinks, would do, approved, reviewed, or endorsed anything, and never invent a quotation. If asked whether a chef or any other real person approved a recipe, the answer is no: a lens is a described approach, not a person.
 - **Disagree by name, then resolve.** When lenses pull in different directions, say which lens argues what, give one recommendation, and name any dissent that still stands. When none stands, say `None.`
 - **Evidence beats habit; tradition explains technique.** Prefer what the cook's own cook logs and tested sources show over what is usually done. Treat a traditional method as information about why a dish works, and say what a shortcut gives up before recommending it.
 - **Numbers do not come from a lens.** A quantity, time, or temperature comes from the cook's recipe, a cited tested source, the equipment manual, or `references/food-safety.md`. When a number is missing, say that it is missing. Do not invent one.
@@ -2077,7 +1604,7 @@ The hash ties the report to the card as you read it. If the card changes afterwa
 
 - **Title.** The card's title and version.
 - **Card, Date, Kind of save, Source, Packet.** The card's path, the day of the check, and three lines from the top of the packet: the kind of save, where the approved text came from, and the packet's own path. For Source, say where the text came from, never what it said. When there is no packet, or the packet does not say, write `not stated` for Kind of save and for Source, and for Packet write the path you were given, or `none`.
-- **Editor.** What ran the check, such as a fresh agent session and the model's name if you know it. It is never a person's name and never a lens.
+- **Editor.** What ran the check, such as a fresh agent session. It is never a person's name and never a lens.
 - **Discrepancies.** One row for each. Where: the section and the item. Then what the approved text says and what the card says, in as few words as show the difference, and the severity, `blocking` or `minor`. Write `None.` in place of the table when there is none. For a missing or summarized packet, the one row reads `no verbatim source` under Where.
 - **Additions.** Each thing on the card that the approved text does not hold, and whether it sits outside the Equipment, Ingredients, and Method. Write `None.` when there is none.
 - **Checks run.** One line for each check in the skill's `## Compare the card with the packet` section, in that order, saying `checked`, `not applicable` with the reason, or `not checked` with the reason. With no verbatim source, every check that needs the approved text reads `not checked, because there is no verbatim source`.
@@ -2314,8 +1841,7 @@ What the recipe card needs after this cook. The card itself is changed through t
 
 ===== FILE: templates/lens-vetting-record.md =====
 ---
-lens: Name-style lens
-name: Full name as published
+lens: Descriptor lens
 seat: core or specialist
 job: The job this lens does on the council, in a few words
 question: The one question this lens always asks?
@@ -2324,40 +1850,23 @@ scope: What this lens may argue about, or none when the verdict is cut
 checked: YYYY-MM-DD
 ---
 
-# Name-style lens
+# Descriptor lens
 
-Copy this file to `kitchen/vetting/<slug>.md` and replace every line. [`kitchen/council-vetting.md`](../kitchen/council-vetting.md) is the rule this record has to meet. Delete this paragraph when the record is filled in.
+Copy this file to `kitchen/vetting/<slug>.md` and replace every line. [`kitchen/council-vetting.md`](../kitchen/council-vetting.md) is the rule this record has to meet. Name no person, publication, or brand, and put in no web link. Delete this paragraph when the record is filled in.
 
-## Official site
+## What this lens holds
 
-- Site name: https://example.com/ (checked YYYY-MM-DD). What the site is and what was read there.
-
-## Published work
-
-- *Title of a book, series, or column* (publisher, year): https://example.com/ (checked YYYY-MM-DD). Why it is relevant to the seat.
-- *A second published work*: https://example.com/ (checked YYYY-MM-DD). Why it is relevant to the seat.
-
-## Independent sources
-
-- *Publication, review, award listing, or a book by someone else*: https://example.com/ (checked YYYY-MM-DD). What it confirms about the published work.
-
-## What the published work shows
-
-1. A tendency the published work shows, in your own words.
+1. A tendency: a way of working that this lens holds, in your own words.
 2. A second tendency.
 3. A third tendency. Five at most.
 
 ## Where this lens can mislead
 
-Where advice argued from these tendencies goes wrong for a home cook, and what to check when it does. This describes the lens, never the person.
+Where advice argued from these tendencies goes wrong for a home cook, and what to check when it does.
 
 ## Verdict
 
 Seat, seat narrower, or cut, and the reason. A narrower seat says what the lens may not argue.
-
-## Access notes
-
-Pages that were not read, paywalls, pages that would not load, and anything known only from a search result.
 ===== END FILE: templates/lens-vetting-record.md =====
 
 ===== FILE: templates/recipe-card.md =====

@@ -19,7 +19,7 @@ references:
   - docs/learnings/L001-scaffold.md
   - docs/learnings/L002-council-roster-and-vetting.md
   - .agents/spec-profile.md
-cross_examined: meta/muse-wonder-full-1.0 (architect), round 2 on the revision, 7 findings, 7 accepted
+cross_examined: cross-provider (architect), round 2 on the revision, 7 findings, 7 accepted
 approved_by: human
 approved_at: 2026-11-19T00:05Z
 pr: 22
@@ -29,6 +29,8 @@ harvested: 2026-11-19 (2 learnings)
 ---
 
 # Chef-council skill: lens selection, seven modes, the first-run interview, and two references
+
+> **Names removed on 2026-11-19.** This record was edited after it was written. Real names, titles, and links now read `[name removed]`, `[title removed]`, or `[link removed]`, a lens's former name reads as its present name in square brackets, a vetting record's former file name reads as its present one, and the model that reviewed a spec is described without its name. Until that day the lenses carried real names. That decision was superseded, and spec S010 made this edit.
 
 ## Goal and definition of done
 
@@ -165,7 +167,7 @@ pull request.
    It tells the agent to read the record of each lens it consults: the
    roster's Scope and the record's Verdict section say what the lens may not
    argue (for example, the Verdict section of
-   `kitchen/vetting/kenji-lopez-alt.md` says that lens may not argue
+   `kitchen/vetting/savory-science.md` says that lens may not argue
    troubleshooting).
 4. **Where advice comes from.** The ticket's done-condition says every piece
    of advice is attributed to a `<Name>-style lens` or to a cited standard,
@@ -673,7 +675,7 @@ for path in sorted(glob.glob("kitchen/vetting/*.md")):
     names.add(re.search(r"^lens: (.*)-style lens$", text, re.M).group(1))
     for part in re.search(r"^name: (.*)$", text, re.M).group(1).split(" / "):
         names.add(part.strip())
-        if part.strip() != "America's Test Kitchen":
+        if part.strip() != "[name removed]":
             names.update(word for word in part.split() if len(word.strip(".")) > 2)
 names.update(unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode() for name in list(names))
 for label, text in (("SKILL.md", skill), ("food-safety.md", safety), ("troubleshooting.md", trouble)):
@@ -951,7 +953,7 @@ for record in sorted(glob.glob("kitchen/vetting/*.md")):
     names.add(lens[:-len("-style lens")])
     for part in re.search(r"^name: (.*)$", text, re.M).group(1).split(" / "):
         names.add(part.strip())
-        if part.strip() != "America's Test Kitchen":
+        if part.strip() != "[name removed]":
             names.update(word for word in part.split() if len(word.strip(".")) > 2)
 names.update(unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode() for name in list(names))
 roster = open("kitchen/council.md", encoding="utf-8").read()
@@ -1191,8 +1193,8 @@ Two rounds: the first on the original draft, the second on the revision.
 
 ### Round 1: the original draft
 
-Blind review by `meta/muse-wonder-full-1.0` (architect tier, reasoning effort
-high, Muse Code 1.4.15, read-only, sandboxed to the dossier) on 2026-11-18.
+Blind review by a different provider's architect-tier model (architect tier, reasoning effort
+high, its command-line tool, read-only, sandboxed to the dossier) on 2026-11-18.
 The dossier held the draft spec, `AGENTS.md`, the profile,
 `.agents/skills/README.md`, `kitchen/council.md`, `kitchen/profile.md`,
 `kitchen/equipment.md`, `scripts/check-skills.py`, and the ticket, and
@@ -1264,8 +1266,8 @@ the four behavior checks again on the edited files.
 
 ### Round 2: the revision
 
-Blind review by `meta/muse-wonder-full-1.0` (architect tier, reasoning effort
-high, Muse Code 1.4.15, read-only, sandboxed to the dossier) on 2026-11-18,
+Blind review by a different provider's architect-tier model (architect tier, reasoning effort
+high, its command-line tool, read-only, sandboxed to the dossier) on 2026-11-18,
 of the revised draft as it stood before the edits below. The dossier held
 the same nine files as round 1, with the revised spec, and passed the
 privacy sweep's `--text` and a gitleaks scan before it was sent. The

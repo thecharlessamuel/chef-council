@@ -7,7 +7,7 @@ The person you are working with is called the cook here. If you cannot read or w
 ## Read in this order
 
 1. [`kitchen/README.md`](kitchen/README.md), then [`kitchen/profile.md`](kitchen/profile.md), [`kitchen/equipment.md`](kitchen/equipment.md), and [`kitchen/pantry.md`](kitchen/pantry.md): who is being cooked for, their constraints and standing corrections, the equipment, and a dated pantry snapshot. A file whose front matter says `filled_in: no` is still a blank template: ask the cook, and never treat a placeholder as a fact.
-2. [`kitchen/council.md`](kitchen/council.md): the lenses on the council, what each one is for, its scope, and where it can mislead. Each lens has a vetting record in `kitchen/vetting/`, and [`kitchen/council-vetting.md`](kitchen/council-vetting.md) is the rule for seating one.
+2. [`kitchen/council.md`](kitchen/council.md): the lenses on the council, what each one is for, its scope, and where it can mislead. Each lens has a record in `kitchen/vetting/`, and [`kitchen/council-vetting.md`](kitchen/council-vetting.md) is the rule for seating one.
 3. The skill for the job, from [Skills](#skills) below. Read its `SKILL.md` in full before acting on it.
 4. The saved recipe card, listed in [`recipes/INDEX.md`](recipes/INDEX.md), and its most recent cook log in `cook-logs/`, before changing that recipe or cooking from it.
 
@@ -18,7 +18,7 @@ The person you are working with is called the cook here. If you cannot read or w
 - **Never report a save, sync, or check that did not happen.** Say "saved" only after the file is written, "synced" only after reading the other copy back, and "checked" only when the check ran and you read its result. When a step failed or was skipped, say which one and why.
 - **Do not invent** quantities, times, temperatures, cook outcomes, allergies, equipment limits, or sources. When a number is missing, say so on the card.
 - **Keep the old version when testing a new one.** A small edit is a version bump on the same card. A changed technique or a variant is its own card, and the original stays.
-- **The council is a set of lenses, not people.** Attribute advice to a lens, written `<Name>-style lens`. No real chef has reviewed, approved, endorsed, or contributed to anything here, so never say or imply one did, and never invent a quote. A lens argues only from the tendencies in its vetting record and only inside its scope. Asked to add a name to the council, vet it first under `kitchen/council-vetting.md`, then seat it or decline with the reason.
+- **The council is a set of lenses, not people.** Attribute advice to a lens by its roster name. No lens is a real person or speaks for one, and no chef has reviewed, approved, endorsed, or contributed to anything here: never say or imply one did, and never invent a quote. A lens argues only from the tendencies in its record and only inside its scope. Asked to add a person or brand, seat no name: follow `kitchen/council-vetting.md`.
 - **Food safety is a constraint, not a lens's opinion.** A safety number comes from a cited standard. When `higher_risk_diners` in `kitchen/profile.md` is `yes`, use the stricter endpoints; when it is `unknown`, ask before giving one.
 - **Every recipe change gets an independent editor check.** A separate agent, in a fresh context that did not write the card, compares the card one for one with the exact text the cook approved. A failed check blocks the change. With no second agent available, say so; never certify your own work.
 - **Copy no third-party recipe text:** no ingredient lists, methods, or headnotes from any publisher. Credit a source by title and link only when it was actually read.
@@ -55,6 +55,7 @@ Skills live in `.agents/skills/<name>/`, and Claude Code finds them through the 
 - Before opening a pull request, run the checks CI runs:
   - `python3 scripts/check-skills.py`: every skill has its link and its line above.
   - `python3 scripts/check-council.py`: the council roster matches the vetting records.
+  - `python3 scripts/check-names.py`: no removed name is back.
   - `python3 -m unittest discover -s tests -v`: the tests for the scripts.
   - `scripts/secret-scan.sh`: gitleaks over the full history.
   - `python3 scripts/lint-cards.py`: the cards are well formed and the index is current.

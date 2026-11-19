@@ -2,7 +2,7 @@
 
 I cook at home most nights, and I work with AI agents to develop recipes, cook them, and improve them over time. This repository is the system I use for that. A council of cooking lenses argues a recipe into shape. Plain-text recipe cards and cook logs record what actually happened in the kitchen. An independent editor checks every saved recipe against what I approved before it is allowed in. It works with any agent that can read files, and, by copy and paste, with a chat app that cannot.
 
-**No chef is affiliated with this repository, and none has endorsed it.** The lenses carry the names of real cooks and publishers, because each lens is a reading of that cook's or publisher's published work. Nobody named here has reviewed, approved, endorsed, or contributed to anything in this repository, and nothing here speaks for them. [`kitchen/council.md`](kitchen/council.md) is the roster, and [`docs/reading-list.md`](docs/reading-list.md) links the published work each lens is built from.
+**No chef is affiliated with this repository, and none has endorsed it.** Each lens is a described cooking approach, named for the approach and never for a person or a brand. No lens is a real person or speaks for one, nothing a lens argues is a quotation of anyone, and no cook, author, or publisher has reviewed, approved, endorsed, or contributed to anything in this repository. [`kitchen/council.md`](kitchen/council.md) is the roster.
 
 ## Why this exists
 
@@ -18,7 +18,7 @@ I wanted the opposite: one place where recipes and the reasons behind them are w
 
 You need Git, Bash, and Python 3. There is nothing to install and nothing to build.
 
-**With a coding agent** (Claude Code, Codex, Cursor, Gemini CLI, Pi, or another agent that reads `AGENTS.md`):
+**With a coding agent** (any agent that reads `AGENTS.md`):
 
 1. Fork or clone this repository and open it in your agent.
 2. Say what you have: "Summon the council. I have two pounds of carrots, butter, and forty minutes." The first time, the agent asks five short questions before it answers (who you cook for, constraints and allergies, equipment, skill and time, and units) and writes your answers into `kitchen/profile.md` and `kitchen/equipment.md`. It then rebuilds `chat/bundle.md`, which includes those files, and leaves all three for you to commit.
@@ -26,7 +26,7 @@ You need Git, Bash, and Python 3. There is nothing to install and nothing to bui
 4. Say: "Log this cook." It writes a cook log in your own words, marks what you did not say as not reported, and proposes one change for next time.
 5. Say: "Save the recipe as a card." It writes the card with an honest status, and a separate agent checks the card against what you approved before anything is committed.
 
-**With a chat app** (a project in Claude or ChatGPT, a Gem in Gemini, and similar):
+**With a chat app** (one that takes pasted instructions and an uploaded file):
 
 1. Follow [`chat/README.md`](chat/README.md): paste `chat/project-instructions.md` into the app's instructions and upload `chat/bundle.md` as its knowledge file.
 2. Use the same prompts. The chat cannot write to the repository, so it returns each finished file for you to save and says that nothing was saved.
@@ -48,13 +48,13 @@ You need Git, Bash, and Python 3. There is nothing to install and nothing to bui
 | [`chat/`](chat/README.md) | The paste-in instructions and the generated knowledge file for a chat app with no file access. |
 | [`adapters/`](adapters/README.md) | Optional: how an agent keeps a copy of a card in a notes app without making duplicates. |
 | [`evals/behavior-checks.md`](evals/behavior-checks.md) | Scenarios you run by hand to see whether your setup behaves well. |
-| `docs/` | [How this was built](docs/how-this-was-built.md), [the council pattern](docs/council-pattern.md), and [the reading list](docs/reading-list.md). |
+| `docs/` | [How this was built](docs/how-this-was-built.md) and [the council pattern](docs/council-pattern.md). |
 
 ## The council
 
-The council is a set of lenses, not people. Six core lenses are consulted by default, each for its own job: heat and ingredient function, reliability, the finishing touch, baking formulas, baking workflow, and pantry cooking. Eight specialists join only when a dish is in their scope, such as a regional cuisine or the balance of a dish. Each lens is written `<Name>-style lens`, argues only from the tendencies in its vetting record, and stays inside its recorded scope.
+The council is a set of lenses, not people. Six core lenses are consulted by default, each for its own job: heat and ingredient function, reliability, the finishing touch, baking formulas, baking workflow, and pantry cooking. Eight specialists join only when a dish is in their scope, such as a regional cuisine or the balance of a dish. Each lens is named for its approach, such as the Savory science lens, argues only from the tendencies in its record, and stays inside its recorded scope.
 
-The roster is yours to edit. To add, narrow, or remove a lens, follow [`kitchen/council-vetting.md`](kitchen/council-vetting.md): the record of published work comes first, and a name whose work cannot be verified is not seated.
+The roster is yours to edit. To add, narrow, or remove a lens, follow [`kitchen/council-vetting.md`](kitchen/council-vetting.md): the record comes first, and a lens is named for an approach, never for a person or a brand.
 
 Food safety is not a lens. It is a constraint on all of them, and a number such as a safe temperature comes from a cited standard, never from a lens.
 
@@ -94,12 +94,12 @@ The food-safety numbers follow United States federal guidance. They are dated, w
 
 ## Check your setup
 
-[`evals/behavior-checks.md`](evals/behavior-checks.md) holds scenarios such as "the card says one thing; didn't we change that?" and "did Kenji approve this?" (the answer is no). Each one gives a prompt, the behavior to expect, and the red flags. Run a few after you set up, and again after you change the rules or the roster.
+[`evals/behavior-checks.md`](evals/behavior-checks.md) holds scenarios such as "the card says one thing; didn't we change that?" and "did a famous chef approve this?" (the answer is no). Each one gives a prompt, the behavior to expect, and the red flags. Run a few after you set up, and again after you change the rules or the roster.
 
 ## How this was built
 
-It started in July 2026 as a council of named chefs inside one agent, publishing straight to a notes app. In October 2026 it became plain files any agent can read, when I moved it between tools and found the knowledge stuck in one chat. In November 2026 it gained the independent editor, and the first card through the check failed: the card put the first temperature check five minutes later than I had agreed, and the cook log described equipment I never mentioned. The editor caught both before anything was published. This repository was then built fresh from my private cooking repo, with the personal details left out. The full timeline, and the incident behind each rule, is in [`docs/how-this-was-built.md`](docs/how-this-was-built.md).
+It started in July 2026 as a council of named chefs inside one agent, publishing straight to a notes app. In October 2026 it became plain files any agent can read, when I moved it between tools and found the knowledge stuck in one chat. In November 2026 it gained the independent editor, and the first card through the check failed: the card put the first temperature check five minutes later than I had agreed, and the cook log described equipment I never mentioned. The editor caught both before anything was published. This repository was then built fresh from my private cooking repo, with the personal details left out. Until November 19, 2026, the lenses carried the names of real cooks and publishers. That decision was superseded on that day, and each lens now carries a description of its approach. The full timeline, and the incident behind each rule, is in [`docs/how-this-was-built.md`](docs/how-this-was-built.md).
 
 ## License
 
-MIT. See [`LICENSE`](LICENSE). The names of the cooks and publishers on the roster belong to them. They are used here only to say whose published work a lens reads.
+MIT. See [`LICENSE`](LICENSE).
