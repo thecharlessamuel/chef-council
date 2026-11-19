@@ -17,7 +17,7 @@ references:
   - docs/wayfinder/W001-public-chef-council/issues/T006-private-repository-names.md
   - docs/learnings/L001-scaffold.md
   - .agents/spec-profile.md
-cross_examined: meta/muse-wonder-full-1.0 (architect), 22 findings, 22 accepted
+cross_examined: cross-provider (architect), 22 findings, 22 accepted
 approved_by: autonomous
 approved_at: 2026-11-18T19:33Z
 pr: 20
@@ -27,6 +27,8 @@ harvested: 2026-11-18 (3 learnings)
 ---
 
 # Council roster and vetting: the rule, the check, fourteen records, and the roster
+
+> **Names removed on 2026-11-19.** This record was edited after it was written. Real names, titles, and links now read `[name removed]`, `[title removed]`, or `[link removed]`, a lens's former name reads as its present name in square brackets, a vetting record's former file name reads as its present one, and the model that reviewed a spec is described without its name. Until that day the lenses carried real names. That decision was superseded, and spec S010 made this edit.
 
 ## Goal and definition of done
 
@@ -190,8 +192,8 @@ pull request.
    `job`, and `question` of every record are fixed here, and so is the
    default scope a full seat carries. The lens name follows the profile's
    form, the name and then `-style lens`: the given name alone where the
-   published work itself goes by it (Kenji, Maangchi), the publisher's name
-   for America's Test Kitchen, and the full name otherwise. The jobs and
+   published work itself goes by it ([name removed], [name removed]), the publisher's name
+   for [name removed], and the full name otherwise. The jobs and
    questions are the seats' (design report §5, reworded); the eight
    specialists' are one per cuisine or subject. This table is the order of
    the roster. The `lenscheck` helper carries the same values and is the
@@ -199,20 +201,20 @@ pull request.
 
    | # | slug | `lens` | `name` | `seat` | `job` | `question` | default `scope` |
    |---|---|---|---|---|---|---|---|
-   | 1 | `kenji-lopez-alt` | Kenji-style lens | J. Kenji López-Alt | core | Heat, ingredient function, and which variables matter | Which variables actually change the result? | Savory cooking technique and troubleshooting in a home kitchen |
-   | 2 | `americas-test-kitchen` | America's Test Kitchen-style lens | America's Test Kitchen / Dan Souza | core | Reliability, repeatability, and failure prevention | Where will a home cook most likely fail? | Any home recipe that has to work the first time |
-   | 3 | `heston-blumenthal` | Heston Blumenthal-style lens | Heston Blumenthal | core | Aroma, texture, and the finishing touch | Which one change most improves eating it? | Flavor, aroma, and texture improvements a home cook can add in one optional step |
-   | 4 | `stella-parks` | Stella Parks-style lens | Stella Parks | core | Baking formulas, sugar, fat, and leavening | Does the formula work structurally? | Baking and dessert formulas |
-   | 5 | `claire-saffitz` | Claire Saffitz-style lens | Claire Saffitz | core | Baking workflow, dough handling, and doneness cues | Is the method clear and practical for a home baker? | Pastry, doughs, cakes, and dessert assembly |
-   | 6 | `sohla-el-waylly` | Sohla El-Waylly-style lens | Sohla El-Waylly | core | Substitutions, leftovers, and pantry cooking | How do we make what is here work coherently? | Adapting a recipe to the pantry, substitutions, and leftovers |
-   | 7 | `rick-martinez` | Rick Martinez-style lens | Rick Martinez | specialist | Regional Mexican cooking | Which regional version of this dish are we making, and is the adaptation defensible? | Mexican dishes |
-   | 8 | `madhur-jaffrey` | Madhur Jaffrey-style lens | Madhur Jaffrey | specialist | Indian home cooking and spice layering | Are the spices added in an order and form that builds the flavor this dish needs? | Indian dishes |
-   | 9 | `fuchsia-dunlop` | Fuchsia Dunlop-style lens | Fuchsia Dunlop | specialist | Chinese regional cooking and wok technique | Does the technique fit the regional dish this claims to be? | Chinese dishes |
-   | 10 | `samin-nosrat` | Samin Nosrat-style lens | Samin Nosrat | specialist | Balance of salt, fat, acid, and heat | What is missing from the balance? | Seasoning and balance in any dish |
-   | 11 | `jacques-pepin` | Jacques Pépin-style lens | Jacques Pépin | specialist | Classical French technique and knife work | Is the basic technique sound before anything is added? | French technique and basic knife work |
-   | 12 | `yotam-ottolenghi` | Yotam Ottolenghi-style lens | Yotam Ottolenghi | specialist | Vegetable-forward cooking with bold flavor | What gives this dish contrast and a strong flavor of its own? | Vegetable and grain dishes with Mediterranean and Middle Eastern flavors |
-   | 13 | `maangchi` | Maangchi-style lens | Maangchi | specialist | Korean home cooking | Would this be recognized as the Korean dish it is named for? | Korean dishes |
-   | 14 | `marcella-hazan` | Marcella Hazan-style lens | Marcella Hazan | specialist | Italian home cooking and restraint | What can be taken out so the main ingredient is clear? | Italian dishes |
+   | 1 | `savory-science` | [Savory science lens] | [name removed] | core | Heat, ingredient function, and which variables matter | Which variables actually change the result? | Savory cooking technique and troubleshooting in a home kitchen |
+   | 2 | `repeatable-results` | [Repeatable results lens] | [name removed] / [name removed] | core | Reliability, repeatability, and failure prevention | Where will a home cook most likely fail? | Any home recipe that has to work the first time |
+   | 3 | `sensory-finish` | [Sensory finish lens] | [name removed] | core | Aroma, texture, and the finishing touch | Which one change most improves eating it? | Flavor, aroma, and texture improvements a home cook can add in one optional step |
+   | 4 | `baking-formula` | [Baking formula lens] | [name removed] | core | Baking formulas, sugar, fat, and leavening | Does the formula work structurally? | Baking and dessert formulas |
+   | 5 | `baking-workflow` | [Baking workflow lens] | [name removed] | core | Baking workflow, dough handling, and doneness cues | Is the method clear and practical for a home baker? | Pastry, doughs, cakes, and dessert assembly |
+   | 6 | `pantry-adaptation` | [Pantry adaptation lens] | [name removed] | core | Substitutions, leftovers, and pantry cooking | How do we make what is here work coherently? | Adapting a recipe to the pantry, substitutions, and leftovers |
+   | 7 | `regional-mexican` | [Regional Mexican lens] | [name removed] | specialist | Regional Mexican cooking | Which regional version of this dish are we making, and is the adaptation defensible? | Mexican dishes |
+   | 8 | `indian-spice-layering` | [Indian spice layering lens] | [name removed] | specialist | Indian home cooking and spice layering | Are the spices added in an order and form that builds the flavor this dish needs? | Indian dishes |
+   | 9 | `regional-chinese` | [Regional Chinese lens] | [name removed] | specialist | Chinese regional cooking and wok technique | Does the technique fit the regional dish this claims to be? | Chinese dishes |
+   | 10 | `seasoning-balance` | [Seasoning balance lens] | [name removed] | specialist | Balance of salt, fat, acid, and heat | What is missing from the balance? | Seasoning and balance in any dish |
+   | 11 | `classical-french-technique` | [Classical French technique lens] | [name removed] | specialist | Classical French technique and knife work | Is the basic technique sound before anything is added? | French technique and basic knife work |
+   | 12 | `bold-vegetable` | [Bold vegetable lens] | [name removed] | specialist | Vegetable-forward cooking with bold flavor | What gives this dish contrast and a strong flavor of its own? | Vegetable and grain dishes with Mediterranean and Middle Eastern flavors |
+   | 13 | `korean-home-cooking` | [Korean home cooking lens] | [name removed] | specialist | Korean home cooking | Would this be recognized as the Korean dish it is named for? | Korean dishes |
+   | 14 | `italian-restraint` | [Italian restraint lens] | [name removed] | specialist | Italian home cooking and restraint | What can be taken out so the main ingredient is clear? | Italian dishes |
 
 5. **The verdict is decided by the evidence, by this rule.** A tendency is
    supported when a page cited in the record, opened and read, says something
@@ -221,14 +223,14 @@ pull request.
 
    | slug | parts of the default scope |
    |---|---|
-   | `kenji-lopez-alt` | savory cooking technique; troubleshooting |
-   | `americas-test-kitchen` | recipes that work the first time (one part) |
-   | `heston-blumenthal` | flavor; aroma; texture |
-   | `stella-parks` | baking and dessert formulas (one part) |
-   | `claire-saffitz` | pastry and doughs; cakes; dessert assembly |
-   | `sohla-el-waylly` | adapting to the pantry; substitutions; leftovers |
-   | `jacques-pepin` | French technique; basic knife work |
-   | `yotam-ottolenghi` | vegetable dishes; grain dishes; Mediterranean and Middle Eastern flavors |
+   | `savory-science` | savory cooking technique; troubleshooting |
+   | `repeatable-results` | recipes that work the first time (one part) |
+   | `sensory-finish` | flavor; aroma; texture |
+   | `baking-formula` | baking and dessert formulas (one part) |
+   | `baking-workflow` | pastry and doughs; cakes; dessert assembly |
+   | `pantry-adaptation` | adapting to the pantry; substitutions; leftovers |
+   | `classical-french-technique` | French technique; basic knife work |
+   | `bold-vegetable` | vegetable dishes; grain dishes; Mediterranean and Middle Eastern flavors |
    | the other six | the whole default scope is one part |
 
    - `cut` when, after the search steps of `### Writing a record` with their
@@ -253,20 +255,20 @@ pull request.
    reworded by the executor. If the published work points to a different
    job, the record is cut or seated narrower under this rule, and the pull
    request's Evidence section says so.
-6. **America's Test Kitchen / Dan Souza is one record about a publisher.**
+6. **[name removed] / [name removed] is one record about a publisher.**
    Its tendencies describe the publisher's published work (the magazine, the
-   books, the recipe site, the television programs). Dan Souza is named in
+   books, the recipe site, the television programs). [name removed] is named in
    the `name` line because T002 names him; the body says what he publishes
    there only if a page read in the session states it, and otherwise the
    access notes say his role was not confirmed. The record describes no
    company history, ownership, or staffing.
-7. **Marcella Hazan.** The Official site section is exactly `- No official
+7. **[name removed].** The Official site section is exactly `- No official
    site (checked <TODAY>).`, the record rests on her books and on two or more
    independent sources, and the access notes say there is no official site
    (ticket T008). The record says nothing of her life or death. If the
    worker's search finds a site that presents itself as her official site,
    the worker stops and the orchestrator reports ``Question: a site
-   presenting itself as Marcella Hazan's official site was found, which
+   presenting itself as [name removed]'s official site was found, which
    ticket T008 and S002 say does not exist; cite it or keep the fixed
    line?``
 8. **An official site that exists but could not be opened**, after two
@@ -279,8 +281,7 @@ pull request.
    the person, the person's own site or company, and the publisher of the
    work the source is cited about. A publisher's description reprinted by a
    bookseller, a library catalog, or any other site is not independent. For
-   America's Test Kitchen it means not written or published by America's
-   Test Kitchen or its magazines. A review, a profile of the work in a
+   [name removed] it means not written or published by [name removed] or its magazines. A review, a profile of the work in a
    publication the person does not write for in that piece, and an award
    body's own listing are independent.
 10. **Nothing is carried from the private chef profiles but names, roles, and
@@ -298,7 +299,7 @@ pull request.
     group heading:
 
     ```markdown
-    ### [Kenji-style lens](vetting/kenji-lopez-alt.md)
+    ### [[Savory science lens]](vetting/savory-science.md)
 
     - **Job:** <the record's job>
     - **Typical question:** <the record's question>
@@ -448,59 +449,59 @@ lenscheck() {
 import hashlib, os, re, sys
 SKELETON = "6fd7a185d8ba1715bbbda52da98526d999aae936df3baef7ad6f1fb058f0871d"
 LENSES = [
-    ("kenji-lopez-alt", "Kenji-style lens", "J. Kenji López-Alt", "core",
+    ("savory-science", "[Savory science lens]", "[name removed]", "core",
      "Heat, ingredient function, and which variables matter",
      "Which variables actually change the result?",
      "Savory cooking technique and troubleshooting in a home kitchen"),
-    ("americas-test-kitchen", "America's Test Kitchen-style lens", "America's Test Kitchen / Dan Souza", "core",
+    ("repeatable-results", "[Repeatable results lens]", "[name removed] / [name removed]", "core",
      "Reliability, repeatability, and failure prevention",
      "Where will a home cook most likely fail?",
      "Any home recipe that has to work the first time"),
-    ("heston-blumenthal", "Heston Blumenthal-style lens", "Heston Blumenthal", "core",
+    ("sensory-finish", "[Sensory finish lens]", "[name removed]", "core",
      "Aroma, texture, and the finishing touch",
      "Which one change most improves eating it?",
      "Flavor, aroma, and texture improvements a home cook can add in one optional step"),
-    ("stella-parks", "Stella Parks-style lens", "Stella Parks", "core",
+    ("baking-formula", "[Baking formula lens]", "[name removed]", "core",
      "Baking formulas, sugar, fat, and leavening",
      "Does the formula work structurally?",
      "Baking and dessert formulas"),
-    ("claire-saffitz", "Claire Saffitz-style lens", "Claire Saffitz", "core",
+    ("baking-workflow", "[Baking workflow lens]", "[name removed]", "core",
      "Baking workflow, dough handling, and doneness cues",
      "Is the method clear and practical for a home baker?",
      "Pastry, doughs, cakes, and dessert assembly"),
-    ("sohla-el-waylly", "Sohla El-Waylly-style lens", "Sohla El-Waylly", "core",
+    ("pantry-adaptation", "[Pantry adaptation lens]", "[name removed]", "core",
      "Substitutions, leftovers, and pantry cooking",
      "How do we make what is here work coherently?",
      "Adapting a recipe to the pantry, substitutions, and leftovers"),
-    ("rick-martinez", "Rick Martinez-style lens", "Rick Martinez", "specialist",
+    ("regional-mexican", "[Regional Mexican lens]", "[name removed]", "specialist",
      "Regional Mexican cooking",
      "Which regional version of this dish are we making, and is the adaptation defensible?",
      "Mexican dishes"),
-    ("madhur-jaffrey", "Madhur Jaffrey-style lens", "Madhur Jaffrey", "specialist",
+    ("indian-spice-layering", "[Indian spice layering lens]", "[name removed]", "specialist",
      "Indian home cooking and spice layering",
      "Are the spices added in an order and form that builds the flavor this dish needs?",
      "Indian dishes"),
-    ("fuchsia-dunlop", "Fuchsia Dunlop-style lens", "Fuchsia Dunlop", "specialist",
+    ("regional-chinese", "[Regional Chinese lens]", "[name removed]", "specialist",
      "Chinese regional cooking and wok technique",
      "Does the technique fit the regional dish this claims to be?",
      "Chinese dishes"),
-    ("samin-nosrat", "Samin Nosrat-style lens", "Samin Nosrat", "specialist",
+    ("seasoning-balance", "[Seasoning balance lens]", "[name removed]", "specialist",
      "Balance of salt, fat, acid, and heat",
      "What is missing from the balance?",
      "Seasoning and balance in any dish"),
-    ("jacques-pepin", "Jacques Pépin-style lens", "Jacques Pépin", "specialist",
+    ("classical-french-technique", "[Classical French technique lens]", "[name removed]", "specialist",
      "Classical French technique and knife work",
      "Is the basic technique sound before anything is added?",
      "French technique and basic knife work"),
-    ("yotam-ottolenghi", "Yotam Ottolenghi-style lens", "Yotam Ottolenghi", "specialist",
+    ("bold-vegetable", "[Bold vegetable lens]", "[name removed]", "specialist",
      "Vegetable-forward cooking with bold flavor",
      "What gives this dish contrast and a strong flavor of its own?",
      "Vegetable and grain dishes with Mediterranean and Middle Eastern flavors"),
-    ("maangchi", "Maangchi-style lens", "Maangchi", "specialist",
+    ("korean-home-cooking", "[Korean home cooking lens]", "[name removed]", "specialist",
      "Korean home cooking",
      "Would this be recognized as the Korean dish it is named for?",
      "Korean dishes"),
-    ("marcella-hazan", "Marcella Hazan-style lens", "Marcella Hazan", "specialist",
+    ("italian-restraint", "[Italian restraint lens]", "[name removed]", "specialist",
      "Italian home cooking and restraint",
      "What can be taken out so the main ingredient is clear?",
      "Italian dishes"),
@@ -638,20 +639,20 @@ Leads, by slug (titles only, unverified):
 
 | slug | leads |
 |---|---|
-| `kenji-lopez-alt` | *The Food Lab*; *The Wok*; his column at Serious Eats |
-| `americas-test-kitchen` | *Cook's Illustrated* magazine; the America's Test Kitchen recipe site and television program; its test-kitchen cookbooks |
-| `heston-blumenthal` | *The Fat Duck Cookbook*; *Heston Blumenthal at Home*; *In Search of Perfection* |
-| `stella-parks` | *BraveTart*; her baking column at Serious Eats |
-| `claire-saffitz` | *Dessert Person*; *What's for Dessert* |
-| `sohla-el-waylly` | *Start Here*; her recipe columns and video series |
-| `rick-martinez` | *Mi Cocina*; his recipe columns and video series |
-| `madhur-jaffrey` | *An Invitation to Indian Cooking*; *Madhur Jaffrey's Indian Cooking* |
-| `fuchsia-dunlop` | *The Food of Sichuan*; *Every Grain of Rice* |
-| `samin-nosrat` | *Salt, Fat, Acid, Heat* (the book and the series) |
-| `jacques-pepin` | *Jacques Pépin's New Complete Techniques*; *Essential Pépin* |
-| `yotam-ottolenghi` | *Plenty*; *Ottolenghi Simple*; *Jerusalem* |
-| `maangchi` | *Maangchi's Real Korean Cooking*; *Maangchi's Big Book of Korean Cooking*; her recipe site |
-| `marcella-hazan` | *Essentials of Classic Italian Cooking*; *The Classic Italian Cook Book* |
+| `savory-science` | *[name removed]*; *[name removed]*; his column at [name removed] |
+| `repeatable-results` | *[title removed]* magazine; the [name removed] recipe site and television program; its test-kitchen cookbooks |
+| `sensory-finish` | *[title removed]*; *[name removed]*; *[name removed]* |
+| `baking-formula` | [title removed]; her baking column at [name removed] |
+| `baking-workflow` | *[title removed]*; *[name removed]* |
+| `pantry-adaptation` | *[name removed]*; her recipe columns and video series |
+| `regional-mexican` | *[title removed]*; his recipe columns and video series |
+| `indian-spice-layering` | *[name removed]*; *[name removed]* |
+| `regional-chinese` | *[name removed]*; *[name removed]* |
+| `seasoning-balance` | *[title removed]* (the book and the series) |
+| `classical-french-technique` | *[name removed]'s New [title removed]*; *[title removed]* |
+| `bold-vegetable` | [title removed]; *[name removed]*; [title removed] |
+| `korean-home-cooking` | *[name removed]*; *[name removed]*; her recipe site |
+| `italian-restraint` | *[name removed]*; *[title removed]* |
 
 ### Citation verification
 
@@ -970,59 +971,59 @@ task wrote changed; revise the spec?``
   - The tests are unchanged.
 - **Nature:** mechanical
 
-### Task 4 — Vet the Kenji-style and America's Test Kitchen-style lenses
-- **Work:** The shared work, with `<slug-a>` = `kenji-lopez-alt`, `<slug-b>`
-  = `americas-test-kitchen`, and `<R>` = 2. Decision 6 applies.
-- **Touches:** `kitchen/vetting/kenji-lopez-alt.md`,
-  `kitchen/vetting/americas-test-kitchen.md`, `kitchen/council.md`
+### Task 4 — Vet the [Savory science lens] and [Repeatable results lens]es
+- **Work:** The shared work, with `<slug-a>` = `savory-science`, `<slug-b>`
+  = `repeatable-results`, and `<R>` = 2. Decision 6 applies.
+- **Touches:** `kitchen/vetting/savory-science.md`,
+  `kitchen/vetting/repeatable-results.md`, `kitchen/council.md`
 - **Gate:** The shared gate.
 - **Nature:** copy
 
-### Task 5 — Vet the Heston Blumenthal-style and Stella Parks-style lenses
-- **Work:** The shared work, with `<slug-a>` = `heston-blumenthal`,
-  `<slug-b>` = `stella-parks`, and `<R>` = 4.
-- **Touches:** `kitchen/vetting/heston-blumenthal.md`,
-  `kitchen/vetting/stella-parks.md`, `kitchen/council.md`
+### Task 5 — Vet the [Sensory finish lens] and [Baking formula lens]es
+- **Work:** The shared work, with `<slug-a>` = `sensory-finish`,
+  `<slug-b>` = `baking-formula`, and `<R>` = 4.
+- **Touches:** `kitchen/vetting/sensory-finish.md`,
+  `kitchen/vetting/baking-formula.md`, `kitchen/council.md`
 - **Gate:** The shared gate.
 - **Nature:** copy
 
-### Task 6 — Vet the Claire Saffitz-style and Sohla El-Waylly-style lenses
-- **Work:** The shared work, with `<slug-a>` = `claire-saffitz`, `<slug-b>` =
-  `sohla-el-waylly`, and `<R>` = 6.
-- **Touches:** `kitchen/vetting/claire-saffitz.md`,
-  `kitchen/vetting/sohla-el-waylly.md`, `kitchen/council.md`
+### Task 6 — Vet the [Baking workflow lens] and [Pantry adaptation lens]es
+- **Work:** The shared work, with `<slug-a>` = `baking-workflow`, `<slug-b>` =
+  `pantry-adaptation`, and `<R>` = 6.
+- **Touches:** `kitchen/vetting/baking-workflow.md`,
+  `kitchen/vetting/pantry-adaptation.md`, `kitchen/council.md`
 - **Gate:** The shared gate.
 - **Nature:** copy
 
-### Task 7 — Vet the Rick Martinez-style and Madhur Jaffrey-style lenses
-- **Work:** The shared work, with `<slug-a>` = `rick-martinez`, `<slug-b>` =
-  `madhur-jaffrey`, and `<R>` = 8.
-- **Touches:** `kitchen/vetting/rick-martinez.md`,
-  `kitchen/vetting/madhur-jaffrey.md`, `kitchen/council.md`
+### Task 7 — Vet the [Regional Mexican lens] and [Indian spice layering lens]es
+- **Work:** The shared work, with `<slug-a>` = `regional-mexican`, `<slug-b>` =
+  `indian-spice-layering`, and `<R>` = 8.
+- **Touches:** `kitchen/vetting/regional-mexican.md`,
+  `kitchen/vetting/indian-spice-layering.md`, `kitchen/council.md`
 - **Gate:** The shared gate.
 - **Nature:** copy
 
-### Task 8 — Vet the Fuchsia Dunlop-style and Samin Nosrat-style lenses
-- **Work:** The shared work, with `<slug-a>` = `fuchsia-dunlop`, `<slug-b>` =
-  `samin-nosrat`, and `<R>` = 10.
-- **Touches:** `kitchen/vetting/fuchsia-dunlop.md`,
-  `kitchen/vetting/samin-nosrat.md`, `kitchen/council.md`
+### Task 8 — Vet the [Regional Chinese lens] and [Seasoning balance lens]es
+- **Work:** The shared work, with `<slug-a>` = `regional-chinese`, `<slug-b>` =
+  `seasoning-balance`, and `<R>` = 10.
+- **Touches:** `kitchen/vetting/regional-chinese.md`,
+  `kitchen/vetting/seasoning-balance.md`, `kitchen/council.md`
 - **Gate:** The shared gate.
 - **Nature:** copy
 
-### Task 9 — Vet the Jacques Pépin-style and Yotam Ottolenghi-style lenses
-- **Work:** The shared work, with `<slug-a>` = `jacques-pepin`, `<slug-b>` =
-  `yotam-ottolenghi`, and `<R>` = 12.
-- **Touches:** `kitchen/vetting/jacques-pepin.md`,
-  `kitchen/vetting/yotam-ottolenghi.md`, `kitchen/council.md`
+### Task 9 — Vet the [Classical French technique lens] and [Bold vegetable lens]es
+- **Work:** The shared work, with `<slug-a>` = `classical-french-technique`, `<slug-b>` =
+  `bold-vegetable`, and `<R>` = 12.
+- **Touches:** `kitchen/vetting/classical-french-technique.md`,
+  `kitchen/vetting/bold-vegetable.md`, `kitchen/council.md`
 - **Gate:** The shared gate.
 - **Nature:** copy
 
-### Task 10 — Vet the Maangchi-style and Marcella Hazan-style lenses
-- **Work:** The shared work, with `<slug-a>` = `maangchi`, `<slug-b>` =
-  `marcella-hazan`, and `<R>` = 14. Decision 7 applies.
-- **Touches:** `kitchen/vetting/maangchi.md`,
-  `kitchen/vetting/marcella-hazan.md`, `kitchen/council.md`
+### Task 10 — Vet the [Korean home cooking lens] and [Italian restraint lens]es
+- **Work:** The shared work, with `<slug-a>` = `korean-home-cooking`, `<slug-b>` =
+  `italian-restraint`, and `<R>` = 14. Decision 7 applies.
+- **Touches:** `kitchen/vetting/korean-home-cooking.md`,
+  `kitchen/vetting/italian-restraint.md`, `kitchen/council.md`
 - **Gate:** The shared gate, and then, with the Touches still staged,
   definition-of-done items 1, 2, 3, 4, 6, and 8, which need no push.
 - **Nature:** copy
@@ -1044,8 +1045,8 @@ task wrote changed; revise the spec?``
 
 ## Cross-examination
 
-Blind review by `meta/muse-wonder-full-1.0` (architect tier, reasoning effort
-high, Muse Code 1.4.15, read-only, sandboxed to the dossier) on 2026-11-18.
+Blind review by a different provider's architect-tier model (architect tier, reasoning effort
+high, its command-line tool, read-only, sandboxed to the dossier) on 2026-11-18.
 The dossier held the draft spec, `AGENTS.md`, the profile,
 `kitchen/README.md`, and `.github/workflows/ci.yml`, and passed the privacy
 sweep's `--text` and a gitleaks scan before it was sent. 22 findings; every

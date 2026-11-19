@@ -24,7 +24,7 @@ references:
   - docs/learnings/L003-chef-council-skill.md
   - docs/learnings/L004-codify-and-cook-log.md
   - .agents/spec-profile.md
-cross_examined: meta/muse-wonder-full-1.0 (architect), 17 findings, 17 accepted
+cross_examined: cross-provider (architect), 17 findings, 17 accepted
 approved_by: human
 approved_at: 2026-11-19T03:23Z
 pr: 26
@@ -34,6 +34,8 @@ harvested: 2026-11-19 (2 learnings)
 ---
 
 # Editor gate: the recipe-editor skill, the hash-bound gate, the card linter, and their CI jobs
+
+> **Names removed on 2026-11-19.** This record was edited after it was written. Real names, titles, and links now read `[name removed]`, `[title removed]`, or `[link removed]`, a lens's former name reads as its present name in square brackets, a vetting record's former file name reads as its present one, and the model that reviewed a spec is described without its name. Until that day the lenses carried real names. That decision was superseded, and spec S010 made this edit.
 
 ## Goal and definition of done
 
@@ -1372,9 +1374,8 @@ adds to its check list. Additions for this spec only:
 
 ## Cross-examination
 
-One round, on the complete first draft, on 2026-11-19: Meta
-`muse-wonder-full-1.0` (architect tier) at high reasoning effort, through
-Muse Code 1.4.15 (1.4.15-R8339.1) in the read-only sandbox of the
+One round, on the complete first draft, on 2026-11-19: a different provider's architect-tier model (architect tier) at high reasoning effort, through
+its command-line tool in the read-only sandbox of the
 maintainer's routes document. The dossier held the draft, the ticket, and
 the files `## Repo profile` lists, and passed the privacy sweep's `--text`
 and a gitleaks scan before it was sent. The reviewer reported eleven tools,

@@ -15,7 +15,7 @@ references:
   - docs/wayfinder/W001-public-chef-council/issues/T003-license.md
   - docs/wayfinder/W001-public-chef-council/issues/T005-privacy-rules.md
   - .agents/spec-profile.md
-cross_examined: meta/muse-wonder-full-1.0 (architect), 16 findings, 15 accepted
+cross_examined: cross-provider (architect), 16 findings, 15 accepted
 approved_by: autonomous
 approved_at: 2026-11-18T18:12Z
 pr: 18
@@ -25,6 +25,8 @@ harvested: 2026-11-18 (3 learnings)
 ---
 
 # Scaffold: agent entry files, kitchen templates, skills home, and CI
+
+> **Names removed on 2026-11-19.** This record was edited after it was written. Real names, titles, and links now read `[name removed]`, `[title removed]`, or `[link removed]`, a lens's former name reads as its present name in square brackets, a vetting record's former file name reads as its present one, and the model that reviewed a spec is described without its name. Until that day the lenses carried real names. That decision was superseded, and spec S010 made this edit.
 
 ## Goal and definition of done
 
@@ -1366,7 +1368,7 @@ if __name__ == "__main__":
 ````markdown
 # Skills
 
-Each skill is one folder here, `.agents/skills/<name>/`, holding a `SKILL.md` in the Agent Skills format. Codex, Cursor, Gemini CLI, and Pi find skills in this folder on their own. Claude Code looks in `.claude/skills/`, so every skill also has a symbolic link there.
+Each skill is one folder here, `.agents/skills/<name>/`, holding a `SKILL.md` in the Agent Skills format. [name removed], [name removed], Gemini CLI, and [name removed] find skills in this folder on their own. Claude Code looks in `.claude/skills/`, so every skill also has a symbolic link there.
 
 ## Adding a skill
 
@@ -1789,8 +1791,7 @@ The eight lines Task 5 inserts, each indented exactly as shown:
 
 ## Cross-examination
 
-Blind review on 2026-11-18 by `muse-wonder-full-1.0` (provider `meta`,
-architect tier, reasoning effort high, Muse Code 1.4.15 (1.4.15-R8339.1)),
+Blind review on 2026-11-18 by a different provider's architect-tier model (architect tier, reasoning effort high, its command-line tool),
 through the sandboxed read-only route, on a dossier holding the draft spec,
 the profile, and `README.md`. 16 findings, 15 accepted (two in part), 1
 rejected. After the edits, leg 1 re-measured the red and re-ran every task

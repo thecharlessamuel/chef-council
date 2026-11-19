@@ -11,12 +11,14 @@ issue: https://github.com/thecharlessamuel/chef-council/issues/14
 spec: docs/specs/archive/S007-chat-path-and-adapters.md
 ---
 
+> **Names removed on 2026-11-19.** This record was edited after it was written. Real names, titles, and links now read `[name removed]`, `[title removed]`, or `[link removed]`, a lens's former name reads as its present name in square brackets, a vetting record's former file name reads as its present one, and the model that reviewed a spec is described without its name. Until that day the lenses carried real names. That decision was superseded, and spec S010 made this edit.
+
 ## Question
 Give chat apps with no file access the same system, and give notes-app users a safe mirror:
 
 - `chat/project-instructions.md`: the canonical, vendor-neutral paste-in, under 8,000 characters, that every setup note follows and never diverges from;
 - `scripts/build-chat-bundle.sh`, which generates `chat/bundle.md` from `kitchen/`, the skills, and the templates, with CI failing when the bundle is stale;
-- `chat/README.md`: setup for Claude Projects, ChatGPT Projects, Gemini Gems, and Muse, plus the editor check in a new chat;
+- `chat/README.md`: setup for Claude Projects, ChatGPT Projects, Gemini Gems, and [name removed], plus the editor check in a new chat;
 - `adapters/README.md`, the sync contract: search before creating, store the external ID in the sync map, read the live version before updating, never create a duplicate as a retry, report each destination separately, and read back before claiming success;
 - `adapters/sync-map.md`, an empty template, and `adapters/mem.md`, one worked example with no IDs.
 

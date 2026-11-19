@@ -26,7 +26,7 @@ references:
   - docs/learnings/L005-editor-gate.md
   - docs/learnings/L006-example-recipes.md
   - .agents/spec-profile.md
-cross_examined: meta/muse-wonder-full-1.0 (architect), 21 findings, 21 accepted
+cross_examined: cross-provider (architect), 21 findings, 21 accepted
 approved_by: autonomous
 approved_at: 2026-11-19T06:08Z
 pr: 30
@@ -36,6 +36,8 @@ harvested: 2026-11-19 (3 learnings)
 ---
 
 # Chat path and adapters: paste-in instructions, a generated chat bundle with a CI check, setup notes, and the sync contract
+
+> **Names removed on 2026-11-19.** This record was edited after it was written. Real names, titles, and links now read `[name removed]`, `[title removed]`, or `[link removed]`, a lens's former name reads as its present name in square brackets, a vetting record's former file name reads as its present one, and the model that reviewed a spec is described without its name. Until that day the lenses carried real names. That decision was superseded, and spec S010 made this edit.
 
 ## Goal and definition of done
 
@@ -129,7 +131,7 @@ Build plan — agent loop` sourced:
    chat/README.md` prints `0`: the notes hold no block of text to paste,
    so the only text a cook pastes is `chat/project-instructions.md`
    (decision 3). `grep -c -E '^\| (Claude Projects|ChatGPT Projects|Gemini
-   Gems|Muse) \|' chat/README.md` prints `4`.
+   Gems|[name removed]) \|' chat/README.md` prints `4`.
 8. **The links.** `linkcheck AGENTS.md chat/README.md
    chat/project-instructions.md adapters/README.md adapters/mem.md
    adapters/sync-map.md; echo $?` prints `0` and nothing else. `grep -c
@@ -368,7 +370,7 @@ Build plan — agent loop` sourced:
     The instructions give no second way to save: a chat hands every file
     back, whatever tools its app offers.
 12. **The four apps, and what was actually read.** The ticket names Claude
-    Projects, ChatGPT Projects, Gemini Gems, and Muse. The design report
+    Projects, ChatGPT Projects, Gemini Gems, and [name removed]. The design report
     marks its knowledge of them as inferred. Leg 1 read two vendor help
     pages on 2026-11-19, and `chat/README.md` says, row by row, what was
     read and what was not:
@@ -381,8 +383,8 @@ Build plan — agent loop` sourced:
       "Knowledge", then "Add files".
     - ChatGPT Projects: the help page returned an error to leg 1's reader.
       The row says the names are not checked and may be wrong.
-    - Muse: a search found no official page that describes instructions or
-      knowledge files for a Muse chat. The row says "Not known" and points
+    - [name removed]: a search found no official page that describes instructions or
+      knowledge files for a [name removed] chat. The row says "Not known" and points
       to the fallback: paste the instructions as the first message and
       attach the bundle.
     The notes link the two pages that were read and no other. Nothing in
@@ -1124,7 +1126,7 @@ One run is a sample. Decision 17 says what a failed run in leg 2 means.
   - `idcheck adapters/README.md adapters/mem.md adapters/sync-map.md; echo
     $?` prints `0` and nothing else.
   - `grep -c '^```' chat/README.md` prints `0`, and `grep -c -E '^\|
-    (Claude Projects|ChatGPT Projects|Gemini Gems|Muse) \|' chat/README.md`
+    (Claude Projects|ChatGPT Projects|Gemini Gems|[name removed]) \|' chat/README.md`
     prints `4`. `tail -1 adapters/sync-map.md` prints
     `|---|---|---|---|---|---|`: the table has no row.
   - `scripts/build-chat-bundle.sh --check; echo $?` prints `chat bundle
@@ -1176,8 +1178,7 @@ things for the pull request:
 ## Cross-examination
 
 The blind cross-examination ran on 2026-11-19 through the profile's route:
-Meta, `muse-wonder-full-1.0`, high reasoning effort, Muse Code 1.4.15
-(1.4.15-R8339.1), read-only in the routes document's sandbox, on a dossier
+a different provider's architect-tier model, high reasoning effort, its command-line tool, read-only in the routes document's sandbox, on a dossier
 of the first draft, `AGENTS.md`, the profile, ticket T013, and the
 repository files this spec leans on (the CI workflow, the two method
 pages, the `recipe-codify` and `chef-council` skills, `kitchen/README.md`,
@@ -2060,7 +2061,7 @@ Choosing a direction, the scope of a save, what was cooked and how it tasted, pr
 ````markdown
 # Chef Council in a chat app
 
-Use this folder when your assistant is a chat app that cannot read this repository: a project in Claude or ChatGPT, a Gem in Gemini, or a chat in Muse. You get the same council, the same rules, and the same editor check. What changes is that you carry the files in and out by hand, because the chat cannot save anything.
+Use this folder when your assistant is a chat app that cannot read this repository: a project in Claude or ChatGPT, a Gem in Gemini, or a chat in [name removed]. You get the same council, the same rules, and the same editor check. What changes is that you carry the files in and out by hand, because the chat cannot save anything.
 
 ## What is here
 
@@ -2086,7 +2087,7 @@ These steps are the same in every app. The table below says what each app calls 
 | Claude Projects | "Set project instructions" on the project's page | The project knowledge base, with its "+" button | Read on 2026-11-19: [How can I create and manage projects?](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects) |
 | ChatGPT Projects | The project's instructions | The project's files | Not checked. The help page could not be read on 2026-11-19, so these names may be wrong. |
 | Gemini Gems | The instructions box of a new Gem | "Knowledge", then "Add files" | Read on 2026-11-19: [Tips for creating custom Gems](https://support.google.com/gemini/answer/15235603) |
-| Muse | Not known | Not known | Not checked. No official page describing instructions or knowledge files for a Muse chat was found on 2026-11-19. Use the fallback below. |
+| [name removed] | Not known | Not known | Not checked. No official page describing instructions or knowledge files for a [name removed] chat was found on 2026-11-19. Use the fallback below. |
 
 Apps rename their screens. When a name above is not there, look for the place the app keeps instructions that apply to every chat, and the place it keeps files that every chat can read.
 

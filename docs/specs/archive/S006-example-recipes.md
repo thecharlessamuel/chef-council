@@ -25,7 +25,7 @@ references:
   - docs/learnings/L004-codify-and-cook-log.md
   - docs/learnings/L005-editor-gate.md
   - .agents/spec-profile.md
-cross_examined: meta/muse-wonder-full-1.0 (architect), 17 findings, 15 accepted
+cross_examined: cross-provider (architect), 17 findings, 15 accepted
 approved_by: autonomous
 approved_at: 2026-11-19T04:48Z
 pr: 28
@@ -35,6 +35,8 @@ harvested: 2026-11-19 (3 learnings)
 ---
 
 # Example recipes: two cards at v1.1, each with a real editor report, and the generated index
+
+> **Names removed on 2026-11-19.** This record was edited after it was written. Real names, titles, and links now read `[name removed]`, `[title removed]`, or `[link removed]`, a lens's former name reads as its present name in square brackets, a vetting record's former file name reads as its present one, and the model that reviewed a spec is described without its name. Until that day the lenses carried real names. That decision was superseded, and spec S010 made this edit.
 
 ## Goal and definition of done
 
@@ -218,8 +220,8 @@ Build plan — agent loop` says:
    carrots steam instead of browning", is the recipe's rationale and is not
    such a claim. The tuna melt loses these, the first four by Appendix B and
    the last three by this definition:
-   - "(ATK Method)" in a heading, and "(Kenji's trick)" in step 6;
-   - "ATK proved this reduces sogginess dramatically", which becomes "so
+   - "([name removed] Method)" in a heading, and "([name removed]'s trick)" in step 6;
+   - "[name removed] proved this reduces sogginess dramatically", which becomes "so
      pre-toasting the inside faces limits sogginess";
    - "Swiss is a medium-moisture cheese that melts at ~150°F", which
      becomes "on high heat, the bread burns before the cheese melts";
@@ -487,7 +489,7 @@ PY
 #### Helper: `namecheck`
 
 ````bash
-NAMES='kenji|l[oó]pez|test kitchen|\batk\b|souza|heston|blumenthal|\bstella\b|\bparks\b|\bclaire\b|saffitz|sohla|waylly|\brick\b|martinez|madhur|jaffrey|fuchsia|dunlop|samin|nosrat|jacques|p[eé]pin|yotam|ottolenghi|maangchi|marcella|hazan|charles|-style lens'
+NAMES='[name removed]'
 namecheck() {
   NAMES="$NAMES" python3 - "$@" <<'PY'
 import os, re, sys
@@ -867,8 +869,7 @@ to this spec:
 ## Cross-examination
 
 The blind cross-examination ran on 2026-11-19 through the profile's route:
-Meta, `muse-wonder-full-1.0`, high reasoning effort, Muse Code 1.4.15
-(1.4.15-R8339.1), read-only in the routes document's sandbox, on a dossier
+a different provider's architect-tier model, high reasoning effort, its command-line tool, read-only in the routes document's sandbox, on a dossier
 of the first draft, `AGENTS.md`, the profile, ticket T012, and the
 repository files this spec leans on, privacy-swept and secret-scanned, with
 no private-source file. It returned 17 findings. Three turned on things
