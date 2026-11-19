@@ -3,7 +3,7 @@ date: 2026-11-19
 id: S010
 wayfinder: none
 target_release: none
-status: approved
+status: shipped
 base_branch: main
 base_sha: 38dfcceca709b025624c08327f87791871a3605f
 work_branch: workstream/s010-name-free-agent-agnostic
@@ -28,8 +28,8 @@ approved_by: autonomous
 approved_at: 2026-11-19T18:28Z
 pr: 36
 kickbacks: 1
-merged: none
-harvested: none
+merged: 2026-11-19
+harvested: 2026-11-19 (3 learnings)
 ---
 
 # Name-free lenses and agent-agnostic pages: fourteen descriptors, redacted records, and a check that keeps the names out
