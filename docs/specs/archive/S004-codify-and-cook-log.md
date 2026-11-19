@@ -3,7 +3,7 @@ date: 2026-11-19
 id: S004
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T010-codify-and-cook-log.md
 target_release: none
-status: approved
+status: shipped
 base_branch: main
 base_sha: bec1b67b158e384d52414e731be051a80e54f0cf
 work_branch: workstream/t010-codify-and-cook-log
@@ -26,8 +26,8 @@ approved_by: autonomous
 approved_at: 2026-11-19T01:46Z
 pr: 24
 kickbacks: 0
-merged: none
-harvested: none
+merged: 2026-11-19
+harvested: 2026-11-19 (4 learnings)
 ---
 
 # Codify and cook log: two skills, three templates, the status rules, and the index generator

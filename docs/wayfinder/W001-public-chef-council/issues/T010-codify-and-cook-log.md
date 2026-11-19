@@ -2,13 +2,13 @@
 id: T010
 map: docs/wayfinder/W001-public-chef-council/MAP.md
 type: build
-status: claimed
+status: resolved
 blocked_by: [T007]
 claimed_by: spec-pipeline
 claimed_at: 2026-11-19T01:04:32Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/11
-spec: docs/specs/S004-codify-and-cook-log.md
+spec: docs/specs/archive/S004-codify-and-cook-log.md
 ---
 
 ## Question
@@ -28,6 +28,7 @@ Done when following codify on a fixture produces a card, a regenerated index, an
 - Templates and rules: `private-sources/cooking/templates/` and `private-sources/cooking/context/publishing-workflow.md`, generalized; drop notes-app fields and personal fields such as named feedback.
 
 ## Resolution
+Shipped as docs/specs/archive/S004-codify-and-cook-log.md through PR #24, merged 2026-11-19; harvest: L004.
 
 ## Rationale
 
