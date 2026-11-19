@@ -2,13 +2,13 @@
 id: T014
 map: docs/wayfinder/W001-public-chef-council/MAP.md
 type: build
-status: claimed
+status: resolved
 blocked_by: [T012, T013]
 claimed_by: spec-pipeline
 claimed_at: 2026-11-19T06:44:50Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/15
-spec: docs/specs/S008-docs-and-behavior-checks.md
+spec: docs/specs/archive/S008-docs-and-behavior-checks.md
 ---
 
 ## Question
@@ -29,6 +29,7 @@ Done when every relative link resolves, every path the README names exists, and 
 - The history calls the predecessors "my private cooking repo" and "a self-hosted assistant agent".
 
 ## Resolution
+Shipped as docs/specs/archive/S008-docs-and-behavior-checks.md through PR #32, merged 2026-11-19; harvest: L008.
 
 ## Rationale
 
