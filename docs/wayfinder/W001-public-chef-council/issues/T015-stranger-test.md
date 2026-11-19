@@ -2,13 +2,13 @@
 id: T015
 map: docs/wayfinder/W001-public-chef-council/MAP.md
 type: build
-status: claimed
+status: resolved
 blocked_by: [T014]
 claimed_by: spec-pipeline
 claimed_at: 2026-11-19T07:58:50Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/16
-spec: docs/specs/S009-stranger-test.md
+spec: docs/specs/archive/S009-stranger-test.md
 ---
 
 ## Question
@@ -22,6 +22,7 @@ Done when a second fresh stranger run on the fixed branch completes the path wit
 - A fix that changes a card re-runs the editor and the gate; a fix that changes a skill keeps its link and index line.
 
 ## Resolution
+Shipped as docs/specs/archive/S009-stranger-test.md through PR #34, merged 2026-11-19; harvest: L009.
 
 ## Rationale
 
