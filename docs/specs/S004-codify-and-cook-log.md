@@ -3,7 +3,7 @@ date: 2026-11-19
 id: S004
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T010-codify-and-cook-log.md
 target_release: none
-status: ready-to-build
+status: executing
 base_branch: main
 base_sha: bec1b67b158e384d52414e731be051a80e54f0cf
 work_branch: workstream/t010-codify-and-cook-log
