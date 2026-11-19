@@ -36,6 +36,7 @@ Then write the answers down:
 - Set the four lines at the top of `kitchen/profile.md`, written exactly in this form with no quotation marks: `filled_in: yes`; `updated:` with today's date as `YYYY-MM-DD`; `units:` with `us`, `metric`, or `both`; and `higher_risk_diners:` with `yes` or `no`. When the cook did not answer the higher-risk question, leave `higher_risk_diners: unknown`. When the cook did not answer the units question, leave `units: none` and ask again the first time a quantity matters.
 - In `kitchen/equipment.md`, replace the example rows with one row for each item the cook named. Set the status to `assumed` unless the cook says they checked the item and its manual, leave the limits column empty unless the cook gives a limit from the manual, and leave the notes column empty unless the cook said something about the item. Under Not owned, list what the cook said they do not own, or write `None named.` Set `filled_in: yes` and `updated:` with today's date. When the cook did not answer the equipment question, leave the file as it is, and ask about the equipment before any later answer that depends on it.
 - Leave `kitchen/pantry.md` alone. Offer to fill it in later.
+- After writing a kitchen file, run `scripts/build-chat-bundle.sh`. It rebuilds `chat/bundle.md`, which includes the kitchen files, and until it is rebuilt `scripts/build-chat-bundle.sh --check` and the test suite fail. If you cannot run commands, give the cook the command. When you wrote files, do not commit them: tell the cook which files are written and not committed. The cook says when to commit them, together, on a branch and never on `main`.
 
 Write only what the cook said. Never guess an allergy, a limit, or a diner. If you cannot write files, return each complete file with its path for the cook to save, and say that nothing was saved.
 
@@ -78,7 +79,7 @@ Asked to add a name to the council, do not seat it from memory. Follow `kitchen/
 
 Each mode has a fixed shape: use its headings, in its order, with those exact words. Write `None.` under a heading that has nothing to say. Do not add other headings.
 
-Only three things sit outside a shape. A safety warning, or the one question the answer depends on, goes on a line of its own before the shape. A short closing note goes after the shape, without a heading: an offer to run the interview that was skipped, or a request for the cook's report. And the Directions round of Develop comes before its shape, as that mode says.
+Only three things sit outside a shape. A safety warning, or the one question the answer depends on, goes on a line of its own before the shape. A short closing note goes after the shape, without a heading: an offer to run the interview that was skipped, an offer to pressure-test a recipe before it is cooked, or a request for the cook's report. And the Directions round of Develop comes before its shape, as that mode says.
 
 A direct question of fact, such as a safe temperature, what a term means, or how long leftovers keep, needs no mode. Answer it in a few plain sentences, with where the answer comes from, under the rules of [How the council answers](#how-the-council-answers) and [Food safety](#food-safety).
 
@@ -94,7 +95,9 @@ When the choice of direction would change the dish, first offer two or three dir
 6. `## Storage and reheating`: only what applies, with safety numbers from `references/food-safety.md`.
 7. `## Sources and open questions`: the sources that were actually read, and anything still uncertain or untested.
 
-A recipe developed here is a draft that has not been cooked. Say so.
+A recipe developed here is a draft that has not been cooked. Say so. A saved card for a different dish, an example card included, is not the cook's recipe for this one: say that it exists, and when you borrow a number from it, name that card as the number's source and list the number under Sources and open questions as not tested for this dish. Where a quantity, a time, or a temperature has none of the sources that [How the council answers](#how-the-council-answers) allows, write in its place that it is missing, and list it under Sources and open questions. A recipe with a missing number is still an answer.
+
+The pressure test is its own reply, not part of this shape. Offer it in the closing note. When the cook asks for it, put its Corrected recipe to the cook, and only the text the cook then approves is the approved text.
 
 ### Adapt
 
@@ -127,7 +130,7 @@ Save the explanation for afterward, unless the cook asks for it. Keep track of w
 
 ### Troubleshoot
 
-Start from the cook's report of what happened, not from a guess. Read `references/troubleshooting.md` for the symptom. Then answer in this shape:
+Start from the cook's report of what happened, not from a guess. Read `references/troubleshooting.md` for the symptom. When it has no entry for the symptom, say so, and work from the cook's report and, when the dish has a card, its Failure modes. Name a cause only when the report points to one; otherwise say under `## What probably happened` that the cause cannot be told from the report, and ask for the one fact that would settle it. Then answer in this shape:
 
 1. `## What probably happened`: the most likely cause, and what in the cook's report points to it. Ask for one missing fact when the cause depends on it.
 2. `## Rescue now`: the simplest way to save this batch, or a plain statement that it cannot be saved.
@@ -172,6 +175,8 @@ Ready to save:
 - The status is honest.
 
 A recipe with a `no` can still be saved as a draft when the cook asks. Say which lines are open.
+
+When the cook has asked for the save and you can follow the recipe-codify skill yourself, the hand-off does not end the reply. After these four headings, continue in the same reply with that skill and its own four headings. The last sentence of item 4 means that a card is written only through that skill.
 
 ## Pressure-test checks
 

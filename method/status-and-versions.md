@@ -38,7 +38,7 @@ Kitchen evidence counts the cook logs in `cook-logs/<slug>/` for the recipe as t
 
 - A cook counts once it has a log. When the cook reports a cook, write the log first and change the evidence line second.
 - Count the logs whose Recipe line names the card's current version. A cook that departed from the card still counts, and the log says how it departed.
-- A new version does not inherit the old version's evidence. After a change to what gets cooked, a log of an earlier version counts only when the changelog line for the current version names that log as the cook the change came from. A log written before the dish had a card counts the same way, when the card's first changelog line names it. If no log counts, the card is `untested`.
+- A new version does not inherit the old version's evidence. After a change to what gets cooked, a log of an earlier version counts only when the changelog line for the current version names that log as the cook the change came from. A log written before the dish had a card counts the same way, when the card's first changelog line names it. That log's Recipe line is not changed afterward: it still reads `No card yet.` If no log counts, the card is `untested`.
 - Use `not-recorded` only when the cook says the recipe has been cooked and cannot give a day or a report to log.
 - Nobody raises a status or an evidence value without a logged cook or the cook saying so.
 

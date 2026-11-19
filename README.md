@@ -21,8 +21,8 @@ You need Git, Bash, and Python 3. There is nothing to install and nothing to bui
 **With a coding agent** (Claude Code, Codex, Cursor, Gemini CLI, Pi, or another agent that reads `AGENTS.md`):
 
 1. Fork or clone this repository and open it in your agent.
-2. Say what you have: "Summon the council. I have two pounds of carrots, butter, and forty minutes." The first time, the agent asks five short questions before it answers (who you cook for, constraints and allergies, equipment, skill and time, and units) and writes your answers into `kitchen/profile.md` and `kitchen/equipment.md`.
-3. Choose a direction, cook, and tell it how it went: "Made it. Too sweet, and the thin pieces burned."
+2. Say what you have: "Summon the council. I have two pounds of carrots, butter, and forty minutes." The first time, the agent asks five short questions before it answers (who you cook for, constraints and allergies, equipment, skill and time, and units) and writes your answers into `kitchen/profile.md` and `kitchen/equipment.md`. It then rebuilds `chat/bundle.md`, which includes those files, and leaves all three for you to commit.
+3. Choose a direction. To have the recipe checked before you cook, say: "Pressure-test it." Then cook, and tell it how it went: "Made it. Too sweet, and the thin pieces burned."
 4. Say: "Log this cook." It writes a cook log in your own words, marks what you did not say as not reported, and proposes one change for next time.
 5. Say: "Save the recipe as a card." It writes the card with an honest status, and a separate agent checks the card against what you approved before anything is committed.
 

@@ -1291,6 +1291,7 @@ Then write the answers down:
 - Set the four lines at the top of `kitchen/profile.md`, written exactly in this form with no quotation marks: `filled_in: yes`; `updated:` with today's date as `YYYY-MM-DD`; `units:` with `us`, `metric`, or `both`; and `higher_risk_diners:` with `yes` or `no`. When the cook did not answer the higher-risk question, leave `higher_risk_diners: unknown`. When the cook did not answer the units question, leave `units: none` and ask again the first time a quantity matters.
 - In `kitchen/equipment.md`, replace the example rows with one row for each item the cook named. Set the status to `assumed` unless the cook says they checked the item and its manual, leave the limits column empty unless the cook gives a limit from the manual, and leave the notes column empty unless the cook said something about the item. Under Not owned, list what the cook said they do not own, or write `None named.` Set `filled_in: yes` and `updated:` with today's date. When the cook did not answer the equipment question, leave the file as it is, and ask about the equipment before any later answer that depends on it.
 - Leave `kitchen/pantry.md` alone. Offer to fill it in later.
+- After writing a kitchen file, run `scripts/build-chat-bundle.sh`. It rebuilds `chat/bundle.md`, which includes the kitchen files, and until it is rebuilt `scripts/build-chat-bundle.sh --check` and the test suite fail. If you cannot run commands, give the cook the command. When you wrote files, do not commit them: tell the cook which files are written and not committed. The cook says when to commit them, together, on a branch and never on `main`.
 
 Write only what the cook said. Never guess an allergy, a limit, or a diner. If you cannot write files, return each complete file with its path for the cook to save, and say that nothing was saved.
 
@@ -1333,7 +1334,7 @@ Asked to add a name to the council, do not seat it from memory. Follow `kitchen/
 
 Each mode has a fixed shape: use its headings, in its order, with those exact words. Write `None.` under a heading that has nothing to say. Do not add other headings.
 
-Only three things sit outside a shape. A safety warning, or the one question the answer depends on, goes on a line of its own before the shape. A short closing note goes after the shape, without a heading: an offer to run the interview that was skipped, or a request for the cook's report. And the Directions round of Develop comes before its shape, as that mode says.
+Only three things sit outside a shape. A safety warning, or the one question the answer depends on, goes on a line of its own before the shape. A short closing note goes after the shape, without a heading: an offer to run the interview that was skipped, an offer to pressure-test a recipe before it is cooked, or a request for the cook's report. And the Directions round of Develop comes before its shape, as that mode says.
 
 A direct question of fact, such as a safe temperature, what a term means, or how long leftovers keep, needs no mode. Answer it in a few plain sentences, with where the answer comes from, under the rules of [How the council answers](#how-the-council-answers) and [Food safety](#food-safety).
 
@@ -1349,7 +1350,9 @@ When the choice of direction would change the dish, first offer two or three dir
 6. `## Storage and reheating`: only what applies, with safety numbers from `references/food-safety.md`.
 7. `## Sources and open questions`: the sources that were actually read, and anything still uncertain or untested.
 
-A recipe developed here is a draft that has not been cooked. Say so.
+A recipe developed here is a draft that has not been cooked. Say so. A saved card for a different dish, an example card included, is not the cook's recipe for this one: say that it exists, and when you borrow a number from it, name that card as the number's source and list the number under Sources and open questions as not tested for this dish. Where a quantity, a time, or a temperature has none of the sources that [How the council answers](#how-the-council-answers) allows, write in its place that it is missing, and list it under Sources and open questions. A recipe with a missing number is still an answer.
+
+The pressure test is its own reply, not part of this shape. Offer it in the closing note. When the cook asks for it, put its Corrected recipe to the cook, and only the text the cook then approves is the approved text.
 
 ### Adapt
 
@@ -1382,7 +1385,7 @@ Save the explanation for afterward, unless the cook asks for it. Keep track of w
 
 ### Troubleshoot
 
-Start from the cook's report of what happened, not from a guess. Read `references/troubleshooting.md` for the symptom. Then answer in this shape:
+Start from the cook's report of what happened, not from a guess. Read `references/troubleshooting.md` for the symptom. When it has no entry for the symptom, say so, and work from the cook's report and, when the dish has a card, its Failure modes. Name a cause only when the report points to one; otherwise say under `## What probably happened` that the cause cannot be told from the report, and ask for the one fact that would settle it. Then answer in this shape:
 
 1. `## What probably happened`: the most likely cause, and what in the cook's report points to it. Ask for one missing fact when the cause depends on it.
 2. `## Rescue now`: the simplest way to save this batch, or a plain statement that it cannot be saved.
@@ -1427,6 +1430,8 @@ Ready to save:
 - The status is honest.
 
 A recipe with a `no` can still be saved as a draft when the cook asks. Say which lines are open.
+
+When the cook has asked for the save and you can follow the recipe-codify skill yourself, the hand-off does not end the reply. After these four headings, continue in the same reply with that skill and its own four headings. The last sentence of item 4 means that a card is written only through that skill.
 
 ## Pressure-test checks
 
@@ -1897,12 +1902,12 @@ Copy `templates/recipe-card.md` to `recipes/<category>/<slug>.md` and replace ev
 
 - **Slug and category.** Make the slug from the title as `method/status-and-versions.md` says under Names and places. No two cards share a slug, whatever their categories, so look at the card files in every folder under `recipes/` first, not only at the index. Use the category the cook names, made into a folder name the same way a slug is made. If the cook names none, use the folder that already holds similar cards, or ask.
 - **The block at the top.** Write `id`, `version`, `status`, `evidence`, `category`, and `mirrors` as plain words with no quotation marks. `id` is the slug and `category` is the folder. The lines under the title repeat the version, status, and evidence, and the two must agree. The date is today's.
-- **The recipe itself.** Equipment, Ingredients, Method, Yield, and Time carry what the approved text says and nothing else. Every ingredient keeps its amount, unit, and prep. Every step keeps its order, heat, time, cue, and doneness check. You may reword a step and arrange the recipe into the template's tables. Use a `###` component or stage line only when the approved text has more than one component or stage, and add no step: the template's three steps show the form of a step. You may not change what gets cooked.
+- **The recipe itself.** Equipment, Ingredients, Method, Yield, and Time carry what the approved text says and nothing else. Every ingredient keeps its amount, unit, and prep. Every step keeps its order, heat, time, cue, and doneness check. You may reword a step and arrange the recipe into the template's tables. A cue the approved text gives outside its steps, such as under a Cues heading, goes word for word into the step it describes, beside that step's own cue. A cue that describes no step goes under Notes. Use a `###` component or stage line only when the approved text has more than one component or stage, and add no step: the template's three steps show the form of a step. You may not change what gets cooked.
 - **Do not invent.** Never add a quantity, a time, a temperature, an ingredient, or a step. Never convert a unit unless the cook asks for it. Where the approved text leaves out something a cook needs, write `Not stated.` in its place, list it under Notes as open, and set the status to `draft`.
 - **The other sections.** Why this works, Failure modes, Variations, Storage, Notes, and Next experiment hold only what the approved text or the cook said. Under a heading with nothing to hold, write `None recorded.` Do not write new advice into a card.
 - **Source.** Write `Original.` for a recipe developed here. Credit a published source by title and link only when it was actually read, as `adapted from` or `technique informed by`. A lens is never an author or a source, and no card says a person reviewed or approved it. Do not copy a publisher's ingredient list, method, or headnote into a card: when the approved text is a publisher's recipe, say so and ask the cook what of their own to save.
 - **Status and evidence.** Take both from `method/status-and-versions.md`. A new card is `reviewed` when nothing is open, the cook approved the text, and the recipe was checked for coherence, which the cook's word or a chef-council hand-off with every Ready to save line at `yes` shows. Otherwise it is `draft`. Evidence counts the logs in `cook-logs/<slug>/` as that page says: read each log's Recipe line and count the ones that name the card's current version, plus an earlier one only when the changelog line for the current version names it. When the cook says they cooked the recipe and there is no log, the cook-log skill writes the log first; use `not-recorded` only when the cook cannot give a day or a report to log. Never raise either value on your own.
-- **Changelog.** Add one line for this save: the version, the date, what changed, and why. For a new card, say whether it has been cooked.
+- **Changelog.** Add one line for this save: the version, the date, what changed, and why. For a new card, say whether it has been cooked. When `cook-logs/<slug>/` holds a log written before the card, name that log by its path in this line, which is what lets it count.
 
 ## Regenerate the index
 
@@ -2153,7 +2158,7 @@ To run the gate yourself, from the repository root:
 scripts/check-qc.sh
 ```
 
-It compares your last commit with `origin/main` and prints `qc checked:` with the number of changed cards, or one line for each card that lacks a report. To compare with another branch, name it with `--base`, or set `QC_BASE`. The gate never passes when it cannot find the base to compare with. The comments at the top of the script list its other options and its exit statuses.
+It compares your last commit with `origin/main` and prints `qc checked:` with the number of changed cards, or one line for each card that lacks a report. Before a commit, the card you just wrote is not in your last commit, so that command prints `qc checked: 0` and has checked nothing. Run `scripts/check-qc.sh --working-tree` then, which reads the files as they are now. To compare with another branch, name it with `--base`, or set `QC_BASE`. The gate never passes when it cannot find the base to compare with. The comments at the top of the script list its other options and its exit statuses.
 
 A second script, `python3 scripts/lint-cards.py`, checks the form of every card: the block at the top, the lines under the title, the status and evidence values, the file and folder names, one slug per card, links that lead somewhere, and an index that is up to date. CI runs it beside the gate.
 
@@ -2212,7 +2217,7 @@ Kitchen evidence counts the cook logs in `cook-logs/<slug>/` for the recipe as t
 
 - A cook counts once it has a log. When the cook reports a cook, write the log first and change the evidence line second.
 - Count the logs whose Recipe line names the card's current version. A cook that departed from the card still counts, and the log says how it departed.
-- A new version does not inherit the old version's evidence. After a change to what gets cooked, a log of an earlier version counts only when the changelog line for the current version names that log as the cook the change came from. A log written before the dish had a card counts the same way, when the card's first changelog line names it. If no log counts, the card is `untested`.
+- A new version does not inherit the old version's evidence. After a change to what gets cooked, a log of an earlier version counts only when the changelog line for the current version names that log as the cook the change came from. A log written before the dish had a card counts the same way, when the card's first changelog line names it. That log's Recipe line is not changed afterward: it still reads `No card yet.` If no log counts, the card is `untested`.
 - Use `not-recorded` only when the cook says the recipe has been cooked and cannot give a day or a report to log.
 - Nobody raises a status or an evidence value without a logged cook or the cook saying so.
 

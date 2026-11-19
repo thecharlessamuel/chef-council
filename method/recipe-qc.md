@@ -64,7 +64,7 @@ To run the gate yourself, from the repository root:
 scripts/check-qc.sh
 ```
 
-It compares your last commit with `origin/main` and prints `qc checked:` with the number of changed cards, or one line for each card that lacks a report. To compare with another branch, name it with `--base`, or set `QC_BASE`. The gate never passes when it cannot find the base to compare with. The comments at the top of the script list its other options and its exit statuses.
+It compares your last commit with `origin/main` and prints `qc checked:` with the number of changed cards, or one line for each card that lacks a report. Before a commit, the card you just wrote is not in your last commit, so that command prints `qc checked: 0` and has checked nothing. Run `scripts/check-qc.sh --working-tree` then, which reads the files as they are now. To compare with another branch, name it with `--base`, or set `QC_BASE`. The gate never passes when it cannot find the base to compare with. The comments at the top of the script list its other options and its exit statuses.
 
 A second script, `python3 scripts/lint-cards.py`, checks the form of every card: the block at the top, the lines under the title, the status and evidence values, the file and folder names, one slug per card, links that lead somewhere, and an index that is up to date. CI runs it beside the gate.
 
