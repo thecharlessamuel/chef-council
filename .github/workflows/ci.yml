@@ -47,6 +47,19 @@ jobs:
       - name: Lint the recipe cards and check the index
         run: python3 scripts/lint-cards.py
 
+  names:
+    name: removed names
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out the full history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check that no removed name is back in the tree
+        run: python3 scripts/check-names.py
+
   editor-gate:
     name: editor gate
     runs-on: ubuntu-24.04

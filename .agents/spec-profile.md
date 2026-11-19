@@ -30,7 +30,13 @@
   - The CI checks' local commands, run from the repository root:
     `python3 scripts/check-skills.py` (prints `skills checked: <N>` and exits
     0), `python3 scripts/check-council.py` (prints `council checked: <S>
-    seated, <R> records` and exits 0), `python3 -m unittest discover -s tests
+    seated, <R> records` and exits 0), `python3 scripts/check-names.py` (it
+    needs the full history, so run `git fetch --unshallow` in a shallow
+    clone: prints `names checked: <F> files, <T> terms` and exits 0, exit 1
+    on a hit, which it reports by path and line without the name, and exit 2
+    when the check could not run, which never counts as clean; `--show`
+    prints the matched text for a local terminal, and that output is never
+    pasted into committed or posted text), `python3 -m unittest discover -s tests
     -v` (its last line is `OK`), `python3 scripts/lint-cards.py` (prints
     `cards checked: <N>` and exits 0), `scripts/check-qc.sh` (the editor
     gate against `origin/main`, after `git fetch origin`: prints `qc checked:
@@ -144,14 +150,23 @@
 - **Third-party recipes.** Copy no third-party recipe text: no ingredient
   lists, methods, or headnotes from any publisher. Credit a source by title
   and link only when it was actually read.
-- **Real people (decision T002).** Each named lens is seated only with a
-  vetting record of the chef's published work and argues only from that
-  record's tendencies. Never invent a quote, and never say a chef approved,
-  reviewed, endorsed, or contributed to anything. Attribute advice as
-  "Kenji-style lens" (the chef's name, then `-style lens`). Write no
-  "weaknesses" about a real person; describe where the lens can mislead. A
-  vetting record cites only pages actually read in the session, with the date
-  checked, and describes published work, never personal life.
+- **No real names (decision T002, superseded on 2026-11-19 by spec S010).**
+  A lens is named for its cooking approach, never for a person or a brand,
+  and it argues only from its record's tendencies. Nothing this pipeline
+  writes names a real cook, publisher, outlet, show, or book as the source
+  of a lens: no file, spec, ticket, learning, branch name, commit message,
+  PR body, or comment. Never invent a quote, and never say a chef approved,
+  reviewed, endorsed, or contributed to anything. Describe where a lens can
+  mislead, and write nothing about a real person. `scripts/check-names.py`
+  reads the removed names from history each time it runs and fails when one
+  is back; a hit is fixed where it is, and never by quoting the name.
+- **No named model or provider in a record (S010).** A spec's
+  `cross_examined` field, its `## Cross-examination` section, a PR's
+  cross-examination section, an editor report, and every other tracked
+  file or GitHub text describe a model in provider-neutral words. The
+  `cross_examined` field reads `cross-provider (<tier>), N findings, M
+  accepted`, with that one token for the reviewer. This profile and the setup
+  pages that say which file a particular tool loads are the exceptions.
 - **Privacy sweep hits.** Fix a hit at its location; never quote the matched
   text in any committed or posted text. A hit that would need rewriting pushed
   history, or editing GitHub text the leg cannot edit, is a `Question:` for the
@@ -177,8 +192,10 @@ command into this file or into any committed text.
   absent or ambiguous identity, is a stop to ask.
 - Required outside provider family: the route the routes document selects for
   the session's family at the tier of the work, which is architect for the
-  spec cross-examination and the PR cross-examination. Record the exact
-  provider, model, effort, and CLI version in the artifact.
+  spec cross-examination and the PR cross-examination. Record in the
+  artifact that a different provider's model at that tier ran the review,
+  with its effort and its counts, and name no provider, model, or CLI
+  there (`## Pipeline constraints`).
 - Read-only invocation: the routes document's command for the selected route,
   with `REPO` set to this checkout's `git rev-parse --show-toplevel`. The
   dossier holds this repository's bounded evidence and nothing else: the full
