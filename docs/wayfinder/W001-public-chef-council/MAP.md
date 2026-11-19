@@ -26,6 +26,7 @@ issue: https://github.com/thecharlessamuel/chef-council/issues/1
 - [Scaffold](issues/T007-scaffold.md) — shipped as S001 (PR #18)
 - [Council roster and vetting](issues/T008-council-roster-and-vetting.md) — shipped as S002 (PR #20)
 - [Chef council skill](issues/T009-chef-council-skill.md) — shipped as S003 (PR #22)
+- [Codify and cook log](issues/T010-codify-and-cook-log.md) — shipped as S004 (PR #24)
 
 ## Not yet specified
 - [deferred] How Antigravity CLI and Muse Code load instructions is unverified (design §6); `AGENTS.md` covers them by convention, and no ticket tests them.
