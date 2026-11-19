@@ -3,7 +3,7 @@ date: 2026-11-19
 id: S005
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T011-editor-gate.md
 target_release: none
-status: approved
+status: shipped
 base_branch: main
 base_sha: 492df7ced36c08e9de3e0efbf1311a37e7adc9ae
 work_branch: workstream/t011-editor-gate
@@ -29,8 +29,8 @@ approved_by: human
 approved_at: 2026-11-19T03:23Z
 pr: 26
 kickbacks: 0
-merged: none
-harvested: none
+merged: 2026-11-19
+harvested: 2026-11-19 (2 learnings)
 ---
 
 # Editor gate: the recipe-editor skill, the hash-bound gate, the card linter, and their CI jobs
