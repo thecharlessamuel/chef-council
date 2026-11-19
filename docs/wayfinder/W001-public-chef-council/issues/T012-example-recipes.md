@@ -2,13 +2,13 @@
 id: T012
 map: docs/wayfinder/W001-public-chef-council/MAP.md
 type: build
-status: open
+status: claimed
 blocked_by: [T009, T011]
-claimed_by: none
-claimed_at: none
+claimed_by: spec-pipeline
+claimed_at: 2026-11-19T04:02:13Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/13
-spec: none
+spec: docs/specs/S006-example-recipes.md
 ---
 
 ## Question
