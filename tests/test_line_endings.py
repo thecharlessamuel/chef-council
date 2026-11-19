@@ -4,7 +4,9 @@ The editor gate hashes a card's committed bytes, and scripts/check-qc.sh --hash
 and scripts/build-chat-bundle.sh read the files as they are checked out. The
 rule keeps the two the same on a machine whose git would otherwise check text
 files out with Windows line endings. Each test builds a repository in a
-temporary directory with that setting turned on.
+temporary directory with that setting turned on, and runs git there with an
+environment of its own, so that the caller's git settings and an exported
+GIT_DIR cannot reach it.
 """
 
 import hashlib
@@ -28,14 +30,23 @@ class LineEndingsTest(unittest.TestCase):
         self.addCleanup(self._tmp.cleanup)
         self.root = os.path.join(self._tmp.name, "repo")
         os.makedirs(os.path.join(self.root, "recipes", "sides"))
+        self.env = dict(os.environ)
+        for name in ("QC_BASE", "CI", "GIT_DIR", "GIT_WORK_TREE", "GIT_INDEX_FILE"):
+            self.env.pop(name, None)
+        self.env.update(
+            GIT_CONFIG_GLOBAL=os.devnull,
+            GIT_CONFIG_SYSTEM=os.devnull,
+            GIT_AUTHOR_NAME="test",
+            GIT_AUTHOR_EMAIL="test@example.invalid",
+            GIT_COMMITTER_NAME="test",
+            GIT_COMMITTER_EMAIL="test@example.invalid",
+        )
         self.git("init", "-q")
-        self.git("config", "user.name", "Test Cook")
-        self.git("config", "user.email", "cook@example.invalid")
         self.git("config", "core.autocrlf", "true")
 
     def git(self, *args):
         return subprocess.run(
-            ["git", "-C", self.root, *args], capture_output=True, check=True
+            ["git", "-C", self.root, *args], capture_output=True, check=True, env=self.env
         ).stdout
 
     def commit_and_check_out_again(self, with_rule):
@@ -69,6 +80,7 @@ class LineEndingsTest(unittest.TestCase):
             text=True,
             cwd=self.root,
             check=False,
+            env=self.env,
         )
         self.assertEqual(
             (result.returncode, result.stdout),

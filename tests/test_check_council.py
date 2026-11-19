@@ -12,8 +12,7 @@ SCRIPT = os.path.join(REPO, "scripts", "check-council.py")
 ROSTER_HEAD = "# The council\n\nA test roster.\n"
 
 FIELDS = {
-    "lens": "Example-style lens",
-    "name": "Example Cook",
+    "lens": "Example lens",
     "seat": "core",
     "job": "Heat and ingredient function",
     "question": "Which variable changes the result?",
@@ -21,30 +20,18 @@ FIELDS = {
     "scope": "Savory technique at home",
     "checked": "2026-11-18",
 }
-KEYS = ["lens", "name", "seat", "job", "question", "verdict", "scope", "checked"]
+KEYS = ["lens", "seat", "job", "question", "verdict", "scope", "checked"]
 
-SITE = "- Example site: https://example.com/ (checked 2026-11-18). The author's own site.\n"
-WORK = (
-    "- *First Book* (Example Press, 2015): https://example.com/first (checked 2026-11-18). Technique.\n"
-    "- *Second Book* (Example Press, 2022): https://example.com/second (checked 2026-11-18).\n"
-    "  A continuation line.\n"
-)
-SOURCES = "- *A review*: https://example.org/review (checked 2026-11-18). Confirms the method.\n"
-SECOND_SOURCE = "- *A profile*: https://example.net/profile (checked 2026-11-18). Describes the books.\n"
 SHOWS = "1. Tests one variable at a time.\n2. Explains why a step works.\n3. Writes for home equipment.\n"
 MISLEAD = "It can add steps a weeknight cook does not need.\n"
-VERDICT = "Seat. The published work covers the job.\n"
-NOTES = "Nothing was behind a paywall.\n"
+VERDICT = "Seat. The tendencies cover the job.\n"
 
 SECTIONS = [
-    "Official site",
-    "Published work",
-    "Independent sources",
-    "What the published work shows",
+    "What this lens holds",
     "Where this lens can mislead",
     "Verdict",
-    "Access notes",
 ]
+LENS_FORM = "lens must be <Descriptor> lens, and never <Name>-style lens"
 SECTION_LIST = ", ".join(SECTIONS)
 
 
@@ -62,13 +49,9 @@ def record(front=None, **changes):
     (with spaces as underscores) replace a section's text."""
     fields = dict(FIELDS)
     bodies = {
-        "Official site": SITE,
-        "Published work": WORK,
-        "Independent sources": SOURCES,
-        "What the published work shows": SHOWS,
+        "What this lens holds": SHOWS,
         "Where this lens can mislead": MISLEAD,
         "Verdict": VERDICT,
-        "Access notes": NOTES,
     }
     for key, value in changes.items():
         if key in fields:
@@ -150,7 +133,7 @@ class CheckCouncilTest(unittest.TestCase):
         self.write(
             "kitchen/vetting/second-cook.md",
             record(
-                lens="Second Cook-style lens",
+                lens="Second lens",
                 seat="specialist",
                 verdict="seat narrower",
                 scope="Regional home cooking",
@@ -159,12 +142,10 @@ class CheckCouncilTest(unittest.TestCase):
         self.write(
             "kitchen/vetting/third-cook.md",
             record(
-                lens="Third Cook-style lens",
+                lens="Third lens",
                 verdict="cut",
                 scope="none",
-                Published_work="- None found (checked 2026-11-18).\n",
-                Independent_sources="- None found (checked 2026-11-18).\n",
-                What_the_published_work_shows="Not established.\n",
+                What_this_lens_holds="Not established.\n",
             ),
         )
         self.write(
@@ -173,20 +154,12 @@ class CheckCouncilTest(unittest.TestCase):
                 core=entry(),
                 specialists=entry(
                     "second-cook",
-                    lens="Second Cook-style lens",
+                    lens="Second lens",
                     scope="Regional home cooking",
                 ),
             ),
         )
         self.check(["council checked: 2 seated, 3 records"], 0)
-
-    def test_no_official_site_passes_with_two_independent_sources(self):
-        self.check_record(
-            record(
-                Official_site="- No official site (checked 2026-11-18).\n",
-                Independent_sources=SOURCES + SECOND_SOURCE,
-            )
-        )
 
     def test_dot_files_in_the_records_folder_are_ignored(self):
         self.write("kitchen/vetting/.gitkeep", "")
@@ -212,23 +185,31 @@ class CheckCouncilTest(unittest.TestCase):
         )
 
     def test_missing_front_matter_fails(self):
-        self.check_record("# Example-style lens\n", "front matter is missing")
+        self.check_record("# Example lens\n", "front matter is missing")
 
     def test_unclosed_front_matter_fails(self):
-        self.check_record("---\nlens: Example-style lens\n", "front matter is missing")
+        self.check_record("---\nlens: Example lens\n", "front matter is missing")
 
     def test_front_matter_line_without_a_value_fails(self):
         front = "".join("%s: %s\n" % (key, FIELDS[key]) for key in KEYS)
         self.check_record(
             record(front=front.replace("job: Heat and ingredient function\n", "job:\n")),
-            "front matter line 5 is not key: value",
+            "front matter line 4 is not key: value",
         )
 
     def test_front_matter_keys_out_of_order_fail(self):
         front = "".join("%s: %s\n" % (key, FIELDS[key]) for key in reversed(KEYS))
         self.check_record(
             record(front=front),
-            "front matter keys must be exactly: lens, name, seat, job, question, "
+            "front matter keys must be exactly: lens, seat, job, question, "
+            "verdict, scope, checked",
+        )
+
+    def test_front_matter_with_a_name_key_fails(self):
+        front = "".join("%s: %s\n" % (key, FIELDS[key]) for key in KEYS)
+        self.check_record(
+            record(front=front.replace("seat: core\n", "name: Example Cook\nseat: core\n")),
+            "front matter keys must be exactly: lens, seat, job, question, "
             "verdict, scope, checked",
         )
 
@@ -236,7 +217,7 @@ class CheckCouncilTest(unittest.TestCase):
         front = "".join("%s: %s\n" % (key, FIELDS[key]) for key in KEYS[:-1])
         self.check_record(
             record(front=front),
-            "front matter keys must be exactly: lens, name, seat, job, question, "
+            "front matter keys must be exactly: lens, seat, job, question, "
             "verdict, scope, checked",
         )
 
@@ -254,13 +235,19 @@ class CheckCouncilTest(unittest.TestCase):
 
     def test_value_starting_with_a_symbol_fails(self):
         self.check_record(
-            record(name="*Example Cook*"),
-            "name must start with a letter or digit and hold no double quote, "
+            record(scope="*Savory technique*"),
+            "scope must start with a letter or digit and hold no double quote, "
             "colon-space, or space-hash",
         )
 
     def test_lens_without_the_suffix_fails(self):
-        self.check_record(record(lens="Example Cook"), "lens must end with -style lens")
+        self.check_record(record(lens="Example Cook"), LENS_FORM)
+
+    def test_lens_named_in_the_style_of_someone_fails(self):
+        self.check_record(record(lens="Example Cook-style lens"), LENS_FORM)
+
+    def test_lens_that_only_ends_in_the_letters_fails(self):
+        self.check_record(record(lens="Examplelens"), LENS_FORM)
 
     def test_unknown_seat_fails(self):
         self.check_record(record(seat="guest"), "seat must be core or specialist")
@@ -304,35 +291,11 @@ class CheckCouncilTest(unittest.TestCase):
         )
 
     def test_empty_section_fails(self):
-        self.check_record(record(Access_notes="\n"), "section Access notes is empty")
-
-    def test_prose_in_a_cited_section_fails(self):
-        self.check_record(
-            record(Published_work=WORK + "\nAlso well known for a third book.\n"),
-            "Published work: every line must be a list item or its indented continuation",
-        )
-
-    def test_two_official_sites_fail(self):
-        self.check_record(
-            record(Official_site=SITE + SITE.replace("example.com/", "example.com/about")),
-            "Official site: expected one list item, found 2",
-        )
-
-    def test_continuation_before_the_first_item_fails(self):
-        self.check_record(
-            record(Published_work="  Also a third book, uncited.\n" + WORK),
-            "Published work: every line must be a list item or its indented continuation",
-        )
-
-    def test_repeated_link_fails(self):
-        self.check_record(
-            record(Independent_sources=SOURCES + SOURCES),
-            "Independent sources: item 2 repeats a link already cited in this record",
-        )
+        self.check_record(record(Verdict="\n"), "section Verdict is empty")
 
     def test_missing_title_fails(self):
         self.check_record(
-            record().replace("# Example-style lens\n", ""),
+            record().replace("# Example lens\n", ""),
             "the text before the first section must be the title line # <lens> "
             "and nothing else",
         )
@@ -340,7 +303,7 @@ class CheckCouncilTest(unittest.TestCase):
     def test_text_beside_the_title_fails(self):
         self.check_record(
             record().replace(
-                "# Example-style lens\n", "# Example-style lens\n\nA famous cook.\n"
+                "# Example lens\n", "# Example lens\n\nA famous cook.\n"
             ),
             "the text before the first section must be the title line # <lens> "
             "and nothing else",
@@ -348,9 +311,8 @@ class CheckCouncilTest(unittest.TestCase):
 
     def test_prose_beside_the_tendencies_fails(self):
         self.check_record(
-            record(What_the_published_work_shows=SHOWS + "\nAlso widely admired.\n"),
-            "What the published work shows: a seated lens lists numbered items "
-            "and nothing else",
+            record(What_this_lens_holds=SHOWS + "\nAlso widely admired.\n"),
+            "What this lens holds: a seated lens lists numbered items and nothing else",
         )
 
     def test_record_that_is_not_text_fails(self):
@@ -363,58 +325,72 @@ class CheckCouncilTest(unittest.TestCase):
             handle.write(b"---\nlens: \xff\n")
         self.check(["kitchen/vetting/example.md: cannot be read as UTF-8 text"], 1)
 
-    def test_citation_without_a_link_fails(self):
-        self.check_record(
-            record(Independent_sources="- *A review* (checked 2026-11-18).\n"),
-            "Independent sources: item 1 needs an https:// link and (checked YYYY-MM-DD)",
-        )
-
-    def test_citation_without_a_date_fails(self):
-        self.check_record(
-            record(Published_work=WORK + "- *Third Book*: https://example.com/third\n"),
-            "Published work: item 3 needs an https:// link and (checked YYYY-MM-DD)",
-        )
-
-    def test_no_official_site_without_a_date_fails(self):
-        self.check_record(
-            record(
-                Official_site="- No official site.\n",
-                Independent_sources=SOURCES + SECOND_SOURCE,
-            ),
-            "Official site: item 1 needs (checked YYYY-MM-DD)",
-        )
-
-    def test_no_official_site_needs_two_independent_sources(self):
-        self.check_record(
-            record(Official_site="- No official site (checked 2026-11-18).\n"),
-            "Independent sources: a seated lens needs at least 2 items, found 1",
-        )
-
-    def test_one_published_work_fails(self):
-        self.check_record(
-            record(Published_work=WORK.split("\n")[0] + "\n"),
-            "Published work: a seated lens needs at least 2 items, found 1",
-        )
-
-    def test_none_found_does_not_seat_a_lens(self):
-        self.check_record(
-            record(Independent_sources="- None found (checked 2026-11-18).\n"),
-            "Independent sources: item 1 needs an https:// link and (checked YYYY-MM-DD)",
-        )
-
     def test_two_tendencies_fail(self):
         self.check_record(
-            record(What_the_published_work_shows="1. One.\n2. Two.\n"),
-            "What the published work shows: a seated lens needs 3 to 5 numbered "
-            "items, found 2",
+            record(What_this_lens_holds="1. One.\n2. Two.\n"),
+            "What this lens holds: a seated lens needs 3 to 5 numbered items, found 2",
         )
 
     def test_six_tendencies_fail(self):
         shows = "".join("%d. Tendency.\n" % n for n in range(1, 7))
         self.check_record(
-            record(What_the_published_work_shows=shows),
-            "What the published work shows: a seated lens needs 3 to 5 numbered "
-            "items, found 6",
+            record(What_this_lens_holds=shows),
+            "What this lens holds: a seated lens needs 3 to 5 numbered items, found 6",
+        )
+
+    def test_three_and_five_tendencies_pass(self):
+        for count in (3, 5):
+            with self.subTest(count=count):
+                shows = "".join("%d. Tendency.\n" % n for n in range(1, count + 1))
+                self.check_record(record(What_this_lens_holds=shows))
+
+    def test_cut_record_needs_no_tendencies(self):
+        self.write("kitchen/council.md", roster())
+        self.write(
+            "kitchen/vetting/example.md",
+            record(verdict="cut", scope="none", What_this_lens_holds="Not established.\n"),
+        )
+        self.check(["council checked: 0 seated, 1 records"], 0)
+
+    def test_web_link_in_a_record_fails(self):
+        for link in ("https://example.com/book", "http://example.com/", "HTTPS://EXAMPLE.COM"):
+            with self.subTest(link=link):
+                text = record(Verdict="Seat. See %s for the source.\n" % link)
+                line = text.split("\n").index("Seat. See %s for the source." % link) + 1
+                self.check_record(text, "line %d: a record holds no web link" % line)
+
+    def test_web_link_in_a_record_with_the_wrong_sections_fails(self):
+        text = record() + "\n## Sources\n\n- https://example.com/\n"
+        line = text.split("\n").index("- https://example.com/") + 1
+        self.check_record(
+            text,
+            "sections must be exactly, in order: " + SECTION_LIST,
+            "line %d: a record holds no web link" % line,
+        )
+
+    def test_web_link_in_a_record_with_bad_front_matter_fails(self):
+        text = "# Example lens\n\nSee https://example.com/.\n"
+        self.check_record(
+            text, "front matter is missing", "line 3: a record holds no web link"
+        )
+        front = "".join("%s: %s\n" % (key, FIELDS[key]) for key in KEYS[:-1])
+        text = record(front=front, Verdict="Seat. See https://example.com/.\n")
+        line = text.split("\n").index("Seat. See https://example.com/.") + 1
+        self.check_record(
+            text,
+            "front matter keys must be exactly: lens, seat, job, question, "
+            "verdict, scope, checked",
+            "line %d: a record holds no web link" % line,
+        )
+        front = "".join("%s: %s\n" % (key, FIELDS[key]) for key in KEYS)
+        text = record(
+            front=front.replace("seat: core\n", "seat:\n"),
+            Verdict="Seat. See https://example.com/.\n",
+        )
+        self.check_record(
+            text,
+            "front matter line 3 is not key: value",
+            "line %d: a record holds no web link" % (line + 1),
         )
 
     def test_quotation_marks_and_blockquotes_fail(self):
@@ -473,19 +449,36 @@ class CheckCouncilTest(unittest.TestCase):
         )
 
     def test_lens_heading_without_a_record_link_fails(self):
-        text = roster(core=entry() + "\n### Budget-style lens\n\n- **Job:** Cost\n")
-        line = text.split("\n").index("### Budget-style lens") + 1
+        text = roster(core=entry() + "\n### Budget lens\n\n- **Job:** Cost\n")
+        line = text.split("\n").index("### Budget lens") + 1
         self.check_roster(
             text,
-            "line %d: lens heading must be ### [<Name>-style lens](vetting/<slug>.md)"
-            % line,
+            "line %d: lens heading must be ### [<Descriptor> lens](vetting/<slug>.md), "
+            "and never <Name>-style lens" % line,
+        )
+
+    def test_lens_heading_in_the_style_of_someone_fails(self):
+        heading = "### [Example Cook-style lens](vetting/example.md)"
+        text = roster(core=entry().replace("### [Example lens](vetting/example.md)", heading))
+        line = text.split("\n").index(heading) + 1
+        self.write("kitchen/vetting/example.md", record())
+        self.write("kitchen/council.md", text)
+        self.check(
+            [
+                "kitchen/council.md: line %d: lens heading must be "
+                "### [<Descriptor> lens](vetting/<slug>.md), and never "
+                "<Name>-style lens" % line,
+                "kitchen/vetting/example.md: verdict is seat, but "
+                "kitchen/council.md does not seat it",
+            ],
+            1,
         )
 
     def test_lens_heading_outside_the_groups_fails(self):
         text = roster(core=entry()).replace(
-            "\n## Core lenses\n", "\n### [Example-style lens](vetting/example.md)\n\n## Core lenses\n"
+            "\n## Core lenses\n", "\n### [Example lens](vetting/example.md)\n\n## Core lenses\n"
         )
-        line = text.split("\n").index("### [Example-style lens](vetting/example.md)") + 1
+        line = text.split("\n").index("### [Example lens](vetting/example.md)") + 1
         self.check_roster(
             text,
             "line %d: a ### heading must be under ## Core lenses or "
@@ -529,7 +522,7 @@ class CheckCouncilTest(unittest.TestCase):
 
     def test_entry_without_a_record_fails(self):
         self.check_roster(
-            roster(core=entry() + entry("ghost", lens="Ghost-style lens")),
+            roster(core=entry() + entry("ghost", lens="Ghost lens")),
             "ghost: no record at kitchen/vetting/ghost.md",
         )
 
@@ -553,7 +546,7 @@ class CheckCouncilTest(unittest.TestCase):
         self.check_roster(
             roster(
                 core=entry(
-                    lens="Sample-style lens",
+                    lens="Sample lens",
                     job="Everything",
                     question="Why?",
                     scope="All cooking",
@@ -582,7 +575,7 @@ class CheckCouncilTest(unittest.TestCase):
         self.write("kitchen/council.md", roster(core=entry() + entry("other")))
         self.check(
             [
-                "kitchen/vetting/other.md: lens Example-style lens is also used by "
+                "kitchen/vetting/other.md: lens Example lens is also used by "
                 "kitchen/vetting/example.md"
             ],
             1,
@@ -602,7 +595,7 @@ class CheckCouncilTest(unittest.TestCase):
         self.write("kitchen/vetting/example.md", record(seat="guest"))
         self.write("kitchen/vetting/zed.md", "no front matter\n")
         self.write(
-            "kitchen/council.md", roster(core=entry() + entry("ghost", lens="Ghost-style lens"))
+            "kitchen/council.md", roster(core=entry() + entry("ghost", lens="Ghost lens"))
         )
         self.check(
             [
