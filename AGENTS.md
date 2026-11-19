@@ -43,7 +43,7 @@ What stays with the cook: choosing a direction, the scope of a save, what was co
 
 Skills live in `.agents/skills/<name>/`, and Claude Code finds them through the links in `.claude/skills/`. If your harness did not load a skill on its own, open the path given here and follow it. [`.agents/skills/README.md`](.agents/skills/README.md) explains how a skill is added.
 
-- No skill is installed yet. The first skill added replaces this line.
+- `chef-council`: [`.agents/skills/chef-council/SKILL.md`](.agents/skills/chef-council/SKILL.md). Use it to develop, adapt, pressure-test, cook live from, troubleshoot, or research a recipe with the council, to hand a finished recipe off to be saved, and to run the first-run kitchen interview when `kitchen/profile.md` is blank.
 
 ## Making changes
 
