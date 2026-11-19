@@ -9,12 +9,12 @@ The person you are working with is called the cook here. If you cannot read or w
 1. [`kitchen/README.md`](kitchen/README.md), then [`kitchen/profile.md`](kitchen/profile.md), [`kitchen/equipment.md`](kitchen/equipment.md), and [`kitchen/pantry.md`](kitchen/pantry.md): who is being cooked for, their constraints and standing corrections, the equipment, and a dated pantry snapshot. A file whose front matter says `filled_in: no` is still a blank template: ask the cook, and never treat a placeholder as a fact.
 2. [`kitchen/council.md`](kitchen/council.md): the lenses on the council, what each one is for, its scope, and where it can mislead. Each lens has a vetting record in `kitchen/vetting/`, and [`kitchen/council-vetting.md`](kitchen/council-vetting.md) is the rule for seating one.
 3. The skill for the job, from [Skills](#skills) below. Read its `SKILL.md` in full before acting on it.
-4. The saved recipe card, and its most recent cook log, before changing that recipe or cooking from it.
+4. The saved recipe card, listed in [`recipes/INDEX.md`](recipes/INDEX.md), and its most recent cook log in `cook-logs/`, before changing that recipe or cooking from it.
 
 ## Rules that are easy to get wrong
 
 - **The latest correction beats a saved card.** When the cook's most recent explicit instruction disagrees with a saved card, name the conflict, follow the correction, and update the card. The standing corrections in `kitchen/profile.md` beat a card in the same way.
-- **Status is several separate facts:** how far the recipe has been developed, whether it has been cooked and how that went, whether the card is saved in the repository, and whether any copy outside the repository is up to date. Writing a card does not make it cooked, and cooking it once does not make it a house recipe. Never raise any of these without a logged cook or the cook saying so.
+- **Status is several separate facts:** how far the recipe has been developed, whether it has been cooked and how that went, whether the card is saved in the repository, and whether any copy outside the repository is up to date. Writing a card does not make it cooked, and cooking it once does not make it a house recipe. Never raise any of these without a logged cook or the cook saying so. [`method/status-and-versions.md`](method/status-and-versions.md) is the full rule, with the version table.
 - **Never report a save, sync, or check that did not happen.** Say "saved" only after the file is written, "synced" only after reading the other copy back, and "checked" only when the check ran and you read its result. When a step failed or was skipped, say which one and why.
 - **Do not invent** quantities, times, temperatures, cook outcomes, allergies, equipment limits, or sources. When a number is missing, say so on the card.
 - **Keep the old version when testing a new one.** A small edit is a version bump on the same card. A changed technique or a variant is its own card, and the original stays.
@@ -44,6 +44,8 @@ What stays with the cook: choosing a direction, the scope of a save, what was co
 Skills live in `.agents/skills/<name>/`, and Claude Code finds them through the links in `.claude/skills/`. If your harness did not load a skill on its own, open the path given here and follow it. [`.agents/skills/README.md`](.agents/skills/README.md) explains how a skill is added.
 
 - `chef-council`: [`.agents/skills/chef-council/SKILL.md`](.agents/skills/chef-council/SKILL.md). Use it to develop, adapt, pressure-test, cook live from, troubleshoot, or research a recipe with the council, to hand a finished recipe off to be saved, and to run the first-run kitchen interview when `kitchen/profile.md` is blank.
+- `recipe-codify`: [`.agents/skills/recipe-codify/SKILL.md`](.agents/skills/recipe-codify/SKILL.md). Use it to save an approved recipe as a card, change a saved card, or start a separate version to test. It writes the card with its version and an honest status, regenerates the index, and saves the source packet for the editor check.
+- `cook-log`: [`.agents/skills/cook-log/SKILL.md`](.agents/skills/cook-log/SKILL.md). Use it when the cook reports back after cooking. It logs what happened in the cook's own words, marks everything else as not reported, and says what the card needs next.
 
 ## Making changes
 
