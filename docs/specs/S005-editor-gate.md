@@ -3,7 +3,7 @@ date: 2026-11-19
 id: S005
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T011-editor-gate.md
 target_release: none
-status: ready-to-build
+status: executing
 base_branch: main
 base_sha: 492df7ced36c08e9de3e0efbf1311a37e7adc9ae
 work_branch: workstream/t011-editor-gate
