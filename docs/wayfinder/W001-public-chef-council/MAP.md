@@ -28,6 +28,7 @@ issue: https://github.com/thecharlessamuel/chef-council/issues/1
 - [Chef council skill](issues/T009-chef-council-skill.md) — shipped as S003 (PR #22)
 - [Codify and cook log](issues/T010-codify-and-cook-log.md) — shipped as S004 (PR #24)
 - [Editor gate](issues/T011-editor-gate.md) — shipped as S005 (PR #26)
+- [Example recipes](issues/T012-example-recipes.md) — shipped as S006 (PR #28)
 
 ## Not yet specified
 - [deferred] How Antigravity CLI and Muse Code load instructions is unverified (design §6); `AGENTS.md` covers them by convention, and no ticket tests them.

@@ -2,13 +2,13 @@
 id: T012
 map: docs/wayfinder/W001-public-chef-council/MAP.md
 type: build
-status: claimed
+status: resolved
 blocked_by: [T009, T011]
 claimed_by: spec-pipeline
 claimed_at: 2026-11-19T04:02:13Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/13
-spec: docs/specs/S006-example-recipes.md
+spec: docs/specs/archive/S006-example-recipes.md
 ---
 
 ## Question
@@ -28,6 +28,7 @@ both as v1.1 with the public-release edits in their changelogs, plus the generat
 - Each source packet is the scrubbed approved text. The spec decides whether the packets are committed as examples or kept in `.sources/`.
 
 ## Resolution
+Shipped as docs/specs/archive/S006-example-recipes.md through PR #28, merged 2026-11-19; harvest: L006.
 
 ## Rationale
 
