@@ -3,7 +3,7 @@ date: 2026-11-19
 id: S010
 wayfinder: none
 target_release: none
-status: pr-open
+status: approved
 base_branch: main
 base_sha: 38dfcceca709b025624c08327f87791871a3605f
 work_branch: workstream/s010-name-free-agent-agnostic
