@@ -8,7 +8,7 @@ claimed_by: spec-pipeline
 claimed_at: 2026-11-19T05:27:42Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/14
-spec: none
+spec: docs/specs/S007-chat-path-and-adapters.md
 ---
 
 ## Question
