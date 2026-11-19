@@ -3,7 +3,7 @@ date: 2026-11-19
 id: S006
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T012-example-recipes.md
 target_release: none
-status: draft
+status: ready-to-build
 base_branch: main
 base_sha: e4fcbf0f1e81554d38eb455889dc48bf94645409
 work_branch: workstream/t012-example-recipes
@@ -26,8 +26,8 @@ references:
   - docs/learnings/L005-editor-gate.md
   - .agents/spec-profile.md
 cross_examined: meta/muse-wonder-full-1.0 (architect), 17 findings, 15 accepted
-approved_by: pending
-approved_at: pending
+approved_by: autonomous
+approved_at: 2026-11-19T04:48Z
 pr: none
 kickbacks: 0
 merged: none

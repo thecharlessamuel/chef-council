@@ -8,7 +8,7 @@ claimed_by: spec-pipeline
 claimed_at: 2026-11-19T04:02:13Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/13
-spec: none
+spec: docs/specs/S006-example-recipes.md
 ---
 
 ## Question
