@@ -2,13 +2,13 @@
 id: T011
 map: docs/wayfinder/W001-public-chef-council/MAP.md
 type: build
-status: claimed
+status: resolved
 blocked_by: [T010]
 claimed_by: spec-pipeline
 claimed_at: 2026-11-19T02:24:41Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/12
-spec: docs/specs/S005-editor-gate.md
+spec: docs/specs/archive/S005-editor-gate.md
 ---
 
 ## Question
@@ -30,6 +30,7 @@ Done when the tests show the gate failing a card change with no report, with a s
 - Sources to generalize: `private-sources/cooking/context/recipe-qc.md`, `private-sources/cooking/.claude/agents/recipe-editor.md`, `private-sources/cooking/.claude/hooks/recipe-qc-gate.sh`, and `private-sources/cooking/.github/workflows/recipe-qc-gate.yml`; drop the notes-app checks and the maintainer's name.
 
 ## Resolution
+Shipped as docs/specs/archive/S005-editor-gate.md through PR #26, merged 2026-11-19; harvest: L005.
 
 ## Rationale
 
