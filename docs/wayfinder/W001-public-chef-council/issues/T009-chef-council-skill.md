@@ -2,13 +2,13 @@
 id: T009
 map: docs/wayfinder/W001-public-chef-council/MAP.md
 type: build
-status: claimed
+status: resolved
 blocked_by: [T008]
 claimed_by: spec-pipeline
 claimed_at: 2026-11-18T22:31:38Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/10
-spec: docs/specs/S003-chef-council-skill.md
+spec: docs/specs/archive/S003-chef-council-skill.md
 ---
 
 ## Question
@@ -30,6 +30,7 @@ Done when the frontmatter is spec-valid, every safety number traces to a cited s
 - Food safety defaults to US guidance (FoodSafety.gov, USDA FSIS, FDA), °F with °C. Poultry at 165°F is the default; a lower temperature appears only as a labeled time-at-temperature hold from a cited FSIS table, never as a default. A `higher_risk_diners` entry in the kitchen profile switches to the stricter endpoints.
 
 ## Resolution
+Shipped as docs/specs/archive/S003-chef-council-skill.md through PR #22, merged 2026-11-19; harvest: L003.
 
 ## Rationale
 

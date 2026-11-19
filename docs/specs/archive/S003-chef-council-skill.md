@@ -3,7 +3,7 @@ date: 2026-11-18
 id: S003
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T009-chef-council-skill.md
 target_release: none
-status: approved
+status: shipped
 base_branch: main
 base_sha: ae8f725603666ca23bb0ba7e80dca6ecfa53b86a
 work_branch: workstream/t009-chef-council-skill
@@ -24,8 +24,8 @@ approved_by: human
 approved_at: 2026-11-19T00:05Z
 pr: 22
 kickbacks: 0
-merged: none
-harvested: none
+merged: 2026-11-19
+harvested: 2026-11-19 (2 learnings)
 ---
 
 # Chef-council skill: lens selection, seven modes, the first-run interview, and two references

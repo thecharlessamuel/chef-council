@@ -25,6 +25,7 @@ issue: https://github.com/thecharlessamuel/chef-council/issues/1
 - [Private repository names](issues/T006-private-repository-names.md) — public text never names the maintainer's private repositories.
 - [Scaffold](issues/T007-scaffold.md) — shipped as S001 (PR #18)
 - [Council roster and vetting](issues/T008-council-roster-and-vetting.md) — shipped as S002 (PR #20)
+- [Chef council skill](issues/T009-chef-council-skill.md) — shipped as S003 (PR #22)
 
 ## Not yet specified
 - [deferred] How Antigravity CLI and Muse Code load instructions is unverified (design §6); `AGENTS.md` covers them by convention, and no ticket tests them.
