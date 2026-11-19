@@ -23,7 +23,7 @@ references:
   - docs/learnings/L008-docs-and-behavior-checks.md
   - docs/learnings/L009-stranger-test.md
   - .agents/spec-profile.md
-cross_examined: a different provider's model (architect), 13 findings, 11 accepted
+cross_examined: cross-provider (architect), 13 findings, 11 accepted
 approved_by: pending
 approved_at: pending
 pr: none
@@ -98,7 +98,7 @@ helpers`):
 9. **The process records are redacted and say so.** `git grep -l 'Names
    removed on 2026-11-19' -- docs ":!$SPEC_REL" | wc -l` prints `15`. `git grep -h
    '^cross_examined:' docs/specs/archive | sed 's/,.*//' | sort -u` prints
-   the one line `cross_examined: a different provider's model (architect)`.
+   the one line `cross_examined: cross-provider (architect)`.
 10. **The pages hold together.** `linkcheck README.md AGENTS.md
     kitchen/council.md kitchen/council-vetting.md
     templates/lens-vetting-record.md chat/README.md docs/council-pattern.md
@@ -303,8 +303,9 @@ helpers`):
     two example editor reports, and the invitation in the report format to
     name one; and, in every process record, the provider, model, and
     command-line tool that cross-examined a spec, which now read `a
-    different provider's architect-tier model` in prose, `a different
-    provider's model (architect)` in the `cross_examined` field, and `its
+    different provider's architect-tier model` in prose, the single token
+    `cross-provider`, as in `cross-provider (architect)`, in the
+    `cross_examined` field, and `its
     command-line tool`. In the process records five tool names also become
     `[name removed]` wherever they stand, inside an archived copy of a page
     too; the tool names this decision keeps are not among the five.
@@ -711,8 +712,9 @@ EDITS = [
         "- **No named model or provider in a record (S010).** A spec's\n"
         "  `cross_examined` field, its `## Cross-examination` section, a PR's\n"
         "  cross-examination section, an editor report, and every other tracked\n"
-        "  file or GitHub text describe a model in provider-neutral words, such as\n"
-        "  `a different provider's model (architect)`. This profile and the setup\n"
+        "  file or GitHub text describe a model in provider-neutral words. The\n"
+        "  `cross_examined` field reads `cross-provider (<tier>), N findings, M\n"
+        "  accepted`, with that one token for the reviewer. This profile and the setup\n"
         "  pages that say which file a particular tool loads are the exceptions.\n",
     ),
     (
@@ -824,7 +826,7 @@ AGENT_RULES = [
     (r"`muse-wonder-full-1\.0` \(provider `meta`,\s+", MODEL + " ("),
     (r"Meta,?\s+`muse-wonder-full-1\.0`", MODEL),
     (r"`meta/muse-wonder-full-1\.0`", MODEL),
-    (r"meta/muse-wonder-full-1\.0", "a different provider's model"),
+    (r"meta/muse-wonder-full-1\.0", "cross-provider"),
     (r"for an(\s+)Anthropic session at", r"for this session's\1provider at"),
     (r"\b(?:Antigravity CLI|Muse Code|Muse|Codex|Cursor|Pi)\b", "[name removed]"),
 ]
@@ -1216,15 +1218,15 @@ its prompt needs a real name and this spec holds none.
 
     ```bash
     sha256sum -c - <<'SUMS'
-    3df2c47e004ca75e8429e739ed471a08cf94831e359ce5faf23873525810c574  docs/specs/archive/S001-scaffold.md
-    a7f77643e8371651a7994ab6f2b01f5c7f9f8689201197c609f4ec33d4fe6164  docs/specs/archive/S002-council-roster-and-vetting.md
-    69894c4ba3314ea5aded0c9ed3fc9d37554edc5da1e22f3bca60f9f75d74e91b  docs/specs/archive/S003-chef-council-skill.md
-    70872009b87d7cdb90b3f273cb4f142730407144b7e92085558a1f402e462987  docs/specs/archive/S004-codify-and-cook-log.md
-    3859bfbb0c20d0913de1844866965f9003f24fab3b13cb5dd1c900cc4be05e53  docs/specs/archive/S005-editor-gate.md
-    6f550a6cc1f7db6f1ab9435908092c806e099805c0c66b4c8c10a414fea55f2d  docs/specs/archive/S006-example-recipes.md
-    5b5ff1cea89a15548d4f963c4599759c519488843d5c34138efdcf24b3f10087  docs/specs/archive/S007-chat-path-and-adapters.md
-    44076ca2aece1eb11683a9fb0ba36d20ed4364f86262000f243b5a5697c48546  docs/specs/archive/S008-docs-and-behavior-checks.md
-    65312adf20cd14681f71d89d8486ca7a45918644dc0d4adffa29b9f88e7923f3  docs/specs/archive/S009-stranger-test.md
+    79b349b4ebc13ff07cfbd09cbdb77fe3134d6a4f09ac5290eb89fc0fe6d3ea86  docs/specs/archive/S001-scaffold.md
+    82d29b23bc0cc6eb51c1163243a87808fb0812d7f4f6ca9dc21c90193fd01bee  docs/specs/archive/S002-council-roster-and-vetting.md
+    6feba9a8c3dccaf2fe38aa4e17f147f0c5cb90351053db2cb096c94d1a853856  docs/specs/archive/S003-chef-council-skill.md
+    e12ff720e527ddc8f206266dbcbf7f7dd28d47297cb661a45991825cb65aa2b7  docs/specs/archive/S004-codify-and-cook-log.md
+    d5511d780999a33ede27f30fc10abc14a9d60543c9feeb6b477504f58e6cf3e6  docs/specs/archive/S005-editor-gate.md
+    e09d8aab72b582539d5dd98f81d9e7f61611565612a71bb8b142e5b91a2c1257  docs/specs/archive/S006-example-recipes.md
+    fc3a78c537092f030a051962f64ca1bcc1725a0b92ad8328575e590008df9f60  docs/specs/archive/S007-chat-path-and-adapters.md
+    188c8f63dc2bc07699d3f091cac8420f8885fa0255b9e39833886e8e33020ed4  docs/specs/archive/S008-docs-and-behavior-checks.md
+    4dd5d8e7e5e133fc1c8e0f1e350bc6f47451cdfd76f2185ff3fef47dff565f90  docs/specs/archive/S009-stranger-test.md
     9b0637de4e1377487eadba7641442b63fb4b1b53093a4d27e0a87c23afc5c4d2  docs/wayfinder/W001-public-chef-council/MAP.md
     a61704f1a96668390e47ff414f831e8dd9b6e265e3a365e79315c676fdc9635f  docs/wayfinder/W001-public-chef-council/issues/T002-named-chefs-with-guardrails.md
     41e74ab11b69f9e257a8205e6e54fd2f469f2956bbc82b9e14f4bf45f8040bf6  docs/wayfinder/W001-public-chef-council/issues/T005-privacy-rules.md
@@ -1259,7 +1261,7 @@ its prompt needs a real name and this spec holds none.
 
     ```bash
     sha256sum -c - <<'SUMS'
-    4613465528ea43e5852db93b02751de097e2fb2d00cbe16e97a6731fc683dc61  .agents/spec-profile.md
+    366672fe4a8f2b4f87b83ea031b3705a7868dca619be9158bdfec92db4d9443e  .agents/spec-profile.md
     600f15e5ac013f3d6fa65cf25fe76097e4a68f444a8b5e26a6b335e9c5cad54f  .github/workflows/ci.yml
     SUMS
     ```
@@ -1358,6 +1360,13 @@ and 2 rejected.
 13. **REJECT.** Two wordings are intended: the `cross_examined` field keeps
     its `(architect)` form, and prose says `architect-tier model`. Decision
     15 now states both, so nothing was unified.
+
+After the round, on 2026-11-19, the maintainer approved the fourteen
+descriptors as proposed and asked for one change: the `cross_examined` field
+records the reviewer as the single token `cross-provider`, in this spec and
+in every archived spec it rewrites. The redact helper, the profile edit,
+decision 15, and definition-of-done item 9 were changed to match, and leg 1
+rebuilt the six tasks and re-measured the hashes of Tasks 5 and 6.
 
 ## File contents
 
