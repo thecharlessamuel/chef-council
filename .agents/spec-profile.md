@@ -36,7 +36,10 @@
     gate against `origin/main`, after `git fetch origin`: prints `qc checked:
     <N>` and exits 0, exit 1 when a changed card lacks a current passing
     report, and exit 2 when the check could not run, which never counts as
-    clean), and
+    clean), `scripts/build-chat-bundle.sh --check` (prints `chat bundle
+    checked: <N> files` and exits 0, exit 1 when `chat/bundle.md` is missing
+    or out of date, and exit 2 when the check could not run, which never
+    counts as clean), and
     `scripts/secret-scan.sh` (gitleaks over the full local history: exit 0
     with `no leaks found`, exit 1 on a leak, and exit 2 when the scan could
     not run, which never counts as clean). The scan downloads the pinned
