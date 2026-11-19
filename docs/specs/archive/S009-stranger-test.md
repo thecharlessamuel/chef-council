@@ -3,7 +3,7 @@ date: 2026-11-19
 id: S009
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T015-stranger-test.md
 target_release: none
-status: approved
+status: shipped
 base_branch: main
 base_sha: d28bb614dd66138805544e2f810ad3129ba54897
 work_branch: workstream/t015-stranger-test
@@ -31,8 +31,8 @@ approved_by: autonomous
 approved_at: 2026-11-19T08:36Z
 pr: 34
 kickbacks: 0
-merged: none
-harvested: none
+merged: 2026-11-19
+harvested: 2026-11-19 (4 learnings)
 ---
 
 # Stranger test: two fresh runs of the README's five-minute path, and the fixes for what the first one tripped on
