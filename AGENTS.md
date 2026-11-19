@@ -46,6 +46,7 @@ Skills live in `.agents/skills/<name>/`, and Claude Code finds them through the 
 - `chef-council`: [`.agents/skills/chef-council/SKILL.md`](.agents/skills/chef-council/SKILL.md). Use it to develop, adapt, pressure-test, cook live from, troubleshoot, or research a recipe with the council, to hand a finished recipe off to be saved, and to run the first-run kitchen interview when `kitchen/profile.md` is blank.
 - `recipe-codify`: [`.agents/skills/recipe-codify/SKILL.md`](.agents/skills/recipe-codify/SKILL.md). Use it to save an approved recipe as a card, change a saved card, or start a separate version to test. It writes the card with its version and an honest status, regenerates the index, and saves the source packet for the editor check.
 - `cook-log`: [`.agents/skills/cook-log/SKILL.md`](.agents/skills/cook-log/SKILL.md). Use it when the cook reports back after cooking. It logs what happened in the cook's own words, marks everything else as not reported, and says what the card needs next.
+- `recipe-editor`: [`.agents/skills/recipe-editor/SKILL.md`](.agents/skills/recipe-editor/SKILL.md). Use it only in a fresh context that did not write the card, to check a new or changed card against its source packet and write the editor report.
 
 ## Making changes
 
@@ -56,5 +57,7 @@ Skills live in `.agents/skills/<name>/`, and Claude Code finds them through the 
   - `python3 scripts/check-council.py`: the council roster matches the vetting records.
   - `python3 -m unittest discover -s tests -v`: the tests for the scripts.
   - `scripts/secret-scan.sh`: gitleaks over the full history.
+  - `python3 scripts/lint-cards.py`: the cards are well formed and the index is current.
+  - `scripts/check-qc.sh`: each changed card has a current passing editor report.
 - Never commit a secret, a credential, or a token. Source packets, the exact text a cook approved, stay in the git-ignored `.sources/` folder.
 - Everything committed to a public fork is public, including `kitchen/` and the history. Keep out anything the cook would not publish.
