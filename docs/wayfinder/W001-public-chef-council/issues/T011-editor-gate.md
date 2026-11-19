@@ -8,7 +8,7 @@ claimed_by: spec-pipeline
 claimed_at: 2026-11-19T02:24:41Z
 cross_examined: none
 issue: https://github.com/thecharlessamuel/chef-council/issues/12
-spec: none
+spec: docs/specs/S005-editor-gate.md
 ---
 
 ## Question
