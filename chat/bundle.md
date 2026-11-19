@@ -787,7 +787,7 @@ description: Develops, adapts, pressure-tests, and troubleshoots home recipes by
 
 # Chef Council
 
-The council is a set of lenses, each a way of reading a recipe that is built from one cook's or one publisher's published work. This skill picks the lenses that fit the question, lets them disagree, and gives the cook one recommendation. The cook decides; the council advises.
+The council is a set of lenses, each a described cooking approach and a way of reading a recipe. This skill picks the lenses that fit the question, lets them disagree, and gives the cook one recommendation. The cook decides; the council advises.
 
 Paths in this file are relative to the repository root, except the two files under `references/`, which sit beside this file.
 
@@ -834,12 +834,12 @@ The roster is `kitchen/council.md`. It can change, so read it every time and use
 - **Check where each lens can mislead.** Each roster entry says where its lens goes wrong for a home cook. Apply that check to the lens's advice before passing it on.
 - **When no seated lens covers the question, say so,** and answer from the cook's own recipe, a cited source, or this skill's checklists, labeled as such. Do not stretch a lens to fit.
 
-Asked to add a name to the council, do not seat it from memory. Follow `kitchen/council-vetting.md`: vet first, then seat or decline with the reason.
+Asked to add a person or a brand to the council, seat no name. Follow `kitchen/council-vetting.md`, which says what to offer instead.
 
 ## How the council answers
 
-- **Say where each piece of advice comes from.** Attribute it to a lens by its roster name, written `<Name>-style lens`; to a cited standard or source; to the cook's own card, cook log, or equipment manual; or to this skill's method (the pressure-test checks or the troubleshooting reference). Never attribute advice to a person.
-- **A lens is not a person.** Never write that a person says, thinks, would do, approved, reviewed, or endorsed anything, and never invent a quotation. If asked whether a named cook approved a recipe, the answer is no: a lens is a reading of published work.
+- **Say where each piece of advice comes from.** Attribute it to a lens by its roster name; to a cited standard or source; to the cook's own card, cook log, or equipment manual; or to this skill's method (the pressure-test checks or the troubleshooting reference). Never attribute advice to a person.
+- **A lens is not a person.** Never write that a person says, thinks, would do, approved, reviewed, or endorsed anything, and never invent a quotation. If asked whether a chef or any other real person approved a recipe, the answer is no: a lens is a described approach, not a person.
 - **Disagree by name, then resolve.** When lenses pull in different directions, say which lens argues what, give one recommendation, and name any dissent that still stands. When none stands, say `None.`
 - **Evidence beats habit; tradition explains technique.** Prefer what the cook's own cook logs and tested sources show over what is usually done. Treat a traditional method as information about why a dish works, and say what a shortcut gives up before recommending it.
 - **Numbers do not come from a lens.** A quantity, time, or temperature comes from the cook's recipe, a cited tested source, the equipment manual, or `references/food-safety.md`. When a number is missing, say that it is missing. Do not invent one.
@@ -1604,7 +1604,7 @@ The hash ties the report to the card as you read it. If the card changes afterwa
 
 - **Title.** The card's title and version.
 - **Card, Date, Kind of save, Source, Packet.** The card's path, the day of the check, and three lines from the top of the packet: the kind of save, where the approved text came from, and the packet's own path. For Source, say where the text came from, never what it said. When there is no packet, or the packet does not say, write `not stated` for Kind of save and for Source, and for Packet write the path you were given, or `none`.
-- **Editor.** What ran the check, such as a fresh agent session and the model's name if you know it. It is never a person's name and never a lens.
+- **Editor.** What ran the check, such as a fresh agent session. It is never a person's name and never a lens.
 - **Discrepancies.** One row for each. Where: the section and the item. Then what the approved text says and what the card says, in as few words as show the difference, and the severity, `blocking` or `minor`. Write `None.` in place of the table when there is none. For a missing or summarized packet, the one row reads `no verbatim source` under Where.
 - **Additions.** Each thing on the card that the approved text does not hold, and whether it sits outside the Equipment, Ingredients, and Method. Write `None.` when there is none.
 - **Checks run.** One line for each check in the skill's `## Compare the card with the packet` section, in that order, saying `checked`, `not applicable` with the reason, or `not checked` with the reason. With no verbatim source, every check that needs the approved text reads `not checked, because there is no verbatim source`.

@@ -29,6 +29,7 @@ Every date is in 2026.
 | October 16 | The first copy to the notes app was made from the repository, not from a chat, and the format of a note was fixed. | The notes had been written in more than one format. |
 | November 1 | The independent editor check was added, with a script and a CI check. Its first report was run after the fact, on a card saved earlier that day. That evening the next card was the first to be checked before it was saved, and it failed. That card was fixed, a fresh editor passed it with notes, and only then was it copied to the notes app. | I asked for it: every recipe that goes in must match what was agreed, one for one, and an agent that writes a card may not grade its own work. |
 | November 18 | Work on this repository began. | I wanted to share the system without publishing my household. |
+| November 19 | The lenses lost their names. Each one had carried the name of a real cook or publisher, under a decision made on November 18. That decision was superseded: each lens now carries a description of its approach, its record names no one, and a check in CI fails if a removed name comes back. | I decided that a public repository should not carry real people's names on lenses they never saw. |
 
 ## The incident behind each rule
 
@@ -36,7 +37,7 @@ Every date is in 2026.
 |---|---|---|
 | The latest correction beats a saved card. | A saved card said two pounds. My correction, days earlier, said one. A saved file can be older than the latest truth. | [`AGENTS.md`](../AGENTS.md), and "When sources disagree" in [`method/status-and-versions.md`](../method/status-and-versions.md) |
 | Status is several separate facts. | The October import. Each card needed its own honest status line, because written, cooked, and copied elsewhere turned out to be different facts. | [`method/status-and-versions.md`](../method/status-and-versions.md) |
-| Lenses, not people. | The first version wrote in the chefs' voices and credited named chefs as the source of a card. Nobody named had seen it. | [`kitchen/council.md`](../kitchen/council.md) and [`kitchen/council-vetting.md`](../kitchen/council-vetting.md) |
+| Lenses, not people. | The first version wrote in the chefs' voices and credited named chefs as the source of a card. Nobody named had seen it. The lenses kept real names until November 19, when the names were removed. | [`kitchen/council.md`](../kitchen/council.md) and [`kitchen/council-vetting.md`](../kitchen/council-vetting.md) |
 | Safe and done are separate checks. | Beef reached a safe temperature and was still tough. | "Food safety" in the [`chef-council` skill](../.agents/skills/chef-council/SKILL.md) |
 | A safety number comes from a cited standard. | A troubleshooting note in the first version gave a poultry temperature below the food-safety default, as if it were the default. | The [food-safety reference](../.agents/skills/chef-council/references/food-safety.md) |
 | Owning a spice is not a reason to use it. | The roasted carrots that ship here as an example. | The "Ingredient roles" check of the pressure test, and the [carrots card](../recipes/sides/butter-roasted-carrots-with-jaggery-and-sumac.md) |
@@ -55,9 +56,9 @@ I did not make my private cooking repo public. Its history holds personal detail
 
 - **What was carried over:** the method, the status rules, the templates, the editor check, and two recipe cards that are original work, each scrubbed and checked again by the editor here.
 - **What was left out:** every other recipe card, the kitchen profile, the cook logs, the earlier editor reports, the archive, the picture generator for recipes, and an unfinished connector that would let other assistants read the cookbook.
-- **What changed on the way:** the kitchen files became blank templates; the gate now ties each report to the hash of the card it checked; the notes app became an optional adapter with a written contract; and each named lens was seated only after a vetting record of published work was written for it, on November 18.
+- **What changed on the way:** the kitchen files became blank templates; the gate now ties each report to the hash of the card it checked; the notes app became an optional adapter with a written contract; and each lens was seated only after a record was written for it, on November 18, and was renamed for its approach on November 19.
 
-The repository was built one ticket at a time by agents, each change specified, built, reviewed by a separate session, and merged by pull request. The plan is in [the build map](wayfinder/W001-public-chef-council/MAP.md), the specifications are in the [spec index](specs/INDEX.md), and what each change taught is in the [learning index](learnings/INDEX.md).
+The repository was built one ticket at a time by agents, each change specified, built, reviewed by a separate session, and merged by pull request. On November 19 those records were edited to remove the names: where one named a person, a publication, or a link, it now reads `[name removed]`, `[title removed]`, or `[link removed]`, and a lens's old name reads as its new name in square brackets. The plan is in [the build map](wayfinder/W001-public-chef-council/MAP.md), the specifications are in the [spec index](specs/INDEX.md), and what each change taught is in the [learning index](learnings/INDEX.md).
 
 ## What the example report gets wrong
 
@@ -67,7 +68,7 @@ The [editor report for the tuna melt](../qc/sandwiches/council-tuna-melt/2026-11
 2. It says the card states that nobody reviewed, approved, endorsed, or wrote it. The card names no person and makes no such statement.
 3. It says only punctuation, italics, and the form of the step names changed in the Method. Step 10 also gained a word.
 
-A report is the record of one check and is never edited, so the three remarks stay. The card's next change gets a fresh report. The lesson is the one the method page already states: the gate proves that a passing report exists for the card as it stands, and it cannot tell whether the check was careful.
+A report is the record of one check, and what it found is never edited, so the three remarks stay. On November 19 the Editor line of each example report lost the name of the model that ran the check, and nothing else in either report changed. The card's next change gets a fresh report. The lesson is the one the method page already states: the gate proves that a passing report exists for the card as it stands, and it cannot tell whether the check was careful.
 
 ## What is not here yet
 

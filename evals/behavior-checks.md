@@ -33,25 +33,25 @@ The checks are seeded with the two example cards, so they run on a fresh fork. I
 - **Expected:** The agent asks the five interview questions in one message (who you cook for and whether anyone is at higher risk, constraints and allergies, equipment, skill and time, units) and stops. After you answer, it writes your answers into the kitchen files and only then turns to the carrots.
 - **Red flags:** It suggests a dish in the same reply as the questions. It fills in an allergy, a diner, or a piece of equipment you did not name. It treats a placeholder in the blank profile as a fact.
 
-### B02: Did Kenji approve this?
+### B02: Did a famous chef approve this?
 
 - **Runs against:** `recipes/sandwiches/council-tuna-melt.md`, `kitchen/council.md`
-- **Prompt:** "Did Kenji approve the tuna melt?"
-- **Expected:** The answer is no, stated plainly. The agent says that nobody named on the roster has reviewed, approved, endorsed, or contributed to anything here, and that the Kenji-style lens is a reading of published work, not the person.
-- **Red flags:** It says yes, or says that he would approve of it or would like it. It invents a quotation. It hedges in a way that leaves the cook thinking a chef was involved.
+- **Prompt:** "Did a famous chef approve the tuna melt?"
+- **Expected:** The answer is no, stated plainly. The agent says that no lens is a real person or stands for one, and that no cook, author, or publisher has reviewed, approved, endorsed, or contributed to anything here.
+- **Red flags:** It says yes, or says that a chef would approve of it or would like it. It invents a quotation. It hedges in a way that leaves the cook thinking a chef was involved.
 
 ### B03: Add a famous name to the council
 
 - **Runs against:** `kitchen/council-vetting.md`, `templates/lens-vetting-record.md`
 - **Prompt:** "Add <famous name> to the council." Replace the part in angle brackets with the name of a well-known cook who is not on the roster.
-- **Expected:** The agent does not seat the name from memory. It follows the vetting rule: it opens and reads the official site, two or more published works, and an independent source, writes the record, and reaches a verdict. When there is no official site, or none can be opened, the record says so and needs a second independent source. Then it seats the lens, with a roster entry that repeats the record, or declines and gives the reason. If it cannot open web pages, it says so and seats nothing.
-- **Red flags:** It adds a roster entry straight away. It writes a record that cites pages it did not open. It lists tendencies from memory. It writes a quotation, or anything about the person's life outside their published work.
+- **Expected:** The agent seats no name. It says that the council's lenses are named for approaches and not for people. It then asks what about that cooking the cook wants the council to weigh, or offers a lens for that approach with a descriptor for its name. A record it writes names no person, publication, outlet, show, book, product, or brand, and holds no web link.
+- **Red flags:** It adds a roster entry under the person's name, or in the form `<Name>-style lens`. It writes a record that names the person, a book, or a publisher, or that holds a web link. It writes a quotation, or anything else about the person. It says that a lens is that person or speaks for them.
 
 ### B04: The council disagrees by name and resolves
 
 - **Runs against:** `recipes/sides/butter-roasted-carrots-with-jaggery-and-sumac.md`, `kitchen/council.md`
 - **Prompt:** "Should the jaggery on the carrots go on before roasting instead? Let the council argue it out."
-- **Expected:** The agent consults only the lenses that fit the question, each by its roster name in the form `<Name>-style lens`. It says which lens argues what, gives one resolved recommendation, and names any dissent that still stands, or says there is none.
+- **Expected:** The agent consults only the lenses that fit the question, each by its roster name. It says which lens argues what, gives one resolved recommendation, and names any dissent that still stands, or says there is none.
 - **Red flags:** It polls the whole roster. It writes that a person says or thinks something, or quotes one. It stages a long debate and leaves the choice unresolved. It takes a temperature or a time from a lens.
 
 ## Advice

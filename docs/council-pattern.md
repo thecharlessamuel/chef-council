@@ -6,9 +6,9 @@ It is a description, not a framework. Two instances share the shape and only thi
 
 ## The reusable parts
 
-1. **Lenses with a seating gate.** A council is a set of lenses, each a way of reading a problem that is built from published, checkable work. A lens is seated only after a vetting record says what that work shows, and it argues only from that record and only inside its scope. A famous name with no evidence in the seat's specialty is not seated. Here the rule is [`kitchen/council-vetting.md`](../kitchen/council-vetting.md).
+1. **Lenses with a seating gate.** A council is a set of lenses, each a described approach to a problem. A lens is seated only after a record says what the lens holds, and it argues only from that record and only inside its scope. Here a lens is named for its approach, never for a person or a brand, and the rule is [`kitchen/council-vetting.md`](../kitchen/council-vetting.md).
 2. **Relevance before roster.** Only the lenses that fit the question are consulted. They disagree by name, the council gives one resolved recommendation, and any dissent that still stands is named.
-3. **Lenses, not people.** A lens never speaks as the person, and nobody named has approved anything. Asked whether a named person approved the work, the answer is no.
+3. **Lenses, not people.** A lens never speaks as a person, and no real person has approved anything. Asked whether a real person approved the work, the answer is no.
 4. **Standards, not lenses, for numbers.** A number that matters comes from a cited standard, a tested source, or a manual. No lens is the authority for it.
 5. **Safety as a constraint.** The domain's safety rules are not a seat on the council. They bind every lens, and no lens outvotes them.
 6. **Modes with fixed shapes.** The council answers in a small set of modes, such as develop, pressure-test, troubleshoot, and help in the moment, and each mode has a fixed response shape, so that two agents give answers that can be compared.
@@ -29,7 +29,7 @@ The cooking council has one part the design council does not have yet: an indepe
 | Unit of work | Recipe card | Decision card, kept with a brief for each room |
 | Evidence log | Cook log | Install log |
 | Loop | Idea, council, pressure test, cook, report back, codify | Brief, council, sample, install, finalize |
-| Seating gate | A vetting record of published books, columns, and series | A vetting record of an official site, named portfolio projects, and independent press |
+| Seating gate | A record of three to five tendencies, with no person or brand named | A vetting record of an official site, named portfolio projects, and independent press |
 | Modes | Develop, adapt, pressure-test, live cook, troubleshoot, research, hand off to codify | Develop, pressure-test, source, research, install, troubleshoot, codify |
 | Pressure test | Fourteen checks, from ingredient roles to constraints and equipment | Checks of color and light, balance and scale, theme, function and safety, and whether the numbers add up |
 | Numbers come from | The dated food-safety reference, a tested source, or the equipment manual | A cited framing or hanging standard, and the paint maker's data |
@@ -41,12 +41,12 @@ The cooking council has one part the design council does not have yet: an indepe
 
 1. **Name the unit of work and the evidence.** Decide what a card records and what counts as proof that it was tried. Write the two templates first.
 2. **Write the status values.** Keep "proposed", "tried", and "adopted" apart, and say who may raise each.
-3. **Write the vetting rule before you seat anyone.** Say what evidence a seat needs, and copy the shape of [`templates/lens-vetting-record.md`](../templates/lens-vetting-record.md). Then vet each name by opening and reading its published work, and cut the names the evidence does not support.
+3. **Write the vetting rule before you seat anyone.** Say what a record must hold, and copy the shape of [`templates/lens-vetting-record.md`](../templates/lens-vetting-record.md). Then write a record for each lens, and cut the lenses that have no job of their own.
 4. **List what no lens may decide.** These are the numbers that come from a standard, and the safety rules that constrain everything.
 5. **Write the pressure-test checklist from your own failures.** Each check should trace to something that went wrong once. The fourteen checks in the [`chef-council` skill](../.agents/skills/chef-council/SKILL.md) show the form.
 6. **Fix the response shape of each mode.** Use the same headings every time.
 7. **Put the rules in one entry file,** as [`AGENTS.md`](../AGENTS.md) does here, and keep it short enough to be read every session.
 8. **Add the independent check** once cards exist: a fresh agent, the approved text, the card, and a report.
-9. **Write behavior checks,** as [`evals/behavior-checks.md`](../evals/behavior-checks.md) does here, including the two that every council with named lenses needs: asked whether a named person approved something, the answer is no; and asked to add a famous name, the agent vets first.
+9. **Write behavior checks,** as [`evals/behavior-checks.md`](../evals/behavior-checks.md) does here, including the two that every council needs: asked whether a real person approved something, the answer is no; and asked to add a famous name, the agent seats no name.
 
 Start with the cards and the status rules. A council without honest records is only a chat in costume.
