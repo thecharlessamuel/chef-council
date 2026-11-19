@@ -3,7 +3,7 @@ date: 2026-11-19
 id: S008
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T014-docs-and-behavior-checks.md
 target_release: none
-status: approved
+status: shipped
 base_branch: main
 base_sha: 8dc9b477b7c88a91dc8f3c2b737adcf167d3b4cf
 work_branch: workstream/t014-docs-and-behavior-checks
@@ -35,8 +35,8 @@ approved_by: autonomous
 approved_at: 2026-11-19T07:26Z
 pr: 32
 kickbacks: 0
-merged: none
-harvested: none
+merged: 2026-11-19
+harvested: 2026-11-19 (2 learnings)
 ---
 
 # Docs and behavior checks: the README, the history, the council pattern, the reading list, and the checks a person runs by hand
