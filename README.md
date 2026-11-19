@@ -1,6 +1,8 @@
 # Chef Council
 
-I cook at home most nights, and I work with AI agents to develop recipes, cook them, and improve them over time. This repository is the system I use for that. A council of cooking lenses argues a recipe into shape. Plain-text recipe cards and cook logs record what actually happened in the kitchen. An independent editor checks every saved recipe against what I approved before it is allowed in. It works with any agent that can read files, and, by copy and paste, with a chat app that cannot.
+I cook at home most nights, and I've got a slew of fantastic cookbooks I use for idea generation. On top of that, (naturally) I work with AI agents to develop composite recipes and improve them over time.
+
+This repository is the core of the system I use for that. A council of cooking lenses argues a recipe into shape. Plain-text recipe cards and cook logs record what actually happened in the kitchen. An independent editor checks every saved recipe against what I approved before it is allowed in. It works with any agent that can read files, and, by copy and paste, with a chat app that cannot.
 
 **No chef is affiliated with this repository, and none has endorsed it.** Each lens is a described cooking approach, named for the approach and never for a person or a brand. No lens is a real person or speaks for one, nothing a lens argues is a quotation of anyone, and no cook, author, or publisher has reviewed, approved, endorsed, or contributed to anything in this repository. [`kitchen/council.md`](kitchen/council.md) is the roster.
 
