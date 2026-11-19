@@ -812,10 +812,9 @@ MODEL = "a different provider's architect-tier model"
 FIRST_RULES = [
     # A deny pattern in an archived gate spelled names as regular expressions.
     (r"(?m)^NAMES='.*'$", "NAMES='[name removed]'"),
-    (r"NYT Cooking", "[name removed]"),
+    (r"(?<=\(\[a publisher\], )[^,\n]+(?=, )", "[name removed]"),
     (
-        r"\S+ \S+ died in 2013; her record rests on her books and independent sources, "
-        r"and its access notes say there is no official site\.",
+        r"(?<=A name the evidence cannot support is cut under the rule, with the reason in its record\. )[^\n]+",
         "One of the fourteen has no official site; that record rests on books and "
         "independent sources, and its access notes say so.",
     ),
