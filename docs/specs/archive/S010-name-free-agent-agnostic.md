@@ -34,6 +34,8 @@ harvested: 2026-11-19 (3 learnings)
 
 # Name-free lenses and agent-agnostic pages: fourteen descriptors, redacted records, and a check that keeps the names out
 
+> Redacted after harvest, 2026-11-19: twelve lines in the checks and scripts below quoted a service name this spec removed; they now read `[name removed]` or `[pattern removed]`. The original lines are in the repository's history.
+
 ## Goal and definition of done
 
 The maintainer decided on 2026-11-19 that the repository goes public with no
@@ -91,7 +93,7 @@ helpers`):
    line. The reply is quoted in the PR body.
 8. **No named model or provider that a reader does not need.** `git grep
    -nIiE "$GONE" -- . ":!$SPEC_REL"` prints nothing, and `git grep -nIE
-   '\bPi\b|\bMeta\b|meta/' -- . ":!$SPEC_REL"` prints exactly one line, which
+   '[pattern removed]' -- . ":!$SPEC_REL"` prints exactly one line, which
    starts `.agents/spec-profile.md:`. `grep -c -E '^\| (Claude
    Projects|ChatGPT Projects|Gemini Gems) \|' chat/README.md` prints `3`, and
    `grep -c 'Not known' chat/README.md` prints `0`.
@@ -439,7 +441,7 @@ SPEC_REL=docs/specs/S010-name-free-agent-agnostic.md
 SPEC="$ROOT/$SPEC_REL"
 BASE_SHA=38dfcceca709b025624c08327f87791871a3605f
 SWEEP="$(git rev-parse --git-common-dir)/info/privacy-sweep"
-GONE='muse|anthropic|openai|\bopus\b|\bfable\b|codex|cursor|antigravity|\bgpt|sonnet|haiku|wonder'
+GONE='[pattern removed]'
 block() {
   python3 - "$1" "$2" <<'PY'
 import re, sys
@@ -505,12 +507,12 @@ EDITS = [
     ),
     (
         "chat/README.md",
-        "Use this folder when your assistant is a chat app that cannot read this repository: a project in Claude or ChatGPT, a Gem in Gemini, or a chat in Muse. You get",
+        "Use this folder when your assistant is a chat app that cannot read this repository: a project in Claude or ChatGPT, a Gem in Gemini, or a chat in [name removed]. You get",
         "Use this folder when your assistant is a chat app that cannot read this repository. You get",
     ),
     (
         "chat/README.md",
-        "| Muse | Not known | Not known | Not checked. No official page describing instructions or knowledge files for a Muse chat was found on 2026-11-19. Use the fallback below. |\n",
+        "| [name removed] | Not known | Not known | Not checked. No official page describing instructions or knowledge files for a [name removed] chat was found on 2026-11-19. Use the fallback below. |\n",
         "",
     ),
     (
@@ -820,14 +822,14 @@ FIRST_RULES = [
     ),
 ]
 AGENT_RULES = [
-    (r"Muse Code 1\.4\.15(?:\s+\(1\.4\.15-R8339\.1\))?", "its command-line tool"),
-    (r"provider `meta`,(\s+)model\s+`muse-wonder-full-1\.0`", MODEL.replace("\\", "")),
-    (r"`muse-wonder-full-1\.0` \(provider `meta`,\s+", MODEL + " ("),
-    (r"Meta,?\s+`muse-wonder-full-1\.0`", MODEL),
-    (r"`meta/muse-wonder-full-1\.0`", MODEL),
-    (r"meta/muse-wonder-full-1\.0", "cross-provider"),
+    (r"[pattern removed]", "its command-line tool"),
+    (r"[pattern removed]", MODEL.replace("\\", "")),
+    (r"[pattern removed]", MODEL + " ("),
+    (r"[pattern removed]", MODEL),
+    (r"[pattern removed]", MODEL),
+    (r"[pattern removed]", "cross-provider"),
     (r"for an(\s+)Anthropic session at", r"for this session's\1provider at"),
-    (r"\b(?:Antigravity CLI|Muse Code|Muse|Codex|Cursor|Pi)\b", "[name removed]"),
+    (r"[pattern removed]", "[name removed]"),
 ]
 PLACE = {"name": "[name removed]", "proper": "[name removed]",
          "title": "[title removed]", "host": "[link removed]"}
@@ -1245,7 +1247,7 @@ its prompt needs a real name and this spec holds none.
     after the redaction of S010, at <paths and lines>; revise the spec?``
     without quoting a name.
   - `git grep -nIiE "$GONE" -- docs ":!$SPEC_REL"` prints nothing, and `git
-    grep -nIE '\bPi\b|\bMeta\b|meta/' -- docs ":!$SPEC_REL"` prints
+    grep -nIE '[pattern removed]' -- docs ":!$SPEC_REL"` prints
     nothing.
   - The Wayfinder lint of definition-of-done item 11 prints `0` and nothing
     else.
