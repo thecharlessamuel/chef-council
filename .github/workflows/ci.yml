@@ -42,3 +42,27 @@ jobs:
         run: python3 scripts/check-council.py
       - name: Run the tests
         run: python3 -m unittest discover -s tests -v
+      - name: Lint the recipe cards and check the index
+        run: python3 scripts/lint-cards.py
+
+  editor-gate:
+    name: editor gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out the full history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Require a current passing editor report for every changed card
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE: ${{ github.base_ref }}
+          PUSH_BEFORE: ${{ github.event.before }}
+        run: |
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            scripts/check-qc.sh --base "origin/$PR_BASE"
+          else
+            scripts/check-qc.sh --base "$PUSH_BEFORE"
+          fi
