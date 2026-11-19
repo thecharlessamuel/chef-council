@@ -26,7 +26,7 @@ references:
   - docs/learnings/L005-editor-gate.md
   - docs/learnings/L006-example-recipes.md
   - .agents/spec-profile.md
-cross_examined: pending
+cross_examined: meta/muse-wonder-full-1.0 (architect), 21 findings, 21 accepted
 approved_by: pending
 approved_at: pending
 pr: none
