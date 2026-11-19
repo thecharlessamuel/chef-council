@@ -3,7 +3,7 @@ date: 2026-11-19
 id: S006
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T012-example-recipes.md
 target_release: none
-status: approved
+status: shipped
 base_branch: main
 base_sha: e4fcbf0f1e81554d38eb455889dc48bf94645409
 work_branch: workstream/t012-example-recipes
@@ -30,8 +30,8 @@ approved_by: autonomous
 approved_at: 2026-11-19T04:48Z
 pr: 28
 kickbacks: 0
-merged: none
-harvested: none
+merged: 2026-11-19
+harvested: 2026-11-19 (3 learnings)
 ---
 
 # Example recipes: two cards at v1.1, each with a real editor report, and the generated index
