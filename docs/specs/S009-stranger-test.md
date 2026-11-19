@@ -3,7 +3,7 @@ date: 2026-11-19
 id: S009
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T015-stranger-test.md
 target_release: none
-status: pr-open
+status: approved
 base_branch: main
 base_sha: d28bb614dd66138805544e2f810ad3129ba54897
 work_branch: workstream/t015-stranger-test
