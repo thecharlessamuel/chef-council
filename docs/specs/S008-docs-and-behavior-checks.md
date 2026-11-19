@@ -3,7 +3,7 @@ date: 2026-11-19
 id: S008
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T014-docs-and-behavior-checks.md
 target_release: none
-status: ready-to-build
+status: executing
 base_branch: main
 base_sha: 8dc9b477b7c88a91dc8f3c2b737adcf167d3b4cf
 work_branch: workstream/t014-docs-and-behavior-checks
