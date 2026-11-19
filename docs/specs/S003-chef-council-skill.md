@@ -3,7 +3,7 @@ date: 2026-11-18
 id: S003
 wayfinder: docs/wayfinder/W001-public-chef-council/issues/T009-chef-council-skill.md
 target_release: none
-status: executing
+status: pr-open
 base_branch: main
 base_sha: ae8f725603666ca23bb0ba7e80dca6ecfa53b86a
 work_branch: workstream/t009-chef-council-skill
@@ -22,7 +22,7 @@ references:
 cross_examined: meta/muse-wonder-full-1.0 (architect), round 2 on the revision, 7 findings, 7 accepted
 approved_by: human
 approved_at: 2026-11-19T00:05Z
-pr: none
+pr: 22
 kickbacks: 0
 merged: none
 harvested: none
